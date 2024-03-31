@@ -9,6 +9,7 @@ export default function CalendarSection({ countDay }) {
     <Container>
       <Flex>
         <VerticalBall />
+        {/* todo: countDay는 굳이 props로 안받고 이 컴포넌트 내부에서 계산해도됨 */}
         <Text>종범💖유정 결혼식이 {countDay}일 남았습니다</Text>
         <Button>캘린더에 추가하기</Button>
         <Calendar />

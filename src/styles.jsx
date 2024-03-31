@@ -21,6 +21,10 @@ const Flex = styled.div`
   }
 `;
 
+const RealtiveFlex = styled(Flex)`
+  position: relative;
+`;
+
 const TextWrapper = styled.div`
   width: 100%;
   display: flex;
@@ -65,7 +69,7 @@ const EmptyBox = styled.div`
   height: 70px;
 `;
 
-/** 이미지 */
+/** 이미지 todo 이미지 통일하기*/
 const Flower = styled.img`
   margin: 33px;
   &.f-t {
@@ -73,7 +77,8 @@ const Flower = styled.img`
   }
   &.f-b {
     margin-bottom: -10%;
+    transform: rotate(180deg);
   }
 `;
 
-export { Container, Flex, TextWrapper, TextCategoryTitle, Text, EmptyBox, Flower };
+export { Container, RealtiveFlex, Flex, TextWrapper, TextCategoryTitle, Text, EmptyBox, Flower };

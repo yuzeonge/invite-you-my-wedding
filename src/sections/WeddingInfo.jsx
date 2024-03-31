@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Container, Flex } from "../styles";
 import styled from "styled-components";
 
@@ -9,21 +10,42 @@ const WEDDING_INFO = [
 ];
 
 export default function WeddingInfo() {
+  const [active, setActive] = useState(false);
   return (
     <Container>
       <Flex className="wedding-info">
+        <InfoWrapper className={active ? "active" : "disable"} onClick={() => setActive(prev => !prev)}>
+          <AbsoluteLine />
+          <Box>
+            <Triangle className={active ? "active" : ""} />
+            <Text className="t-info">신부측 피로연 안내</Text>
+          </Box>
+          <TextWrapper className={active ? "active" : "disable"}>
+            <Text className="t-info">test</Text>
+          </TextWrapper>
+        </InfoWrapper>
+        {/* <InfoWrapper>
+          <AbsoluteLine />
+          <Box>
+            <Triangle />
+            <Text className="t-info">식사 안내</Text>
+          </Box>
+        </InfoWrapper>
+        <InfoWrapper>
+          <AbsoluteLine />
+          <Box>
+            <Triangle />
+            <Text className="t-info">축하 화환 안내</Text>
+          </Box>
+        </InfoWrapper>
+        <InfoWrapper>
+          <AbsoluteLine />
+          <Box>
+            <Triangle />
+            <Text className="t-info">마음 전하실 곳</Text>
+          </Box>
+        </InfoWrapper> */}
         <Line />
-        {WEDDING_INFO.map(item => {
-          return (
-            <>
-              <Box>
-                <Triangle />
-                <Text className="t-info">{item.title}</Text>
-              </Box>
-              <Line />
-            </>
-          );
-        })}
       </Flex>
       <Flex className="wedding-info">
         <Text>비대면으로 축하를 전하고자</Text>
@@ -55,6 +77,32 @@ const Text = styled.p`
   }
 `;
 
+const TextWrapper = styled.div`
+  &.active {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  &.disable {
+    display: none;
+  }
+`;
+const InfoWrapper = styled.div`
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+  border: 1px solid red;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  &.active {
+    height: 84px;
+  }
+  &.disable {
+    height: 38.5px;
+  }
+`;
+
 const Triangle = styled.div`
   width: 0px;
   height: 0px;
@@ -62,12 +110,12 @@ const Triangle = styled.div`
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
   margin-right: 3px;
-  &.rotate {
-    border-bottom: 0px;
-    border-top: calc(6px * 1.732) solid #666666;
-    border-left: 6px solid transparent;
-    border-right: 6px solid transparent;
+
+  &.active {
+    transform: rotate(180deg);
   }
+
+  transition: all 0.3s ease-in-out;
 `;
 
 const Box = styled.div`
@@ -75,12 +123,20 @@ const Box = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  width: 100%;
 `;
 
 const Line = styled.div`
   height: 1px;
-  width: 40%;
+  width: 50%;
   background-color: #d6e6dd;
+`;
+
+const AbsoluteLine = styled(Line)`
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `;
 const ItemBox = styled.div`
   display: flex;

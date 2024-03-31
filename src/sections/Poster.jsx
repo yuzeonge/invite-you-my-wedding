@@ -4,6 +4,7 @@ import styled from "styled-components";
 export default function Poster() {
   return (
     <Container>
+      {/* todo */}
       <ImageWrapper>
         <RightTextBox>
           <Text>종범</Text>
@@ -12,7 +13,6 @@ export default function Poster() {
         <Image src="image/poster-image.png" />
         <Absolute>
           <Text className="f6">Yujeong & Jongbum</Text>
-
           <Text>창원 힐스카이웨딩 10층 힐그랜드홀</Text>
           <Text className="f3">2024.06.02 Jun 12:10</Text>
         </Absolute>

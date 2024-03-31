@@ -1,7 +1,8 @@
 import "./App.css";
 import { useEffect } from "react";
-import Footer from "./sections/Footer";
 import styled from "styled-components";
+
+import Footer from "./sections/Footer";
 import Starting from "./sections/Starting";
 import Poster from "./sections/Poster";
 import Poetry from "./sections/Poetry";

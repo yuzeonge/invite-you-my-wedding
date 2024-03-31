@@ -1,13 +1,18 @@
-import { Container, Flex, TextCategoryTitle, EmptyBox } from "../styles";
+import { Container, Flex, RealtiveFlex, TextCategoryTitle, EmptyBox } from "../styles";
 import styled from "styled-components";
-
+/**
+ *
+ * absolute 들은 가장 가까운 relative 부모 태그 순으로 영향을 받음.
+ *
+ */
 export default function Location() {
   return (
     <Container>
-      <Flex>
+      <RealtiveFlex>
         <Image src="image/image 14.png" />
-        <AbsoluteText>함께 자리를 빛내줄 소중한 분들을 초대합니다.</AbsoluteText>
-      </Flex>
+        <AbsoluteText> 함께 자리를 빛내줄 소중한 분들을 초대합니다.</AbsoluteText>
+        <Filter />
+      </RealtiveFlex>
       <Flex className="blue">
         <EmptyBox />
         <TextCategoryTitle>location</TextCategoryTitle>
@@ -29,7 +34,6 @@ export default function Location() {
           <Text className="tb">도로명 주소</Text>
           <Text>경남 창원시 마산회원구 봉앙로 133</Text>
           <Text className="tb">지번 주소</Text>
-
           <Text>봉암동 391-205</Text>
           <Text className="tb">버스를 타고 오실 경우</Text>
           <Text>
@@ -63,11 +67,22 @@ const Image = styled.img`
   padding: 0;
 `;
 
+const Filter = styled.div`
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  opacity: 0.3;
+`;
+
 const AbsoluteText = styled.p`
   font-size: 1.4rem;
   position: absolute;
   color: white;
   text-shadow: 2px 2px 2px 2px 2em #67676728;
+  z-index: 3;
 `;
 
 const ImageWedding = styled.img`

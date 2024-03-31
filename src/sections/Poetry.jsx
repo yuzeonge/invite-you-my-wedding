@@ -17,7 +17,8 @@ export default function Poetry() {
           <Text>같이 있으면 기분 좋아지는 그대롸 함께</Text>
           <Text>인생의 길을 걸어가겠습니다.</Text>
         </TextWrapper>
-        <Flower className="f-b" src="image/flower2.png" />
+        {/* todo: flower1.png -> flower.png */}
+        <Flower className="f-b" src="image/flower1.png" />
       </FormWrapper>
       <FormWrapper className="w1">
         <TextRowWrapper>

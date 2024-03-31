@@ -37,10 +37,3 @@ const WeddingImage = styled.img`
   height: 280px;
   margin: 10px;
 `;
-
-const ImageWrapper = styled.div`
-  width: 100%;
-  border: 1px solid red;
-  display: flex;
-  justify-content: center;
-`;
