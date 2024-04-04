@@ -76,7 +76,7 @@ export default function ConnectModal() {
         </InfoItemWrapper>
 
         <Button>축하 화환 안내</Button>
-        <Button>닫기</Button>
+        <CloseButton>닫기</CloseButton>
       </Flex>
     </Container>
   );
@@ -150,4 +150,22 @@ const ButtonBox = styled.div`
   padding: 5px;
   width: 20px;
   text-align: center;
+`;
+
+const CloseButton = styled.button`
+  &:hover {
+    color: #9b9389;
+    background-color: #b2aaa1;
+  }
+  border: none;
+  border: 0px;
+  background-color: #c8bbad;
+  font-family: "GowunDodum-Regular";
+  border-radius: 10px;
+  padding: 8px 12px;
+  width: 45%;
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin: 7px;
+  box-shadow: 2px 2px 0.3em #67676728;
 `;

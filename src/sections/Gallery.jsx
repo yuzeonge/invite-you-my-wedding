@@ -10,10 +10,10 @@ export default function Gallery() {
         <TextCategoryTitle>gallery</TextCategoryTitle>
         <SliderWraper>
           <SliderBar>
-            <WeddingImage src="image/gallery1.png" />
-            <WeddingImage src="image/gallery2.png" />
-            <WeddingImage src="image/gallery1.png" />
-            <WeddingImage src="image/gallery2.png" />
+            <WeddingImage src="image/gallery/1.png" />
+            <WeddingImage src="image/gallery/4.jpeg" />
+            <WeddingImage src="image/gallery/3.jpeg" />
+            <WeddingImage src="image/gallery/2.jpeg" />
           </SliderBar>
         </SliderWraper>
         <EmptyBox />
@@ -33,7 +33,7 @@ const SliderWraper = styled.div`
 `;
 
 const WeddingImage = styled.img`
-  width: 170px;
+  width: 168px;
   height: 280px;
   margin: 10px;
 `;

@@ -1,10 +1,12 @@
 import VerticalBall from "../components/VerticalBall";
 import { Container, TextWrapper, Text } from "../styles";
+import MainCard from "../components/MainCard";
 
 export default function Starting() {
   return (
     <Container>
       <TextWrapper>
+        <MainCard />
         <Text className="t1" data-aos="fade-up">
           Invite you
         </Text>

@@ -18,10 +18,10 @@ export default function Posting() {
   return (
     <Container>
       <Flex className="blue">
-        <Flower src="image/flower1.png" className="f-t" />
+        <Flower src="image/flower.png" className="f-t" />
         <Text>신랑 신부에게 축하글을 남겨주세요.</Text>
         <CongratsItem items={items} onDelete={onDelete} onEdit={onEdit} />
-        <Flower src="image/flower2.png" className="f-b" />
+        <Flower src="image/flower.png" className="f-b" />
       </Flex>
     </Container>
   );

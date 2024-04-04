@@ -7,7 +7,7 @@ export default function Poetry() {
     <Container>
       <FormWrapper>
         <BackgoundImage src="image/form-background.png" />
-        <Flower className="f-t" src="image/flower1.png" />
+        <Flower className="f-t" src="image/flower.png" />
         <TextWrapper className="align-l">
           <Text>유월의 어느 초여름,</Text>
           <Text>늘 곁에서 아껴주셨던 고마운 분들을 모십니다.</Text>
@@ -17,8 +17,7 @@ export default function Poetry() {
           <Text>같이 있으면 기분 좋아지는 그대롸 함께</Text>
           <Text>인생의 길을 걸어가겠습니다.</Text>
         </TextWrapper>
-        {/* todo: flower1.png -> flower.png */}
-        <Flower className="f-b" src="image/flower1.png" />
+        <Flower className="f-b" src="image/flower.png" />
       </FormWrapper>
       <FormWrapper className="w1">
         <TextRowWrapper>
@@ -64,8 +63,8 @@ const TextRowWrapper = styled.div`
   flex-direction: row;
   margin: 40px;
   padding: 20px;
-  border-bottom: solid 1px #d6e6dd;
-  border-top: solid 1px #d6e6dd;
+  border-bottom: solid 1px #e6d6d6;
+  border-top: solid 1px #e6d6d6;
 `;
 const BackgoundImage = styled.img`
   position: absolute;

@@ -14,7 +14,7 @@ const Flex = styled.div`
   flex-direction: column;
 
   &.blue {
-    background-color: #f3fcfd;
+    background-color: #f0ede6;
   }
   &.wedding-info {
     margin-bottom: 35px;
@@ -40,7 +40,7 @@ const TextCategoryTitle = styled.p`
   color: #4d4d4d;
   text-align: center;
   width: 35%;
-  border-bottom: solid #d6e6dd;
+  border-bottom: solid #f0ede6;
   margin-bottom: 20px;
 `;
 
@@ -72,11 +72,12 @@ const EmptyBox = styled.div`
 /** 이미지 todo 이미지 통일하기*/
 const Flower = styled.img`
   margin: 33px;
+  width: 40%;
   &.f-t {
-    margin-top: -10%;
+    margin-top: -8%;
   }
   &.f-b {
-    margin-bottom: -10%;
+    margin-bottom: -8%;
     transform: rotate(180deg);
   }
 `;
