@@ -17,7 +17,6 @@ export default function Poster() {
         </Absolute>
       </ImageWrapper>
       <ButtonWrapper>
-        <Button>위치 확인하기</Button>
         <Button>연락하기</Button>
       </ButtonWrapper>
     </Container>

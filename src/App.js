@@ -46,7 +46,7 @@ function App() {
   return (
     <StyledLayout>
       <Starting />
-      <Poster />
+
       <Poetry />
       <Calendar />
       <Gallery />
@@ -55,6 +55,7 @@ function App() {
       <WeddingInfo />
       <Posting />
       <Ending />
+      <Poster />
       <Footer />
     </StyledLayout>
   );
