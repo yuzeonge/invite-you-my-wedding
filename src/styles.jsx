@@ -17,7 +17,9 @@ const Flex = styled.div`
     background-color: #f0ede6;
   }
   &.wedding-info {
+    text-align: center;
     margin-bottom: 35px;
+    width: 100%;
   }
 `;
 

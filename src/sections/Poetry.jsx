@@ -29,7 +29,6 @@ export default function Poetry() {
           </TextWrapper>
         </TextRowWrapper>
         <Button>연락하기</Button>
-        <Button>축하 화환 안내</Button>
       </FormWrapper>
     </Container>
   );

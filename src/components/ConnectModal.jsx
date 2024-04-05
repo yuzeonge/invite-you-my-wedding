@@ -1,33 +1,23 @@
 import styled from "styled-components";
-import Button from "./Button";
+import useCopyClipboard from "../hooks/useCopyClipboard";
 
 const Items = [
   { name: "종범", account: "234", connect: "" },
   { name: "소영식", account: "", connect: "" },
   { name: "박숙녀", account: "", connect: "" },
-  { name: "유정", account: "", connect: "" },
+  { name: "유정", account: "경남은행 50648396", connect: "" },
   { name: "권태건", account: "", connect: "" },
   { name: "마은영", account: "", connect: "" },
 ];
 
-export default function ConnectModal() {
+export default function ConnectModal({ ref, onOpenModal, isOpenModal }) {
+  const { copyToClipboard } = useCopyClipboard;
+
   return (
-    <Container>
+    <Container className={isOpenModal ? "" : "disable"}>
       <Flex>
         <Text className="title">마음 전하실 곳</Text>
-
         <InfoItemWrapper className="row">
-          <InfoItemWrapper>
-            <InfoItemWrapper className="row">
-              <Text>신부</Text>
-              <B>권유정</B>
-            </InfoItemWrapper>
-            <InfoItemWrapper className="row">
-              <ButtonBox>💬</ButtonBox>
-              <ButtonBox>💵</ButtonBox>
-            </InfoItemWrapper>
-          </InfoItemWrapper>
-
           <InfoItemWrapper>
             <InfoItemWrapper className="row">
               <Text>신랑</Text>
@@ -38,18 +28,30 @@ export default function ConnectModal() {
               <ButtonBox>💵</ButtonBox>
             </InfoItemWrapper>
           </InfoItemWrapper>
+
+          <InfoItemWrapper>
+            <InfoItemWrapper className="row">
+              <Text>신부</Text>
+              <B>권유정</B>
+            </InfoItemWrapper>
+            <InfoItemWrapper className="row">
+              <ButtonBox>💬</ButtonBox>
+              <ButtonBox onClick={() => copyToClipboard(Items[3].account)}>💵</ButtonBox>
+            </InfoItemWrapper>
+          </InfoItemWrapper>
         </InfoItemWrapper>
 
         <InfoItemWrapper className="row m">
           <InfoItemWrapper className="row m">
             <InfoItemWrapper>
+              <Text className="line">신랑 측</Text>
               <InfoItemWrapper className="row">
                 <Text>아버지</Text>
-                <B>권태건</B>
+                <B>소영식</B>
               </InfoItemWrapper>
               <InfoItemWrapper className="row">
                 <Text>어머니</Text>
-                <B>마은영</B>
+                <B>박숙녀</B>
               </InfoItemWrapper>
               <InfoItemWrapper className="row">
                 <ButtonBox>📞</ButtonBox>
@@ -59,6 +61,7 @@ export default function ConnectModal() {
           </InfoItemWrapper>
           <InfoItemWrapper className="row">
             <InfoItemWrapper>
+              <Text className="line">신부 측</Text>
               <InfoItemWrapper className="row">
                 <Text>아버지</Text>
                 <B>권태건</B>
@@ -75,20 +78,25 @@ export default function ConnectModal() {
           </InfoItemWrapper>
         </InfoItemWrapper>
 
-        <Button>축하 화환 안내</Button>
-        <CloseButton>닫기</CloseButton>
+        <CloseButton onClick={onOpenModal}>닫기</CloseButton>
       </Flex>
     </Container>
   );
 }
 
 const Container = styled.div`
-  position: relative;
+  position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-top: 50%;
+  z-index: 999;
   width: 100%;
+
+  &.disable {
+    display: none;
+  }
 `;
 
 const Flex = styled.div`
@@ -140,6 +148,9 @@ const Text = styled.p`
     font-weight: bold;
     margin: 15px;
     color: #797979;
+  }
+  &.line {
+    margin-bottom: 5px;
   }
 `;
 

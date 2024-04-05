@@ -4,7 +4,7 @@ import MainCard from "../components/MainCard";
 import Button from "../components/Button";
 import styled from "styled-components";
 
-export default function Starting() {
+export default function Starting({ setIsOpenModal }) {
   return (
     <Container>
       <TextWrapper>
@@ -25,7 +25,13 @@ export default function Starting() {
       <EmptyBox />
       <ButtonWrapper>
         <Button>위치 확인하기</Button>
-        <Button>연락하기</Button>
+        <Button
+          onClick={() => {
+            setIsOpenModal(true);
+          }}
+        >
+          연락하기
+        </Button>
       </ButtonWrapper>
     </Container>
   );

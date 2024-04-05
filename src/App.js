@@ -1,5 +1,5 @@
 import "./App.css";
-import { useEffect } from "react";
+import { useEffect, useState, useRef } from "react";
 import styled from "styled-components";
 
 import Starting from "./sections/Starting";
@@ -22,8 +22,14 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 import { collection, getDoc, getDocs, addDoc, updateDoc, doc, deleteDoc, query } from "firebase/firestore";
-
 function App() {
+  const [isOpenModal, setIsOpenModal] = useState(false);
+  const closeTouchBackground = useRef();
+
+  const onOpenModal = () => {
+    setIsOpenModal(prev => !prev);
+    console.log(isOpenModal);
+  };
   useEffect(() => {
     AOS.init();
   });
@@ -45,8 +51,8 @@ function App() {
 
   return (
     <StyledLayout>
+      {isOpenModal && <Modal ref={closeTouchBackground} onOpenModal={onOpenModal} setIsOpenModal={setIsOpenModal} />}
       <Starting />
-
       <Poetry />
       <Calendar />
       <Gallery />
