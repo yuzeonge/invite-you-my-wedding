@@ -35,5 +35,4 @@ const SliderWraper = styled.div`
 const WeddingImage = styled.img`
   width: 168px;
   height: 280px;
-  margin: 10px;
 `;

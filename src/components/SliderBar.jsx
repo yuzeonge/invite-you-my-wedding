@@ -8,6 +8,7 @@ export default function SliderBar({ children }) {
     speed: 500,
     slidesToShow: 2,
     slidesToScroll: 1,
+    arrows: false,
   };
   return <Slider {...settings}>{children}</Slider>;
 }

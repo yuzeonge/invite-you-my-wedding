@@ -1,10 +1,12 @@
 import VerticalBall from "../components/VerticalBall";
 import { Container, TextWrapper, Text, EmptyBox } from "../styles";
-import MainCard from "../components/MainCard";
 import Button from "../components/Button";
 import styled from "styled-components";
+import { useSetRecoilState } from "recoil";
+import modalState from "../store/infoModal";
 
-export default function Starting({ setIsOpenModal }) {
+export default function Starting() {
+  const setIsOpenModal = useSetRecoilState(modalState);
   return (
     <Container>
       <TextWrapper>
@@ -21,10 +23,10 @@ export default function Starting({ setIsOpenModal }) {
       </TextWrapper>
       <EmptyBox />
       <EmptyBox />
-      <MainCard />
+      <Image src="image/main-card.jpeg" />
       <EmptyBox />
       <ButtonWrapper>
-        <Button>위치 확인하기</Button>
+        <Button onClick={() => {}}>위치 확인하기</Button>
         <Button
           onClick={() => {
             setIsOpenModal(true);
@@ -36,6 +38,10 @@ export default function Starting({ setIsOpenModal }) {
     </Container>
   );
 }
+
+const Image = styled.img`
+  width: 100%;
+`;
 
 const ButtonWrapper = styled.div`
   padding: 24px;

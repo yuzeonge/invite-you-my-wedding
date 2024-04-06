@@ -1,7 +1,10 @@
 import Button from "../components/Button";
 import styled from "styled-components";
+import { useSetRecoilState } from "recoil";
+import modalState from "../store/infoModal";
 
 export default function Poster() {
+  const setModalState = useSetRecoilState(modalState);
   return (
     <Container>
       <ImageWrapper>
@@ -17,7 +20,7 @@ export default function Poster() {
         </Absolute>
       </ImageWrapper>
       <ButtonWrapper>
-        <Button>연락하기</Button>
+        <Button onClick={() => setModalState(true)}> 연락하기</Button>
       </ButtonWrapper>
     </Container>
   );

@@ -1,8 +1,11 @@
 import Button from "../components/Button";
 import styled from "styled-components";
 import { Flower } from "../styles";
+import { useSetRecoilState } from "recoil";
+import modalState from "../store/infoModal";
 
 export default function Poetry() {
+  const setModalState = useSetRecoilState(modalState);
   return (
     <Container>
       <FormWrapper>
@@ -28,7 +31,7 @@ export default function Poetry() {
             <Text className="t2">종범</Text> <Text className="t2">유정</Text>
           </TextWrapper>
         </TextRowWrapper>
-        <Button>연락하기</Button>
+        <Button onClick={() => setModalState(true)}> 연락하기</Button>
       </FormWrapper>
     </Container>
   );

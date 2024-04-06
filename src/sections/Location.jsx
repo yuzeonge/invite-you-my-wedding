@@ -5,9 +5,9 @@ import styled from "styled-components";
  * absolute 들은 가장 가까운 relative 부모 태그 순으로 영향을 받음.
  *
  */
-export default function Location() {
+export default function Location({ ref }) {
   return (
-    <Container>
+    <Container ref={ref}>
       <RealtiveFlex>
         <Image src="image/image 14.png" />
         <AbsoluteText> 함께 자리를 빛내줄 소중한 분들을 초대합니다.</AbsoluteText>
