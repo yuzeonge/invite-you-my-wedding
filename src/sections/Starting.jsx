@@ -1,6 +1,6 @@
 import VerticalBall from "../components/VerticalBall";
 import { Container, TextWrapper, Text, EmptyBox } from "../styles";
-import Button from "../components/Button";
+import Button from "../components/Button/Button";
 import styled from "styled-components";
 import { useSetRecoilState } from "recoil";
 import modalState from "../store/infoModal";

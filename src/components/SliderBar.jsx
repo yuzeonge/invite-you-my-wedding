@@ -3,12 +3,15 @@ import Slider from "react-slick";
 
 export default function SliderBar({ children }) {
   const settings = {
-    dots: true,
-    infinite: false,
+    className: "center",
+    centerMode: true,
+    infinite: true,
+    centerPadding: "0px",
+    slidesToShow: 1,
     speed: 500,
-    slidesToShow: 2,
-    slidesToScroll: 1,
+    rows: 1,
     arrows: false,
+    slidesPerRow: 2,
   };
   return <Slider {...settings}>{children}</Slider>;
 }

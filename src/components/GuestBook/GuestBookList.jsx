@@ -1,18 +1,18 @@
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import transferTime from "../core/dateFormat";
+import transferTime from "../../core/dateFormat";
 
 // todo 아이콘 넣기 react-icone ?? fontawesome?
-export default function PostList({ posts, onDelete, onEdit }) {
+export default function GuestBookList({ posts, onDelete, onEdit }) {
   return (
     <Container>
       <Flex>
         {posts.map(post => (
-          <PostItem>
+          <GuestBookItem>
             <Text className="title">{post.title}</Text>
             <Text className="author">From. {post.author}</Text>
             <Text className="date">{transferTime(new Date(post.date))}</Text>
-          </PostItem>
+          </GuestBookItem>
         ))}
       </Flex>
     </Container>
@@ -31,7 +31,7 @@ const Flex = styled.div`
   flex-direction: column;
 `;
 
-const PostItem = styled.div`
+const GuestBookItem = styled.div`
   width: 85%;
   height: 35px;
   background-color: white;
@@ -43,19 +43,24 @@ const PostItem = styled.div`
 const Text = styled.p`
   font-size: 1.2rem;
   color: #67676728;
+  position: absolute;
 
   &.date {
     color: #333;
-    right: 4px;
-    bottom: 4px;
-    position: absolute;
+    right: 6px;
+    top: 2px;
+
     font-size: 1rem;
   }
 
   &.title {
     color: #333;
+    left: 10px;
+    top: 2px;
   }
   &.author {
     color: #a9a9a9;
+    bottom: 2px;
+    right: 6px;
   }
 `;

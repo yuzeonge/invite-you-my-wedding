@@ -1,17 +1,17 @@
 import styled from "styled-components";
-import useCopyClipboard from "../hooks/useCopyClipboard";
+import useCopyClipboard from "../../hooks/useCopyClipboard";
 import { useRecoilState } from "recoil";
-import infoModalState from "../store/infoModal";
+import infoModalState from "../../store/infoModal";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const people_info = [
-  { name: "종범", account: "234", phone: "" },
-  { name: "소영식", account: "", phone: "" },
-  { name: "박숙녀", account: "", phone: "" },
+  { name: "종범", account: "", phone: "010-2586-7540" },
+  { name: "소영식", account: "", phone: "010-6557-2640" },
+  { name: "박숙녀", account: "", phone: "010-2271-7540" },
   { name: "유정", account: "경남은행 50648396", phone: "010-5064-8396" },
-  { name: "권태건", account: "", phone: "" },
-  { name: "마은영", account: "", phone: "" },
+  { name: "권태건", account: "국민은행 8424 0101 446383", phone: "010-7111-2364" },
+  { name: "마은영", account: "", phone: "010-3012-8399" },
 ];
 
 export default function ConnectInfoModal() {
@@ -21,7 +21,7 @@ export default function ConnectInfoModal() {
 
   const [isModalOpen, setIsModalOpen] = useRecoilState(infoModalState);
 
-  const handleCloseModel = () => {
+  const handleCloseModal = () => {
     setIsModalOpen(false);
   };
   return (
@@ -73,7 +73,7 @@ export default function ConnectInfoModal() {
                   <B>박숙녀</B>
                 </InfoItemWrapper>
                 <InfoItemWrapper className="row">
-                  <ButtonBox onClick={() => (window.document.location.href = `tel:${people_info[3].phone}`)}>📞</ButtonBox>
+                  <ButtonBox onClick={() => (window.document.location.href = `tel:${people_info[1].phone}`)}>📞</ButtonBox>
                   <ButtonBox>💵</ButtonBox>
                 </InfoItemWrapper>
               </InfoItemWrapper>
@@ -90,23 +90,23 @@ export default function ConnectInfoModal() {
                   <B>마은영</B>
                 </InfoItemWrapper>
                 <InfoItemWrapper className="row">
-                  <ButtonBox>📞</ButtonBox>
+                  <ButtonBox onClick={() => (window.document.location.href = `tel:${people_info[4].phone}`)}>📞</ButtonBox>
                   <ButtonBox>💵</ButtonBox>
                 </InfoItemWrapper>
               </InfoItemWrapper>
             </InfoItemWrapper>
           </InfoItemWrapper>
 
-          <CloseButton onClick={handleCloseModel}>닫기</CloseButton>
+          <CloseButton onClick={handleCloseModal}>닫기</CloseButton>
         </Flex>
       </Container>
       <ToastContainer position="bottom-center" autoClose={1500} hideProgressBar={true} />
-      <Dimed className={isModalOpen ? "" : "disable"} onClick={handleCloseModel} />
+      <Dimed className={isModalOpen ? "" : "disable"} onClick={handleCloseModal} />
     </>
   );
 }
 
-const Dimed = styled.div`
+export const Dimed = styled.div`
   width: 100%;
   height: 100%;
   position: fixed;

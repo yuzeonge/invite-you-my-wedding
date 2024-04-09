@@ -1,4 +1,4 @@
-import Button from "../components/Button";
+import Button from "../components/Button/Button";
 import styled from "styled-components";
 import { Flower } from "../styles";
 import { useSetRecoilState } from "recoil";

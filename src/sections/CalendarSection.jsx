@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Container, Flex } from "../styles";
 import Calendar from "../components/CustomCalendar";
 import VerticalBall from "../components/VerticalBall";
-import Button from "../components/Button";
+import Button from "../components/Button/Button";
 
 export default function CalendarSection({ countDay }) {
   return (
@@ -23,7 +23,9 @@ export default function CalendarSection({ countDay }) {
   );
 }
 
-const HeartIcone = styled.img``;
+const HeartIcone = styled.img`
+  width: 15px;
+`;
 const Text = styled.p`
   font-size: 1.4rem;
   margin: 60px;

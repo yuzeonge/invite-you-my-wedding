@@ -3,7 +3,7 @@ import "./App.css";
 import styled from "styled-components";
 
 // hooks
-import { useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 
 // component
 import Starting from "./sections/Starting";
@@ -16,8 +16,7 @@ import WeddingInfo from "./sections/WeddingInfo";
 import Posting from "./sections/Posting";
 import Ending from "./sections/Ending";
 import Footer from "./sections/Footer";
-import ConnectInfoModal from "./components/ConnectInfoModal";
-
+import ConnectInfoModal from "./components/Modal/ConnectInfoModal";
 // slick
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
