@@ -1,16 +1,16 @@
 import React from "react";
 import Slider from "react-slick";
 
-export default function SliderBar({ children }) {
+export default function MultiSlick({ children }) {
   const settings = {
     className: "center",
-    centerMode: true,
-    infinite: true,
-    centerPadding: "0px",
+    centerMode: false,
+    infinite: false,
     slidesToShow: 1,
     speed: 500,
-    rows: 1,
+    rows: 2,
     arrows: false,
+    dots: true,
     slidesPerRow: 2,
   };
   return <Slider {...settings}>{children}</Slider>;

@@ -7,10 +7,12 @@ const InputField = styled.input`
   width: 100%;
   border: none;
   border-bottom: solid #aaaaaa 1px;
-  padding-bottom: 10px;
-  padding-left: 10px;
+
   position: relative;
   background: none;
+  z-index: 5;
+  outline: none;
+  border-radius: 0px;
   z-index: 5;
 
   &:focus {
@@ -23,7 +25,7 @@ const InputField = styled.input`
 
   &:focus ~ label,
   &:valid ~ label {
-    font-size: 16px;
+    font-size: 1.2rem;
     bottom: 64px;
     color: #666;
     font-weight: bold;
@@ -38,10 +40,11 @@ const InputField = styled.input`
 const Label = styled.label`
   position: absolute;
   color: #aaa;
-  left: 10px;
+  left: 0px;
   font-size: 1.4rem;
   bottom: 32px;
   transition: all 0.2s;
+  z-index: 1;
 
   &.textarea {
     top: 36px;
@@ -55,6 +58,7 @@ const TextArea = styled.textarea`
   max-height: 240px;
   border: 1px solid #dbdbdb;
   resize: none;
+  z-index: 5;
 
   &:focus {
     outline: none;

@@ -3,7 +3,7 @@ import "./App.css";
 import styled from "styled-components";
 
 // hooks
-import { useState, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 
 // component
 import Starting from "./sections/Starting";
@@ -25,6 +25,9 @@ import "slick-carousel/slick/slick-theme.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Intro from "./sections/Intro";
+
+// toast
+import { ToastContainer } from "react-toastify";
 
 function App() {
   /** 위치 안내 스크롤 */
@@ -54,6 +57,7 @@ function App() {
         <Poster />
         <Footer />
       </StyledLayout>
+      <ToastContainer position="bottom-center" autoClose={1500} hideProgressBar={true} />
       <ConnectInfoModal />
     </>
   );

@@ -1,11 +1,7 @@
 import styled from "styled-components";
 
-export default function Button({ size, onClick, children }) {
-  return (
-    <StyledButton size={size} onClick={onClick}>
-      {children}
-    </StyledButton>
-  );
+export default function Button({ children, ...props }) {
+  return <StyledButton {...props}>{children}</StyledButton>;
 }
 
 const StyledButton = styled.button`
@@ -19,10 +15,10 @@ const StyledButton = styled.button`
   font-family: "GowunDodum-Regular";
   border-radius: 10px;
   padding: 8px 12px;
-  width: 45%;
   color: #a0988f;
+
+  min-width: 45%;
   font-size: 1.5rem;
-  margin: 7px;
   box-shadow: 2px 2px 0.3em #67676728;
 
   &.del {
@@ -31,5 +27,9 @@ const StyledButton = styled.button`
 
   &.gray {
     background-color: #a2a2a2;
+  }
+  &.point {
+    background-color: #b3a99d;
+    color: #fff;
   }
 `;

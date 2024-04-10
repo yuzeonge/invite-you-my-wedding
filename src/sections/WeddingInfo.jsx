@@ -7,50 +7,52 @@ export default function WeddingInfo() {
   const [active2, setActive2] = useState(true);
 
   return (
-    <Container>
-      <Flex className="wedding-info">
-        <InfoWrapper className={active2 ? "active2" : "disable"} onClick={() => setActive2(prev => !prev)}>
-          <AbsoluteLine />
-          <Box>
-            <Triangle className={active2 ? "active" : ""} />
-
-            <Text className="info-title">마음 전하실 곳</Text>
-          </Box>
-          <TextWrapper className={active2 ? "active2" : "disable"}>
-            <Flex className="wedding-info">
-              <Text className="top-t">비대면으로 축하를 전하고자</Text>
-              <Text>하시는 분들을 위해</Text>
-              <Text>계좌 번호를 기재하였습니다.</Text>
-              <Text>너그러운 마음으로 양해 부탁드리겠습니다.</Text>
-            </Flex>
+    <>
+      <Container>
+        <Flex className="wedding-info">
+          <InfoWrapper className={active2 ? "active2" : "disable"} onClick={() => setActive2(prev => !prev)}>
+            <AbsoluteLine />
             <Box>
-              <ItemBox className="b-box">
-                <Text className="t1">신랑측</Text>
-                <Text className="t1">축하 송금 안내</Text>
-              </ItemBox>
-              <ItemBox className="p-box">
-                <Text className="t1">신부측</Text>
-                <Text className="t1">축하 송금 안내</Text>
-              </ItemBox>
+              <Triangle className={active2 ? "active" : ""} />
+
+              <Text className="info-title">마음 전하실 곳</Text>
             </Box>
-          </TextWrapper>
-        </InfoWrapper>
-        <InfoWrapper className={active1 ? "active1" : "disable"} onClick={() => setActive1(prev => !prev)}>
-          <AbsoluteLine />
-          <Box>
-            <Triangle className={active1 ? "active" : ""} />
-            <Text className="info-title">축하 화환 안내</Text>
-          </Box>
-          <TextWrapper className={active1 ? "active1" : "disable"}>
-            <Flex className="wedding-info">
-              <Text className="t-info">축하 화환 관련은 아래 힐스카이플라워로 문의 부탁드립니다.</Text>
-              <Text>010-3836-9782 / 010-3221-9782</Text>
-            </Flex>
-          </TextWrapper>
-        </InfoWrapper>
-        <Line />
-      </Flex>
-    </Container>
+            <TextWrapper className={active2 ? "active2" : "disable"}>
+              <Flex className="wedding-info">
+                <Text className="top-t">비대면으로 축하를 전하고자</Text>
+                <Text>하시는 분들을 위해</Text>
+                <Text>계좌 번호를 기재하였습니다.</Text>
+                <Text>너그러운 마음으로 양해 부탁드리겠습니다.</Text>
+              </Flex>
+              <Box>
+                <ItemBox className="b-box">
+                  <Text className="t1">신랑측</Text>
+                  <Text className="t1">축하 송금 안내</Text>
+                </ItemBox>
+                <ItemBox className="p-box">
+                  <Text className="t1">신부측</Text>
+                  <Text className="t1">축하 송금 안내</Text>
+                </ItemBox>
+              </Box>
+            </TextWrapper>
+          </InfoWrapper>
+          <InfoWrapper className={active1 ? "active1" : "disable"} onClick={() => setActive1(prev => !prev)}>
+            <AbsoluteLine />
+            <Box>
+              <Triangle className={active1 ? "active" : ""} />
+              <Text className="info-title">축하 화환 안내</Text>
+            </Box>
+            <TextWrapper className={active1 ? "active1" : "disable"}>
+              <Flex className="wedding-info">
+                <Text className="t-info">축하 화환 관련은 아래 힐스카이플라워로 문의 부탁드립니다.</Text>
+                <Text>010-3836-9782 / 010-3221-9782</Text>
+              </Flex>
+            </TextWrapper>
+          </InfoWrapper>
+          <Line />
+        </Flex>
+      </Container>
+    </>
   );
 }
 

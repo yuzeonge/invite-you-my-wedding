@@ -1,18 +1,37 @@
+import { useEffect, useState } from "react";
+
+// style
+
+import styled from "styled-components";
 import { Container, Flex, Flower } from "../styles";
+
+// component
+
 import GuestBookList from "../components/GuestBook/GuestBookList";
 import PostModal from "../components/Modal/PostModal";
-import { useEffect, useState } from "react";
-import styled from "styled-components";
+import HeartIcon from "../components/Icons/heart";
+
+// mui
+import { Pagination } from "@mui/material";
 
 // firbase
 import { firestore } from "../configs/firebase";
 import { collection, getDoc, getDocs, addDoc, updateDoc, doc, deleteDoc, query } from "firebase/firestore";
 
+const limit = 5;
+
 export default function Posting() {
   const [postList, setPostList] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [count, setCount] = useState(0);
 
   const handleCloseModal = () => setIsModalOpen(false);
+
+  const handleChange = (event, value) => {
+    console.log(value);
+    setCurrentPage(value);
+  };
 
   const getGuestBooks = async () => {
     const q = query(collection(firestore, "posting"));
@@ -33,7 +52,7 @@ export default function Posting() {
       return new Date(b.date) - new Date(a.date);
     });
 
-    console.log(sortedArray);
+    setCount(Math.ceil(sortedArray.length / limit));
     setPostList(sortedArray);
   };
 
@@ -47,16 +66,14 @@ export default function Posting() {
     }
   };
 
+  const deleteGuestbook = async id => {
+    await deleteDoc(doc(firestore, "posting", id));
+    getGuestBooks();
+  };
+
   useEffect(() => {
     getGuestBooks();
   }, []);
-
-  const onDelete = () => {
-    // 파이어베이스 공부하기
-  };
-  const onEdit = () => {
-    // 파이어베이스 공부하기
-  };
 
   return (
     <>
@@ -66,7 +83,7 @@ export default function Posting() {
           <TextWrapper>
             <Text>
               신랑
-              <HeartIcone src="image/heart.png" />
+              <HeartIcon src="image/heart.png" />
               신부에게 축하글을 남겨주세요.
             </Text>
             <GoToWriteButton
@@ -77,8 +94,8 @@ export default function Posting() {
               축하글 쓰기💐
             </GoToWriteButton>
           </TextWrapper>
-
-          <GuestBookList posts={postList} onDelete={onDelete} onEdit={onEdit} />
+          <GuestBookList posts={postList.slice((currentPage - 1) * limit, currentPage * limit)} onDelete={deleteGuestbook} />
+          <Pagination count={count} page={currentPage} onChange={handleChange} />
           <Flower src="image/flower.png" className="f-b" />
         </Flex>
       </Container>
@@ -86,11 +103,6 @@ export default function Posting() {
     </>
   );
 }
-
-const HeartIcone = styled.img`
-  margin: 0px;
-  width: 15px;
-`;
 
 const GoToWriteButton = styled.div`
   border-radius: 10px;
@@ -107,6 +119,9 @@ const GoToWriteButton = styled.div`
 const Text = styled.p`
   font-size: 1.2rem;
   z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const TextWrapper = styled.div`

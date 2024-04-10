@@ -36,8 +36,16 @@ export default function ConnectInfoModal() {
                 <B>소종범</B>
               </InfoItemWrapper>
               <InfoItemWrapper className="row">
-                <ButtonBox>💬</ButtonBox>
-                <ButtonBox>💵</ButtonBox>
+                <ButtonBox onClick={() => (window.document.location.href = `tel:${people_info[0].phone}`)}>📞</ButtonBox>
+
+                <ButtonBox
+                  onClick={() => {
+                    copyToClipboard(people_info[0].account);
+                    notify();
+                  }}
+                >
+                  💵
+                </ButtonBox>
               </InfoItemWrapper>
             </InfoItemWrapper>
 
@@ -47,7 +55,7 @@ export default function ConnectInfoModal() {
                 <B>권유정</B>
               </InfoItemWrapper>
               <InfoItemWrapper className="row">
-                <ButtonBox>💬</ButtonBox>
+                <ButtonBox onClick={() => (window.document.location.href = `tel:${people_info[3].phone}`)}>📞</ButtonBox>
                 <ButtonBox
                   onClick={() => {
                     copyToClipboard(people_info[3].account);
@@ -74,7 +82,14 @@ export default function ConnectInfoModal() {
                 </InfoItemWrapper>
                 <InfoItemWrapper className="row">
                   <ButtonBox onClick={() => (window.document.location.href = `tel:${people_info[1].phone}`)}>📞</ButtonBox>
-                  <ButtonBox>💵</ButtonBox>
+                  <ButtonBox
+                    onClick={() => {
+                      copyToClipboard(people_info[1].account);
+                      notify();
+                    }}
+                  >
+                    💵
+                  </ButtonBox>
                 </InfoItemWrapper>
               </InfoItemWrapper>
             </InfoItemWrapper>
@@ -91,7 +106,14 @@ export default function ConnectInfoModal() {
                 </InfoItemWrapper>
                 <InfoItemWrapper className="row">
                   <ButtonBox onClick={() => (window.document.location.href = `tel:${people_info[4].phone}`)}>📞</ButtonBox>
-                  <ButtonBox>💵</ButtonBox>
+                  <ButtonBox
+                    onClick={() => {
+                      copyToClipboard(people_info[4].account);
+                      notify();
+                    }}
+                  >
+                    💵
+                  </ButtonBox>
                 </InfoItemWrapper>
               </InfoItemWrapper>
             </InfoItemWrapper>
@@ -100,7 +122,6 @@ export default function ConnectInfoModal() {
           <CloseButton onClick={handleCloseModal}>닫기</CloseButton>
         </Flex>
       </Container>
-      <ToastContainer position="bottom-center" autoClose={1500} hideProgressBar={true} />
       <Dimed className={isModalOpen ? "" : "disable"} onClick={handleCloseModal} />
     </>
   );
@@ -193,6 +214,10 @@ const Text = styled.p`
   &.line {
     margin-bottom: 5px;
   }
+`;
+const WrapperButton = styled.div`
+  display: flex;
+  flex-direction: column;
 `;
 
 const ButtonBox = styled.div`

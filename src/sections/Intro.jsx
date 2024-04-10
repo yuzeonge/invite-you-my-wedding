@@ -39,7 +39,7 @@ export default function Intro() {
     <Container className={fadeout ? "fadeout" : ""}>
       <Wrapper>
         <Flex>
-          <div class="hero">
+          <div className="hero">
             <p id="dynamic" ref={textRef}></p>
           </div>
         </Flex>
