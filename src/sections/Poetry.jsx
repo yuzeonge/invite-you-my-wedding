@@ -25,7 +25,7 @@ export default function Poetry() {
       <FormWrapper className="w1">
         <TextRowWrapper>
           <TextWrapper className="alignt-l">
-            <Text className="t1">소영식 박숙녀의 아들</Text> <Text className="t1">권태건 마은영의 딸</Text>
+            <Text className="t1">소영식·박숙녀의 아들</Text> <Text className="t1">권태건·마은영의 딸</Text>
           </TextWrapper>
           <TextWrapper className="align-r">
             <Text className="t2">종범</Text> <Text className="t2">유정</Text>

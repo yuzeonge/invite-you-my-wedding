@@ -28,7 +28,7 @@ const PostModal = ({ fetchGuestBook, isModalOpen, handleCloseModal }) => {
       <Container className={isModalOpen ? "" : "disabled"}>
         <Header>
           <HeaderTextWrapper>
-            <HeaderText>축하 방명록 쓰기</HeaderText>
+            <HeaderText>💐축하 방명록 쓰기</HeaderText>
           </HeaderTextWrapper>
           <IconButtonWrapper>
             <IconButton onClick={handleCloseModal}>

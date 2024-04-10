@@ -57,9 +57,16 @@ const Text = styled.p`
   }
   &.t2 {
     font-size: 1.6rem;
-    padding-top: 36px;
-    padding-bottom: 36px;
     letter-spacing: -0.5px;
+    margin-bottom: 10px;
+  }
+
+  &.mb-48 {
+    margin-bottom: 48px;
+  }
+
+  &.mt-50 {
+    margin-top: 50px;
   }
   &.fs {
     font-family: "yleeMortalHeart-ImmortalMemory";

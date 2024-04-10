@@ -20,7 +20,7 @@ export default function Poster() {
         </Absolute>
       </ImageWrapper>
       <ButtonWrapper>
-        <Button onClick={() => setModalState(true)}> 연락하기</Button>
+        <Button onClick={() => setModalState(true)}>축하 연락하기</Button>
       </ButtonWrapper>
     </Container>
   );
