@@ -17,6 +17,7 @@ import Posting from "./sections/Posting";
 import Ending from "./sections/Ending";
 import Footer from "./sections/Footer";
 import ConnectInfoModal from "./components/Modal/ConnectInfoModal";
+
 // slick
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -45,6 +46,9 @@ function App() {
   return (
     <>
       <StyledLayout>
+        <audio controls autoplay>
+          <source src={`/background-music.mp4`} type="audio/ogg" />
+        </audio>
         <Intro />
         <Starting onClick={onMoveToLocationInfo} />
         <Poetry />
