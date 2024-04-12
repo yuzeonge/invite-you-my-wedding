@@ -23,7 +23,7 @@ export default function CalendarSection({ countDay }) {
         </Text>
       </Flex>
       <Flex>
-        <DdayCount targetDate={new Date(2024, 6, 2, 12, 10)} />
+        <DdayCount targetDate={new Date(2024, 5, 2, 12, 10)} />
       </Flex>
     </Container>
   );
