@@ -21,4 +21,18 @@ export default function transferTime(value) {
   return `${Math.floor(betweenTimeDay / 365)}년전`;
 }
 
-export function ddayCount() {}
+export function ddayCount() {
+  const today = new Date();
+  const dday = new Date(2024, 6, 2, 12, 10);
+
+  const timeGap = dday.getTime() - today.getTime();
+
+  const day = Math.ceil(timeGap / (1000 * 60 * 60 * 24));
+
+  const seconds = String(Math.floor(((timeGap / 1000) % 60).padStart(2, "0")));
+  const minute = String(Math.floor(((timeGap / (1000 * 60)) % 60).padStart(2, "0")));
+  const hours = String(Math.floor(((timeGap / (1000 * 60 * 60)) % 24).padStart(2, "0")));
+
+  if (timeGap <= 0) {
+  }
+}
