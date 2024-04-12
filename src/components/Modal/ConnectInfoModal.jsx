@@ -172,6 +172,10 @@ const Flex = styled.div`
   border-radius: 12px;
   padding: 17px;
   box-shadow: 2px 3px 3px 0.2em #67676728;
+
+  &.flex-row {
+    flex-direction: row;
+  }
 `;
 
 const InfoItemWrapper = styled.div`
