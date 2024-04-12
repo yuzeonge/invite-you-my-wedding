@@ -1,31 +1,35 @@
 import styled from "styled-components";
-import { Container, Flex } from "../styles";
+import { Container, EmptyBox, Flex } from "../styles";
 import VerticalBall from "../components/VerticalBall";
 import Button from "../components/Button/Button";
 import HeartIcon from "../components/Icons/heart";
+
+import DdayCount from "../components/DdayCount";
 
 export default function CalendarSection({ countDay }) {
   return (
     <Container>
       <Flex>
         <VerticalBall />
-        {/* todo: countDay는 굳이 props로 안받고 이 컴포넌트 내부에서 계산해도됨 */}
+        <EmptyBox />
+        <Text>2024년 6월 2일</Text>
+        <Text>점심 12시 10분</Text>
+        <Image src="image/calendar.png" />
         <Text>
           종범
           <HeartIcon src="image/heart.png" />
           유정 결혼식이 {countDay}일 남았습니다
         </Text>
-
-        <Image src="image/calendar.png" />
-        <Button>캘린더에 추가하기</Button>
+        <DdayCount seconds={new Date()} />
       </Flex>
     </Container>
   );
 }
 
+const TextWrapper = styled.p``;
+
 const Text = styled.p`
   font-size: 1.4rem;
-  margin: 60px;
   display: flex;
   justify-content: center;
   align-items: center;

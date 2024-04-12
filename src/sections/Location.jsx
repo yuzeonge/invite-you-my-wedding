@@ -1,5 +1,7 @@
 import { Container, Flex, RealtiveFlex, TextCategoryTitle, EmptyBox } from "../styles";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
+
 /**
  *
  * absolute 들은 가장 가까운 relative 부모 태그 순으로 영향을 받음.
@@ -10,7 +12,7 @@ export default function Location({ ref }) {
     <Container ref={ref}>
       <RealtiveFlex>
         <Image src="image/image 14.png" />
-        <AbsoluteText> 함께 자리를 빛내줄 소중한 분들을 초대합니다.</AbsoluteText>
+        <AbsoluteText id="location"> 함께 자리를 빛내줄 소중한 분들을 초대합니다.</AbsoluteText>
         <Filter />
       </RealtiveFlex>
       <Flex className="blue">
@@ -21,10 +23,24 @@ export default function Location({ ref }) {
         <Text>2024년 6월 2일</Text>
         <Text>점심 12시 10분</Text>
         <MapWrapper>
-          <MapIcon src="nav-icon/kakaomap.png" />
-          <MapIcon src="nav-icon/navermap.png" />
-          <MapIcon src="nav-icon/tmap.png" />
-          <MapIcon src="nav-icon/googlemap.png" />
+          <StyledA target="_blank" href="https://map.kakao.com/link/search/창원 힐스타이웨딩">
+            <MapIcon src="nav-icon/kakaomap.png" />
+          </StyledA>
+          <StyledA
+            target="_blank"
+            href="https://map.naver.com/p/search/%EC%B0%BD%EC%9B%90%20%ED%9E%90%20%EC%8A%A4%EC%B9%B4%EC%9D%B4%20%EC%9B%A8%EB%94%A9"
+          >
+            <MapIcon src="nav-icon/navermap.png" />
+          </StyledA>
+          <StyledA target="_blank" href="https://tmap.life/62ffaa39">
+            <MapIcon src="nav-icon/tmap.png" />
+          </StyledA>
+          <StyledA
+            target="_blank"
+            href="https://www.google.com/maps/dir//%ED%9E%90%EC%8A%A4%EC%B9%B4%EC%9D%B4+%EC%9B%A8%EB%94%A9%26%EC%BB%A8%EB%B2%A4%EC%85%98+Gyeongsangnam-do,+Changwon-si,+Masanhoewon-gu,+Bongam-dong,+133/data=!4m8!4m7!1m0!1m5!1m1!1s0x356f33b97d989541:0x43b9f3c30f6c73d2!2m2!1d128.6014549!2d35.2190478?entry=ttu"
+          >
+            <MapIcon src="nav-icon/googlemap.png" />
+          </StyledA>
         </MapWrapper>
       </Flex>
       <Flex className="blue">
@@ -59,6 +75,16 @@ export default function Location({ ref }) {
     </Container>
   );
 }
+
+export const StyledA = styled.a`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+`;
 
 const Image = styled.img`
   background-color: #4d4d4db5;
@@ -107,7 +133,7 @@ const MapWrapper = styled.div`
 
 const MapIcon = styled.img`
   border-radius: 12px;
-  width: 15%;
+  width: 75%;
   margin: 5px;
   box-shadow: 2px 2px 0.3em #67676728;
 `;

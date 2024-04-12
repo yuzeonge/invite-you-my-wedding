@@ -29,7 +29,11 @@ export default function Starting() {
       <Image src="image/main-card.jpeg" />
       <EmptyBox />
       <ButtonWrapper>
-        <Button onClick={() => {}}>위치 확인하기</Button>
+        <Anchor href="#location">
+          <Button className="button" onClick={() => {}}>
+            위치 확인하기
+          </Button>
+        </Anchor>
         <Button
           onClick={() => {
             setIsOpenModal(true);
@@ -41,6 +45,17 @@ export default function Starting() {
     </Container>
   );
 }
+
+const Anchor = styled.a`
+  width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .button {
+    width: 100%;
+  }
+`;
 
 const Image = styled.img`
   width: 100%;

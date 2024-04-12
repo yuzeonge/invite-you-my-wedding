@@ -20,3 +20,5 @@ export default function transferTime(value) {
 
   return `${Math.floor(betweenTimeDay / 365)}년전`;
 }
+
+export function ddayCount() {}

@@ -10,7 +10,7 @@ export default function WeddingInfo() {
     <>
       <Container>
         <Flex className="wedding-info">
-          <InfoWrapper className={active2 ? "active2" : "disable"} onClick={() => setActive2(prev => !prev)}>
+          <InfoWrapper className={active2 ? "active2" : "disable"} onClick={() => {}}>
             <AbsoluteLine />
             <Box>
               <Triangle className={active2 ? "active" : ""} />
