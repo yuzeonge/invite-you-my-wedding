@@ -15,7 +15,7 @@ export default function CalendarSection({ countDay }) {
         <Text>오후 12시 10분</Text>
         <Text>창원 힐스카이 10층 힐그랜드홀</Text>
         <EmptyBox />
-        <Image src="image/calendar.png" />
+        <Image src="image/calendar.png" data-aos="flip-left" />
         <EmptyBox />
         <Text className="countDownText">
           종범

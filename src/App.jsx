@@ -40,7 +40,9 @@ function App() {
   };
 
   useEffect(() => {
-    AOS.init();
+    AOS.init({
+      offset: 20,
+    });
   });
 
   return (
