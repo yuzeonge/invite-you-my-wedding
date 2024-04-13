@@ -2,7 +2,7 @@ import styled from "styled-components";
 import useCopyClipboard from "../../hooks/useCopyClipboard";
 import { useRecoilState } from "recoil";
 import infoModalState from "../../store/infoModal";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const people_info = [
@@ -143,7 +143,7 @@ export const Dimed = styled.div`
   }
 `;
 
-const Container = styled.div`
+export const Container = styled.div`
   position: fixed;
   display: flex;
   justify-content: center;
@@ -161,7 +161,7 @@ const Container = styled.div`
   }
 `;
 
-const Flex = styled.div`
+export const Flex = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -218,10 +218,6 @@ const Text = styled.p`
   &.line {
     margin-bottom: 5px;
   }
-`;
-const WrapperButton = styled.div`
-  display: flex;
-  flex-direction: column;
 `;
 
 const ButtonBox = styled.div`

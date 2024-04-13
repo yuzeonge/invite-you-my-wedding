@@ -1,16 +1,19 @@
 import { useState } from "react";
 import { Container, Flex } from "../styles";
 import styled from "styled-components";
-
+import AccountModal from "../components/Modal/AccountModal";
 export default function WeddingInfo() {
   const [active1, setActive1] = useState(false);
   const [active2, setActive2] = useState(true);
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isBride, setIsBride] = useState(true);
   return (
     <>
+      <AccountModal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} isBride={isBride} />
       <Container>
         <Flex className="wedding-info">
-          <InfoWrapper className={active2 ? "active2" : "disable"} onClick={() => {}}>
+          <InfoWrapper className={active2 ? "active2" : "disable"}>
             <AbsoluteLine />
             <Box>
               <Triangle className={active2 ? "active" : ""} />
@@ -25,11 +28,23 @@ export default function WeddingInfo() {
                 <Text>너그러운 마음으로 양해 부탁드리겠습니다.</Text>
               </Flex>
               <Box>
-                <ItemBox className="b-box">
+                <ItemBox
+                  className="b-box"
+                  onClick={() => {
+                    setIsBride(false);
+                    setIsModalOpen(true);
+                  }}
+                >
                   <Text className="t1">신랑측</Text>
                   <Text className="t1">축하 송금 안내</Text>
                 </ItemBox>
-                <ItemBox className="p-box">
+                <ItemBox
+                  className="p-box"
+                  onClick={() => {
+                    setIsBride(true);
+                    setIsModalOpen(true);
+                  }}
+                >
                   <Text className="t1">신부측</Text>
                   <Text className="t1">축하 송금 안내</Text>
                 </ItemBox>
@@ -45,7 +60,18 @@ export default function WeddingInfo() {
             <TextWrapper className={active1 ? "active1" : "disable"}>
               <Flex className="wedding-info">
                 <Text className="t-info">축하 화환 관련은 아래 힐스카이플라워로 문의 부탁드립니다.</Text>
-                <Text>010-3836-9782 / 010-3221-9782</Text>
+                <WrapperNumber>
+                  <Text onClick={() => (window.document.location.href = "tel:010-3836-9782")}>📞</Text>
+                  <Text>010-3836-9782</Text>
+                </WrapperNumber>
+                <WrapperNumber>
+                  <Text onClick={() => (window.document.location.href = "tel:010-3221-9782")}>📞</Text>
+                  <Text>010-3221-9782</Text>
+                </WrapperNumber>
+
+                <Text>
+                  전화번호 옆 <B>아이콘</B>을 누르면 연락처로 연결됩니다.
+                </Text>
               </Flex>
             </TextWrapper>
           </InfoWrapper>
@@ -56,6 +82,10 @@ export default function WeddingInfo() {
   );
 }
 
+const WrapperNumber = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
 const Text = styled.p`
   font-size: 1.3rem;
   &.t1 {
@@ -73,6 +103,13 @@ const Text = styled.p`
   }
 `;
 
+const B = styled.span`
+  font-size: 1.3rem;
+  color: #717171;
+  font-weight: 800;
+  margin-left: 5px;
+`;
+
 const TextWrapper = styled.div`
   &.active {
     position: relative;
@@ -87,11 +124,12 @@ const TextWrapper = styled.div`
 const InfoWrapper = styled.div`
   position: relative;
   width: 100%;
-  cursor: pointer;
+
   overflow: hidden;
   transition: all 0.3s ease-in-out;
   &.active1 {
-    height: 120px;
+    height: 150px;
+    cursor: pointer;
   }
   &.active2 {
     height: 280px;
@@ -150,9 +188,11 @@ const ItemBox = styled.div`
 
   &.b-box {
     background-color: #81b4ef;
+    cursor: pointer;
   }
 
   &.p-box {
     background-color: #f3cedb;
+    cursor: pointer;
   }
 `;
