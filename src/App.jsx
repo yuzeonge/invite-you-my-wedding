@@ -49,7 +49,7 @@ function App() {
         <audio controls autoplay>
           <source src={`/background-music.mp4`} type="audio/ogg" />
         </audio>
-        {/* <Intro /> */}
+        <Intro />
         <Starting onClick={onMoveToLocationInfo} />
         <Poetry />
         <Calendar />

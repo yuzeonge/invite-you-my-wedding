@@ -189,6 +189,9 @@ const InfoItemWrapper = styled.div`
   &.m {
     margin: 10px;
   }
+  &.line {
+    border-bottom: 1px soild #dbdb;
+  }
 `;
 
 const B = styled.p`
@@ -214,9 +217,6 @@ const Text = styled.p`
     font-weight: bold;
     margin: 15px;
     color: #797979;
-  }
-  &.line {
-    margin-bottom: 5px;
   }
 `;
 

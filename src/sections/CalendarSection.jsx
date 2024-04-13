@@ -12,11 +12,12 @@ export default function CalendarSection({ countDay }) {
         <VerticalBall />
         <EmptyBox />
         <Text>2024년 6월 2일</Text>
-        <Text>점심 12시 10분</Text>
+        <Text>오후 12시 10분</Text>
+        <Text>창원 힐스카이 10층 힐그랜드홀</Text>
         <EmptyBox />
         <Image src="image/calendar.png" />
         <EmptyBox />
-        <Text>
+        <Text className="countDownText">
           종범
           <HeartIcon src="image/heart.png" />
           유정 결혼식이
@@ -34,8 +35,10 @@ const Text = styled.p`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 12px;
-  padding-bottom: 4px;
+  &.countDownText {
+    padding-top: 12px;
+    padding-bottom: 4px;
+  }
 `;
 
 const Image = styled.img`

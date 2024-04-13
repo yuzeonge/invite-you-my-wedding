@@ -6,18 +6,6 @@ export default function Intro() {
 
   const [fadeout, setFadeout] = useState(false);
 
-  useEffect(() => {
-    function blink() {
-      textRef.current.classList.toggle("active"); // dynamic에 active 클래스 추가<->삭제 반복
-    }
-    setInterval(blink, 500); // blink 함수를 0.5초마다 실행
-  }, []);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setFadeout(true);
-    }, 2150);
-  }, []);
   //javascript 작성하기
   const string = "권유정 🧡 소종범 2024년 6월 결혼합니다."; //원하는 텍스트를 string변수 선언
   const split = string.split(""); //string의 텍스트를 여러개의 문자열로 나눠줌
@@ -32,7 +20,22 @@ export default function Intro() {
   }
 
   useEffect(() => {
-    dynamic(split); //dynamic함수에 split인자 넣어서 실행
+    function blink() {
+      textRef.current.classList.toggle("active"); // dynamic에 active 클래스 추가<->삭제 반복
+    }
+    setInterval(blink, 500); // blink 함수를 0.5초마다 실행
+  }, []);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setFadeout(true);
+    }, 3000);
+  }, []);
+
+  useEffect(() => {
+    setTimeout(() => {
+      dynamic(split); //dynamic함수에 split인자 넣어서 실행
+    }, [800]);
   }, []);
 
   return (
