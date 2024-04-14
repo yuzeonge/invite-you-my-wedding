@@ -30,12 +30,23 @@ import Intro from "./sections/Intro";
 // toast
 import { ToastContainer } from "react-toastify";
 
+import { Howl, Howler } from "howler";
+
 function App() {
+  var sound = new Howl({
+    src: ["background-music.mp4"],
+    autoplay: true,
+    loop: true,
+    volume: 0.5,
+    onend: function () {
+      console.log("Finished!");
+    },
+  });
+
   /** 위치 안내 스크롤 */
   const locationInfo = useRef();
 
   const onMoveToLocationInfo = () => {
-    console.log(locationInfo.current.scrollIntoView());
     locationInfo.current.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
@@ -48,9 +59,6 @@ function App() {
   return (
     <>
       <StyledLayout>
-        <audio controls autoplay>
-          <source src={`/background-music.mp4`} type="audio/ogg" />
-        </audio>
         <Intro />
         <Starting onClick={onMoveToLocationInfo} />
         <Poetry />

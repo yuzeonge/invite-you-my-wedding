@@ -24,7 +24,9 @@ export default function Gallery() {
     <Container>
       <Flex className="blue" ref={testRef}>
         <EmptyBox />
+
         <TextCategoryTitle>gallery</TextCategoryTitle>
+
         <SliderWraper>
           <MultiSlick>
             {_imageSrcArray.map((src, index) => (
