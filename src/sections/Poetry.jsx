@@ -1,6 +1,6 @@
 import Button from "../components/Button/Button";
 import styled from "styled-components";
-import { Flower } from "../styles";
+import { Flower, EmptyBox } from "../styles";
 import { useSetRecoilState } from "recoil";
 import modalState from "../store/infoModal";
 
@@ -8,7 +8,7 @@ export default function Poetry() {
   const setModalState = useSetRecoilState(modalState);
   return (
     <Container>
-      <FormWrapper>
+      <FormWrapper data-aos="flip-left" data-aos-delay="300" data-aos-duration="1200">
         <BackgoundImage src="image/form-background.png" />
         <Flower className="f-t" src="image/flower.png" />
         <TextWrapper className="align-l">
@@ -23,7 +23,9 @@ export default function Poetry() {
         <Flower className="f-b" src="image/flower.png" />
       </FormWrapper>
       <FormWrapper className="w1">
-        <TextRowWrapper>
+        <EmptyBox />
+        <EmptyBox />
+        <TextRowWrapper data-aos="fade-up" data-aos-delay="300">
           <TextWrapper className="alignt-l">
             <Text className="t1">소영식·박숙녀의 아들</Text> <Text className="t1">권태건·마은영의 딸</Text>
           </TextWrapper>
@@ -31,7 +33,9 @@ export default function Poetry() {
             <Text className="t2">종범</Text> <Text className="t2">유정</Text>
           </TextWrapper>
         </TextRowWrapper>
-        <Button onClick={() => setModalState(true)}> 연락하기</Button>
+        <Button onClick={() => setModalState(true)} data-aos="fade-up" data-aos-delay="200">
+          연락하기
+        </Button>
       </FormWrapper>
     </Container>
   );

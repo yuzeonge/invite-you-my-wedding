@@ -18,6 +18,8 @@ import Ending from "./sections/Ending";
 import Footer from "./sections/Footer";
 import ConnectInfoModal from "./components/Modal/ConnectInfoModal";
 
+import TestModal from "./components/Modal/TestModal";
+
 // slick
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -59,7 +61,8 @@ function App() {
   return (
     <>
       <StyledLayout>
-        <Intro />
+        {/* <Intro /> */}
+        {/* <TestModal /> */}
         <Starting onClick={onMoveToLocationInfo} />
         <Poetry />
         <Calendar />

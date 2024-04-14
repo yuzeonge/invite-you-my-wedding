@@ -4,40 +4,32 @@ import { useRecoilState } from "recoil";
 import infoModalState from "../../store/infoModal";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useState } from "react";
 
 const people_info = [
-  { account: "소종범", phone: "010-2586-7540" },
-  { account: "경남은행 50648396 권유정", phone: "010-5064-8396" },
-  { account: "소영식", phone: "010-6557-2640" },
-  { account: "박숙녀", phone: "010-2271-7540" },
-  { account: "국민은행 8424 0101 446383 권태건", phone: "010-7111-2364" },
-  { account: "마은영", phone: "010-3012-8399" },
+  { name: "종범", account: "", phone: "010-2586-7540" },
+  { name: "소영식", account: "", phone: "010-6557-2640" },
+  { name: "박숙녀", account: "", phone: "010-2271-7540" },
+  { name: "유정", account: "경남은행 50648396", phone: "010-5064-8396" },
+  { name: "권태건", account: "국민은행 8424 0101 446383", phone: "010-7111-2364" },
+  { name: "마은영", account: "", phone: "010-3012-8399" },
 ];
 
-export default function ConnectInfoModal() {
+export default function TestModal() {
   const { copyToClipboard } = useCopyClipboard();
 
   const notify = () => toast("계좌번호가 복사되었습니다.");
 
-  const [isModalOpen, setIsModalOpen] = useRecoilState(infoModalState);
+  const [isModalOpen, setIsModalOpen] = useState(true);
 
   const handleCloseModal = () => {
-    setIsModalOpen(false);
+    setIsModalOpen(true);
   };
   return (
     <>
       <Container className={isModalOpen ? "" : "disable"}>
         <Flex>
           <Text className="h1">마음 전하는 곳💐</Text>
-          <GuideWrapper>
-            <NameWrapper>
-              *<CallingBox>축하 연락하기📞</CallingBox> <GuideText>를 누르면 전화번호부로 연결됩니다. </GuideText>
-            </NameWrapper>
-            <NameWrapper>
-              *<CopyBox>축하 송금💵</CopyBox>
-              <GuideText>을 누르면 계좌번호가 복사됩니다.</GuideText>
-            </NameWrapper>
-          </GuideWrapper>
           <NameListWrapper>
             <Text className="h2">신랑💍신부</Text>
             <NameWrapper>
@@ -54,10 +46,10 @@ export default function ConnectInfoModal() {
             </NameWrapper>
             <NameWrapper>
               <Text>신부 </Text> <B>권유정</B>
-              <CallingBox onClick={() => (window.document.location.href = `tel:${people_info[1].phone}`)}>축하 연락하기📞</CallingBox>
+              <CallingBox onClick={() => (window.document.location.href = `tel:${people_info[3].phone}`)}>축하 연락하기📞</CallingBox>
               <CopyBox
                 onClick={() => {
-                  copyToClipboard(people_info[1].account);
+                  copyToClipboard(people_info[3].account);
                   notify();
                 }}
               >
@@ -73,10 +65,10 @@ export default function ConnectInfoModal() {
 
             <NameWrapper>
               <Text>신랑 아버지 </Text> <B>소영식</B>
-              <CallingBox onClick={() => (window.document.location.href = `tel:${people_info[2].phone}`)}>축하 연락하기📞</CallingBox>
+              <CallingBox onClick={() => (window.document.location.href = `tel:${people_info[1].phone}`)}>축하 연락하기📞</CallingBox>
               <CopyBox
                 onClick={() => {
-                  copyToClipboard(people_info[2].account);
+                  copyToClipboard(people_info[1].account);
                   notify();
                 }}
               >
@@ -85,17 +77,15 @@ export default function ConnectInfoModal() {
             </NameWrapper>
             <NameWrapper>
               <Text>신랑 어머니 </Text> <B>박숙녀</B>
-              <CallingBox className="onebtn" onClick={() => (window.document.location.href = `tel:${people_info[3].phone}`)}>
-                축하 연락하기📞
-              </CallingBox>
-              {/* <CopyBox
+              <CallingBox onClick={() => (window.document.location.href = `tel:${people_info[4].phone}`)}>축하 연락하기📞</CallingBox>
+              <CopyBox
                 onClick={() => {
-                  copyToClipboard(people_info[3].account);
+                  copyToClipboard(people_info[1].account);
                   notify();
                 }}
               >
                 축하 송금💵
-              </CopyBox> */}
+              </CopyBox>
             </NameWrapper>
           </NameListWrapper>
           <NameListWrapper>
@@ -118,10 +108,10 @@ export default function ConnectInfoModal() {
             </NameWrapper>
             <NameWrapper>
               <Text>신부 어머니 </Text> <B>마은영</B>
-              <CallingBox onClick={() => (window.document.location.href = `tel:${people_info[5].phone}`)}>축하 연락하기📞</CallingBox>
+              <CallingBox onClick={() => (window.document.location.href = `tel:${people_info[4].phone}`)}>축하 연락하기📞</CallingBox>
               <CopyBox
                 onClick={() => {
-                  copyToClipboard(people_info[5].account);
+                  copyToClipboard(people_info[4].account);
                   notify();
                 }}
               >
@@ -129,7 +119,6 @@ export default function ConnectInfoModal() {
               </CopyBox>
             </NameWrapper>
           </NameListWrapper>
-
           <CloseButton onClick={handleCloseModal}>닫기</CloseButton>
         </Flex>
       </Container>
@@ -170,17 +159,6 @@ const Text = styled.p`
   }
 `;
 
-const GuideWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-`;
-
-const GuideText = styled.p`
-  color: gray;
-  font-size: 1.2rem;
-`;
-
 const B = styled.p`
   font-size: 1.4rem;
   font-weight: 600;
@@ -198,11 +176,6 @@ const CallingBox = styled.div`
   background-color: #ded3c6;
   padding: 2px 5px;
   cursor: pointer;
-
-  &.onebtn {
-    text-align: center;
-    width: 137px;
-  }
 `;
 
 export const Dimed = styled.div`
@@ -248,9 +221,9 @@ export const Flex = styled.div`
   width: 80%;
   height: 40%;
   border-radius: 12px;
-  padding: 35px 17px 17px 17px;
+  padding: 17px;
   box-shadow: 2px 3px 3px 0.2em #67676728;
-  gap: 20px;
+  gap: 13px;
 `;
 
 const CloseButton = styled.button`

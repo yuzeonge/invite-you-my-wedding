@@ -7,7 +7,7 @@ export default function Intro() {
   const [fadeout, setFadeout] = useState(false);
 
   //javascript 작성하기
-  const string = "권유정 🧡 소종범 2024년 6월 결혼합니다."; //원하는 텍스트를 string변수 선언
+  const string = "권유정 🧡 소종범 2024년 6월 2일 결혼합니다."; //원하는 텍스트를 string변수 선언
   const split = string.split(""); //string의 텍스트를 여러개의 문자열로 나눠줌
 
   function dynamic(arr) {
@@ -75,6 +75,7 @@ const Flex = styled.div`
   align-items: center;
   width: 100%;
   height: 100%;
+  flex-direction: column;
 `;
 
 const Wrapper = styled.div`

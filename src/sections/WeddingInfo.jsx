@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Container, Flex } from "../styles";
+import { Container, Flex, EmptyBox } from "../styles";
 import styled from "styled-components";
 import AccountModal from "../components/Modal/AccountModal";
 export default function WeddingInfo() {
@@ -11,7 +11,7 @@ export default function WeddingInfo() {
   return (
     <>
       <AccountModal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} isBride={isBride} />
-      <Container>
+      <Container data-aos="fade-up" data-aos-duration="800">
         <Flex className="wedding-info">
           <InfoWrapper className={active2 ? "active2" : "disable"}>
             <AbsoluteLine />
@@ -68,9 +68,8 @@ export default function WeddingInfo() {
                   <Text onClick={() => (window.document.location.href = "tel:010-3221-9782")}>📞</Text>
                   <Text>010-3221-9782</Text>
                 </WrapperNumber>
-
-                <Text>
-                  전화번호 옆 <B>아이콘</B>을 누르면 연락처로 연결됩니다.
+                <Text className="t-info">
+                  전화번호 옆 <B>전화기 아이콘</B>을 누르면 연락처로 연결됩니다.
                 </Text>
               </Flex>
             </TextWrapper>
@@ -85,6 +84,7 @@ export default function WeddingInfo() {
 const WrapperNumber = styled.div`
   display: flex;
   flex-direction: row;
+  gap: 5px;
 `;
 const Text = styled.p`
   font-size: 1.3rem;
@@ -128,7 +128,7 @@ const InfoWrapper = styled.div`
   overflow: hidden;
   transition: all 0.3s ease-in-out;
   &.active1 {
-    height: 150px;
+    height: 160px;
     cursor: pointer;
   }
   &.active2 {

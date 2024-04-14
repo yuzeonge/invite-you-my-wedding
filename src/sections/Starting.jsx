@@ -17,7 +17,7 @@ export default function Starting() {
           2024년 6월 2일 일요일 12시 10분
         </Text>
         <Text className="t2" data-aos="fade-up" data-aos-delay="3000" data-aos-duration="1400">
-          창원 힐스테이트 웨딩홀
+          창원 힐스카이 10층 힐그랜드홀
         </Text>
         <Text className="t2 mb-48" data-aos="fade-up" data-aos-delay="3000" data-aos-duration="1800">
           소중한 당신을 초대합니다.
