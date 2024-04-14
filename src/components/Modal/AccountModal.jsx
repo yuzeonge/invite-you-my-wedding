@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Dimed, Container, Flex } from "./ConnectInfoModal";
+import { Dimed } from "./ConnectInfoModal";
 import { ToastContainer } from "react-toastify";
 import useCopyClipboard from "../../hooks/useCopyClipboard";
 import { useSetRecoilState } from "recoil";
@@ -44,33 +44,35 @@ export default function AccountModal({ isBride, isModalOpen, setIsModalOpen }) {
       <Container className={isModalOpen ? "" : "disable"}>
         <Flex>
           <Text className="bd col">{isBride ? "신부측" : "신랑측"}💐</Text>
-          <TextWrapper>
-            <Text className="bd col">{isBride ? "신부" : "신랑"}</Text>
-            <Text className="bd"> {view_infos[0].name}</Text>
-            <Text>{view_infos[0].account}</Text>
-            <CopyButton
-              onClick={() => {
-                copyToClipboard(view_infos[0].account);
-                notify();
-              }}
-            >
-              복사
-            </CopyButton>
-          </TextWrapper>
-          <TextWrapper>
-            <Text className="bd col">{isBride ? "신부 혼주측" : "신랑 혼주측"} </Text>
-            <Text className="bd">{view_infos[1].name}</Text>
+          <ItemWrapper>
+            <TextWrapper>
+              <Text className="bd col">{isBride ? "신부" : "신랑"}</Text>
+              <Text className="bd"> {view_infos[0].name}</Text>
+              <Text>{view_infos[0].account}</Text>
+              <CopyButton
+                onClick={() => {
+                  copyToClipboard(view_infos[0].account);
+                  notify();
+                }}
+              >
+                복사
+              </CopyButton>
+            </TextWrapper>
+            <TextWrapper>
+              {/* <Text className="bd col">{isBride ? "신부 혼주측" : "신랑 혼주측"} </Text> */}
+              <Text className="bd">{view_infos[1].name}</Text>
 
-            <Text>{view_infos[1].account}</Text>
-            <CopyButton
-              onClick={() => {
-                copyToClipboard(view_infos[1].account);
-                notify();
-              }}
-            >
-              복사
-            </CopyButton>
-          </TextWrapper>
+              <Text>{view_infos[1].account}</Text>
+              <CopyButton
+                onClick={() => {
+                  copyToClipboard(view_infos[1].account);
+                  notify();
+                }}
+              >
+                복사
+              </CopyButton>
+            </TextWrapper>
+          </ItemWrapper>
           <ButtonWrapper>
             <Button onClick={() => setIsOpenModal(true)}>축하 연락하기</Button>
           </ButtonWrapper>
@@ -81,6 +83,43 @@ export default function AccountModal({ isBride, isModalOpen, setIsModalOpen }) {
   );
 }
 
+export const Container = styled.div`
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 11;
+  width: 100%;
+  max-width: 435px;
+
+  &.disable {
+    display: none;
+  }
+`;
+
+export const Flex = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #ffffff;
+  width: 80%;
+  height: 40%;
+  border-radius: 12px;
+  padding: 30px 20px;
+  box-shadow: 2px 3px 3px 0.2em #67676728;
+`;
+
+const ItemWrapper = styled.div`
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+`;
 const TextWrapper = styled.div`
   display: flex;
   flex-direction: row;
@@ -88,6 +127,7 @@ const TextWrapper = styled.div`
   align-items: center;
   gap: 6px;
 `;
+
 const Text = styled.p`
   font-size: 1.3rem;
 
@@ -104,7 +144,7 @@ const CopyButton = styled.div`
   color: #a0988f;
   border-radius: 50px;
   margin: 6px;
-  padding: 5px;
+  padding: 2px 10px;
   width: 20px;
   text-align: center;
   cursor: pointer;
