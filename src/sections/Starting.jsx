@@ -27,7 +27,7 @@ export default function Starting() {
       <EmptyBox />
       <TextWrapper>
         <Text className="t2 mt-50" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
-          소종범 권유정 결혼합니다.
+          소종범·권유정 결혼합니다.
         </Text>
       </TextWrapper>
       <EmptyBox />

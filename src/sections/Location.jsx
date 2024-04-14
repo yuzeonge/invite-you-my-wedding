@@ -23,22 +23,16 @@ export default function Location({ ref }) {
         <Text>2024년 6월 2일</Text>
         <Text>점심 12시 10분</Text>
         <MapWrapper>
-          <StyledA target="_blank" href="https://map.kakao.com/link/search/창원 힐스타이웨딩">
+          <StyledA href="https://map.kakao.com/link/search/창원 힐스타이웨딩">
             <MapIcon src="nav-icon/kakaomap.png" />
           </StyledA>
-          <StyledA
-            target="_blank"
-            href="https://map.naver.com/p/search/%EC%B0%BD%EC%9B%90%20%ED%9E%90%20%EC%8A%A4%EC%B9%B4%EC%9D%B4%20%EC%9B%A8%EB%94%A9"
-          >
+          <StyledA href="https://map.naver.com/p/search/%EC%B0%BD%EC%9B%90%20%ED%9E%90%20%EC%8A%A4%EC%B9%B4%EC%9D%B4%20%EC%9B%A8%EB%94%A9">
             <MapIcon src="nav-icon/navermap.png" />
           </StyledA>
-          <StyledA target="_blank" href="https://tmap.life/62ffaa39">
+          <StyledA href="https://tmap.life/62ffaa39">
             <MapIcon src="nav-icon/tmap.png" />
           </StyledA>
-          <StyledA
-            target="_blank"
-            href="https://www.google.com/maps/dir//%ED%9E%90%EC%8A%A4%EC%B9%B4%EC%9D%B4+%EC%9B%A8%EB%94%A9%26%EC%BB%A8%EB%B2%A4%EC%85%98+Gyeongsangnam-do,+Changwon-si,+Masanhoewon-gu,+Bongam-dong,+133/data=!4m8!4m7!1m0!1m5!1m1!1s0x356f33b97d989541:0x43b9f3c30f6c73d2!2m2!1d128.6014549!2d35.2190478?entry=ttu"
-          >
+          <StyledA href="https://www.google.com/maps/dir//%ED%9E%90%EC%8A%A4%EC%B9%B4%EC%9D%B4+%EC%9B%A8%EB%94%A9%26%EC%BB%A8%EB%B2%A4%EC%85%98+Gyeongsangnam-do,+Changwon-si,+Masanhoewon-gu,+Bongam-dong,+133/data=!4m8!4m7!1m0!1m5!1m1!1s0x356f33b97d989541:0x43b9f3c30f6c73d2!2m2!1d128.6014549!2d35.2190478?entry=ttu">
             <MapIcon src="nav-icon/googlemap.png" />
           </StyledA>
         </MapWrapper>

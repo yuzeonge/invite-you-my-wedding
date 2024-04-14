@@ -248,9 +248,9 @@ export const Flex = styled.div`
   width: 80%;
   height: 40%;
   border-radius: 12px;
-  padding: 35px 17px 17px 17px;
+  padding: 45px 17px 25px 17px;
   box-shadow: 2px 3px 3px 0.2em #67676728;
-  gap: 20px;
+  gap: 30px;
 `;
 
 const CloseButton = styled.button`

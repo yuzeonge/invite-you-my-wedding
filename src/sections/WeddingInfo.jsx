@@ -55,22 +55,23 @@ export default function WeddingInfo() {
             <AbsoluteLine />
             <Box>
               <Triangle className={active1 ? "active" : ""} />
-              <Text className="info-title">축하 화환 안내</Text>
+              <Text className="info-title">축하 화환 보내기</Text>
             </Box>
             <TextWrapper className={active1 ? "active1" : "disable"}>
               <Flex className="wedding-info">
-                <Text className="t-info">축하 화환 관련은 아래 힐스카이플라워로 문의 부탁드립니다.</Text>
-                <WrapperNumber>
-                  <Text onClick={() => (window.document.location.href = "tel:010-3836-9782")}>📞</Text>
-                  <Text>010-3836-9782</Text>
-                </WrapperNumber>
-                <WrapperNumber>
-                  <Text onClick={() => (window.document.location.href = "tel:010-3221-9782")}>📞</Text>
-                  <Text>010-3221-9782</Text>
-                </WrapperNumber>
-                <Text className="t-info">
-                  전화번호 옆 <B>전화기 아이콘</B>을 누르면 연락처로 연결됩니다.
-                </Text>
+                <TextWrapper>
+                  <Text className="t-info">신랑, 신부의 결혼을 축하해주세요.</Text>
+                  <Text className="t-info">예식일에 맞춰 웨딩홀로 배송됩니다.</Text>
+                  <WrapperInfo>
+                    <Text className="t-info">자세한 안내는 아래 힐스카이플라워 측으로</Text>
+                    <Text>문의 부탁드립니다.</Text>
+                  </WrapperInfo>
+                  <WrapperNumber>
+                    <Text onClick={() => (window.document.location.href = "tel:010-3836-9782")}>📞 010-3836-9782</Text>
+                    <Text onClick={() => (window.document.location.href = "tel:010-3221-9782")}>📞 010-3221-9782</Text>
+                  </WrapperNumber>
+                  <Text className="t-info">전화번호를 누르시면 연락처로 연결됩니다.</Text>
+                </TextWrapper>
               </Flex>
             </TextWrapper>
           </InfoWrapper>
@@ -84,16 +85,19 @@ export default function WeddingInfo() {
 const WrapperNumber = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 5px;
+  gap: 15px;
+  margin: 17px;
+`;
+
+const WrapperInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin: 17px;
 `;
 const Text = styled.p`
   font-size: 1.3rem;
   &.t1 {
     font-size: 1.5rem;
-  }
-  &.t-info {
-    margin: 10px;
-    width: 80%;
   }
   &.info-title {
     margin: 10px;
@@ -128,7 +132,7 @@ const InfoWrapper = styled.div`
   overflow: hidden;
   transition: all 0.3s ease-in-out;
   &.active1 {
-    height: 160px;
+    height: 220px;
     cursor: pointer;
   }
   &.active2 {

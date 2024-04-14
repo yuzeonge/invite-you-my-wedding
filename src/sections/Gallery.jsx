@@ -22,7 +22,7 @@ export default function Gallery() {
   };
   return (
     <Container>
-      <Flex className="blue" ref={testRef}>
+      <Flex className="blue" ref={testRef} data-aos="fade-up" data-aos-duration="900">
         <EmptyBox />
         <TextCategoryTitle>gallery</TextCategoryTitle>
         <SliderWraper>

@@ -35,11 +35,11 @@ import { ToastContainer } from "react-toastify";
 import { Howl, Howler } from "howler";
 
 function App() {
-  var sound = new Howl({
+  const sound = new Howl({
     src: ["background-music.mp4"],
     autoplay: true,
     loop: true,
-    volume: 0.5,
+    volume: 0.3,
     onend: function () {
       console.log("Finished!");
     },
@@ -61,8 +61,7 @@ function App() {
   return (
     <>
       <StyledLayout>
-        {/* <Intro /> */}
-        {/* <TestModal /> */}
+        <Intro />
         <Starting onClick={onMoveToLocationInfo} />
         <Poetry />
         <Calendar />
@@ -84,7 +83,6 @@ const StyledLayout = styled.div`
   width: 100%;
   max-width: 435px;
   margin: 0 auto;
-  border: 1px solid #dbdbdb;
   display: flex;
   flex-direction: column;
 `;
