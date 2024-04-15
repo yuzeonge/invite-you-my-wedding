@@ -10,14 +10,11 @@ import { Link } from "react-router-dom";
 export default function Location({ ref }) {
   return (
     <Container ref={ref}>
-      <RealtiveFlex>
-        <Image src="image/image 14.png" />
-        <AbsoluteText id="location"> 함께 자리를 빛내줄 소중한 분들을 초대합니다.</AbsoluteText>
-        <Filter />
-      </RealtiveFlex>
+      <EmptyBox />
+      <EmptyBox />
       <Flex className="blue">
         <EmptyBox />
-        <TextCategoryTitle>location</TextCategoryTitle>
+        <TextCategoryTitle id="location">location</TextCategoryTitle>
         <Text>창원 힐스카이웨딩 10층</Text>
         <Text>힐그랜드홀</Text>
         <Text>2024년 6월 2일</Text>
@@ -78,31 +75,6 @@ export const StyledA = styled.a`
   padding: 0px;
   margin: 0px;
   border: 0px;
-`;
-
-const Image = styled.img`
-  background-color: #4d4d4db5;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-`;
-
-const Filter = styled.div`
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  position: absolute;
-  top: 0;
-  z-index: 2;
-  opacity: 0.3;
-`;
-
-const AbsoluteText = styled.p`
-  font-size: 1.4rem;
-  position: absolute;
-  color: white;
-  text-shadow: 2px 2px 2px 2px 2em #67676728;
-  z-index: 3;
 `;
 
 const ImageWedding = styled.img`

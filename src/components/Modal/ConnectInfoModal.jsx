@@ -6,9 +6,9 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const people_info = [
-  { account: "소종범", phone: "010-2586-7540" },
-  { account: "경남은행 50648396 권유정", phone: "010-5064-8396" },
-  { account: "소영식", phone: "010-6557-2640" },
+  { account: "경남은행 538 07 0060320 소종범", phone: "010-2586-7540" },
+  { account: "카카오뱅크 3333154277124 권유정", phone: "010-5064-8396" },
+  { account: "경남은행 538 07 0060320 소영식", phone: "010-6557-2640" },
   { account: "박숙녀", phone: "010-2271-7540" },
   { account: "국민은행 8424 0101 446383 권태건", phone: "010-7111-2364" },
   { account: "마은영", phone: "010-3012-8399" },
@@ -118,15 +118,9 @@ export default function ConnectInfoModal() {
             </NameWrapper>
             <NameWrapper>
               <Text>신부 어머니 </Text> <B>마은영</B>
-              <CallingBox onClick={() => (window.document.location.href = `tel:${people_info[5].phone}`)}>축하 연락하기📞</CallingBox>
-              <CopyBox
-                onClick={() => {
-                  copyToClipboard(people_info[5].account);
-                  notify();
-                }}
-              >
-                축하 송금💵
-              </CopyBox>
+              <CallingBox className="onebtn" onClick={() => (window.document.location.href = `tel:${people_info[5].phone}`)}>
+                축하 연락하기📞
+              </CallingBox>
             </NameWrapper>
           </NameListWrapper>
 

@@ -17,7 +17,7 @@ export default function Poetry() {
           <Text>있는 그대로 사랑하고</Text>
           <Text>서로의 존재를 감사하며</Text>
           <Text>인연이었던 저희 두 사람</Text>
-          <Text>같이 있으면 기분 좋아지는 그대롸 함께</Text>
+          <Text>같이 있으면 기분 좋아지는 그대와 함께</Text>
           <Text>인생의 길을 걸어가겠습니다.</Text>
         </TextWrapper>
         <Flower className="f-b" src="image/flower.png" />

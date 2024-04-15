@@ -9,7 +9,6 @@ export default function CalendarSection() {
   return (
     <Container>
       <Flex>
-        <VerticalBall />
         <EmptyBox />
         <EmptyBox />
         <TextWrapper data-aos="zoom-in-up" data-aos-delay="100">
