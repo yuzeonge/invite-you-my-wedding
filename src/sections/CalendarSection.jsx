@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { Container, EmptyBox, Flex } from "../styles";
-import VerticalBall from "../components/VerticalBall";
 import HeartIcon from "../components/Icons/heart";
 
 import DdayCount from "../components/DdayCount";

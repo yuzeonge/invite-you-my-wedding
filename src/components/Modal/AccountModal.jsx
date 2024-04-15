@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { Dimed } from "./ConnectInfoModal";
-import { ToastContainer } from "react-toastify";
 import useCopyClipboard from "../../hooks/useCopyClipboard";
 import { useSetRecoilState } from "recoil";
 import modalState from "../../store/infoModal";

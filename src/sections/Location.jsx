@@ -1,6 +1,5 @@
-import { Container, Flex, RealtiveFlex, TextCategoryTitle, EmptyBox } from "../styles";
+import { Container, Flex, TextCategoryTitle, EmptyBox } from "../styles";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 
 /**
  *

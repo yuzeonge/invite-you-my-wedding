@@ -78,16 +78,6 @@ const BackgoundImage = styled.img`
   z-index: -9999;
 `;
 
-const Image = styled.img`
-  margin: 33px;
-  &.img-t {
-    margin-top: -10%;
-  }
-  &.img-b {
-    margin-bottom: -10%;
-  }
-`;
-
 const Text = styled.span`
   font-size: 1.3rem;
   margin: 2px;
