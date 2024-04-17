@@ -128,7 +128,7 @@ const TextWrapper = styled.div`
 `;
 
 const Text = styled.p`
-  font-size: 1.3rem;
+  font-size: 1.25rem;
 
   &.bd {
     font-weight: 600;

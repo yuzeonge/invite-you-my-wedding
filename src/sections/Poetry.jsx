@@ -62,13 +62,13 @@ const TextWrapper = styled.div`
 `;
 
 const TextRowWrapper = styled.div`
-  width: 60%;
+  width: 65%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   margin: 40px;
-  padding: 20px;
+  padding: 10px 5px;
   border-bottom: solid 1px #e6d6d6;
   border-top: solid 1px #e6d6d6;
 `;
@@ -79,17 +79,17 @@ const BackgoundImage = styled.img`
 `;
 
 const Text = styled.span`
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   margin: 2px;
   width: 100%;
   text-align: center;
   &.t1 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     text-align: left;
   }
   &.t2 {
     display: flex;
     margin-left: 15px;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
 `;
