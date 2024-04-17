@@ -45,7 +45,7 @@ export default function Location({ ref }) {
           <Text>
             <B>봉앙공단 입구</B>에서 하차
           </Text>
-          <Text>간선 - 107, 114, 160, 163, 164</Text>
+          <Text>간선 - 107, 114, 160, 116, 162, 163, 164</Text>
           <Text>지선 - 257</Text>
           <Text>좌석 - 740, 3002</Text>
           <Text className="tb">자가용을 이용하실 경우</Text>
