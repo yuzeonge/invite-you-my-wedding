@@ -85,12 +85,15 @@ const Wrapper = styled.div`
 
   .hero {
     @media (max-width: 360px) {
-      font-size: 1rem;
+      font-size: 1.2rem;
     }
     font-size: 1.4rem;
     color: #fff;
   }
   .hero #dynamic {
+    @media (max-width: 360px) {
+      font-size: 1.4rem;
+    }
     position: relative;
     display: inline-block;
     font-size: 1.7rem;
