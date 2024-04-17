@@ -104,11 +104,11 @@ const Text = styled.p`
   &.h1 {
     font-size: 1.7rem;
     font-weight: 600;
-    color: #717171;
+    color: #5e5e5e;
   }
   &.h2 {
     font-size: 1.5rem;
-    color: #797979;
+    color: #5e5d5d;
   }
   &.blue {
     color: #5baddc;
@@ -127,7 +127,7 @@ const GuideWrapper = styled.div`
 `;
 
 const GuideText = styled.p`
-  color: gray;
+  color: #504f4f;
   font-size: 1.2rem;
 `;
 

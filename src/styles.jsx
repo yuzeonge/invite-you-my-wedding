@@ -79,6 +79,10 @@ const EmptyBox = styled.div`
 
 /** 이미지 todo 이미지 통일하기*/
 const Flower = styled.img`
+  @media (max-width: 290px) {
+    margin: 12px;
+    width: 40%;
+  }
   margin: 33px;
   width: 40%;
   &.f-t {

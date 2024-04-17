@@ -34,8 +34,11 @@ const Image = styled.img`
 `;
 
 const Absolute = styled.div`
+  @media (max-width: 360px) {
+    bottom: 12px;
+  }
   position: absolute;
-  bottom: 36px;
+  bottom: 22px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -44,10 +47,16 @@ const Absolute = styled.div`
 `;
 
 const Text = styled.p`
-  font-size: 1.8rem;
+  @media (max-width: 360px) {
+    font-size: 1.4rem;
+  }
+  font-size: 1.6rem;
   color: #fff;
 
   &.f6 {
+    @media (max-width: 360px) {
+      font-size: 4.5rem;
+    }
     font-family: "yleeMortalHeart-ImmortalMemory";
     font-size: 6rem;
     margin-bottom: 10px;

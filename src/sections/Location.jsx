@@ -102,7 +102,7 @@ const MapIcon = styled.img`
 `;
 
 const Text = styled.p`
-  font-size: 1.2rem;
+  font-size: 1.35rem;
 
   &.t {
     font-size: 1.5rem;

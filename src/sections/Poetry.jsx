@@ -62,12 +62,12 @@ const TextWrapper = styled.div`
 `;
 
 const TextRowWrapper = styled.div`
-  width: 65%;
+  width: 70%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  margin: 40px;
+  margin: 35px;
   padding: 10px 5px;
   border-bottom: solid 1px #e6d6d6;
   border-top: solid 1px #e6d6d6;

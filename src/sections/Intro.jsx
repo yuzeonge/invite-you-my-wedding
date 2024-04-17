@@ -84,6 +84,9 @@ const Wrapper = styled.div`
   margin: 0 auto;
 
   .hero {
+    @media (max-width: 360px) {
+      font-size: 1rem;
+    }
     font-size: 1.4rem;
     color: #fff;
   }

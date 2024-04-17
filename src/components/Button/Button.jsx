@@ -15,7 +15,7 @@ const StyledButton = styled.button`
   font-family: "GowunDodum-Regular";
   border-radius: 10px;
   padding: 8px 12px;
-  color: #a0988f;
+  color: #756e66;
 
   min-width: 45%;
   font-size: 1.5rem;

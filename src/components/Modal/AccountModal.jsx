@@ -42,34 +42,31 @@ export default function AccountModal({ isBride, isModalOpen, setIsModalOpen }) {
     <>
       <Container className={isModalOpen ? "" : "disable"}>
         <Flex>
-          <Text className="bd col">{isBride ? "신부측" : "신랑측"}💐</Text>
+          <Text className="bd col modal-title">{isBride ? "신부측" : "신랑측"}💐</Text>
+          <Text className="copy-info">계좌번호를 누르면 계좌가 복사됩니다.</Text>
           <ItemWrapper>
             <TextWrapper>
               <Text className="bd col">{isBride ? "신부" : "신랑"}</Text>
               <Text className="bd"> {view_infos[0].name}</Text>
-              <Text>{view_infos[0].account}</Text>
-              <CopyButton
+              <Text
                 onClick={() => {
                   copyToClipboard(view_infos[0].account);
                   notify();
                 }}
               >
-                복사
-              </CopyButton>
+                {view_infos[0].account}
+              </Text>
             </TextWrapper>
             <TextWrapper>
-              {/* <Text className="bd col">{isBride ? "신부 혼주측" : "신랑 혼주측"} </Text> */}
               <Text className="bd">{view_infos[1].name}</Text>
-
-              <Text>{view_infos[1].account}</Text>
-              <CopyButton
+              <Text
                 onClick={() => {
                   copyToClipboard(view_infos[1].account);
                   notify();
                 }}
               >
-                복사
-              </CopyButton>
+                {view_infos[1].account}
+              </Text>
             </TextWrapper>
           </ItemWrapper>
           <ButtonWrapper>
@@ -131,25 +128,20 @@ const TextWrapper = styled.div`
 `;
 
 const Text = styled.p`
-  font-size: 1.25rem;
+  font-size: 1.3rem;
 
   &.bd {
     font-weight: 600;
   }
+  &.modal-title {
+    font-size: 1.6rem;
+  }
   &.col {
     color: #717171;
   }
-`;
-
-const CopyButton = styled.div`
-  background-color: #e9e2d2;
-  color: #a0988f;
-  border-radius: 50px;
-  margin: 6px;
-  padding: 2px 10px;
-  width: 20px;
-  text-align: center;
-  cursor: pointer;
+  &.copy-info {
+    font-size: 1.2rem;
+  }
 `;
 
 const ButtonWrapper = styled.div`
