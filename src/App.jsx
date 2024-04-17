@@ -3,7 +3,7 @@ import "./App.css";
 import styled from "styled-components";
 
 // hooks
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 
 // component
 import Starting from "./sections/Starting";
@@ -30,7 +30,7 @@ import Intro from "./sections/Intro";
 // toast
 import { ToastContainer } from "react-toastify";
 
-import { Howl, Howler } from "howler";
+import { Howl } from "howler";
 
 function App() {
   const sound = new Howl({
@@ -43,12 +43,25 @@ function App() {
     },
   });
 
-  /** 위치 안내 스크롤 */
-  const locationInfo = useRef();
+  // const targetRef = useRef(null);
+  // const handleScroll = () => {
+  //   console.log("scrolling");
+  //   const scrollPosition = window.scrollY;
+  //   const targetTop = targetRef.current.getBoundingClientRect().top;
+  //   if (targetTop > scrollPosition) {
+  //     targetRef.current.play();
+  //   }
+  // };
 
-  const onMoveToLocationInfo = () => {
-    locationInfo.current.scrollIntoView({ behavior: "smooth", block: "start" });
-  };
+  // useEffect(() => {
+  //   const timer = setInterval(() => {
+  //     window.addEventListener("scroll", handleScroll);
+  //   }, 100);
+  //   return () => {
+  //     clearInterval(timer);
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
 
   useEffect(() => {
     AOS.init({
@@ -60,11 +73,11 @@ function App() {
     <>
       <StyledLayout>
         <Intro />
-        <Starting onClick={onMoveToLocationInfo} />
+        <Starting />
         <Poetry />
         <Calendar />
         <Gallery />
-        <Location ref={locationInfo} />
+        <Location />
         <WeddingInfo />
         <Posting />
         <Ending />

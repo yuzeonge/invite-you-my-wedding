@@ -9,8 +9,6 @@ import styled from "styled-components";
 export default function Location({ ref }) {
   return (
     <Container ref={ref}>
-      <EmptyBox />
-      <EmptyBox />
       <Flex className="blue">
         <EmptyBox />
         <TextCategoryTitle id="location">location</TextCategoryTitle>

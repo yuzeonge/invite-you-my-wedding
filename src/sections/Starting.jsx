@@ -1,12 +1,8 @@
 import VerticalBall from "../components/VerticalBall";
 import { Container, TextWrapper, Text, EmptyBox } from "../styles";
-import Button from "../components/Button/Button";
 import styled from "styled-components";
-import { useSetRecoilState } from "recoil";
-import modalState from "../store/infoModal";
 
 export default function Starting() {
-  const setIsOpenModal = useSetRecoilState(modalState);
   return (
     <Container>
       <StyledWrapper>
@@ -29,37 +25,9 @@ export default function Starting() {
       <EmptyBox />
       <Image src="image/main-card.jpeg" data-aos="flip-left" data-aos-delay="100" data-aos-duration="900" />
       <EmptyBox />
-      <ButtonWrapper>
-        <Anchor href="#location">
-          <Button className="button" data-aos="fade-up" data-aos-delay="200" data-aos-duration="600">
-            위치 확인하기
-          </Button>
-        </Anchor>
-        <Button
-          onClick={() => {
-            setIsOpenModal(true);
-          }}
-          data-aos="fade-up"
-          data-aos-delay="200"
-          data-aos-duration="600"
-        >
-          연락하기
-        </Button>
-      </ButtonWrapper>
     </Container>
   );
 }
-
-const Anchor = styled.a`
-  width: 45%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  .button {
-    width: 100%;
-  }
-`;
 
 const Image = styled.img`
   width: 100%;
@@ -73,13 +41,4 @@ const StyledWrapper = styled(TextWrapper)`
     font-size: 50px;
     font-family: "yleeMortalHeart-ImmortalMemory";
   }
-`;
-const ButtonWrapper = styled.div`
-  padding: 24px;
-  margin: 80px 0 90px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 10px;
 `;

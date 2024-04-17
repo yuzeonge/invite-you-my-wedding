@@ -1,7 +1,7 @@
 import { Container, Flex, TextCategoryTitle, EmptyBox } from "../styles";
 import styled from "styled-components";
 import MultiSlick from "../components/Slick/MultiSlick";
-import { useState, useRef, createRef } from "react";
+import { useState, useRef } from "react";
 import ImageModal from "../components/Modal/ImageModal";
 import { _imageSrcArray, _path } from "../constants/image";
 

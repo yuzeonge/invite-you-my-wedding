@@ -24,7 +24,7 @@ export default function Poetry() {
       </FormWrapper>
       <FormWrapper className="w1">
         <EmptyBox />
-        <EmptyBox />
+
         <TextRowWrapper data-aos="fade-up" data-aos-delay="300">
           <TextWrapper className="alignt-l">
             <Text className="t1">소영식·박숙녀의 아들</Text> <Text className="t1">권태건·마은영의 딸</Text>

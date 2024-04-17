@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 const Container = styled.div`
   position: relative;
-  padding-top: 220px;
-  padding-bottom: 220px;
+  padding-top: 150px;
+  padding-bottom: 150px;
 `;
 
 const Flex = styled.div`

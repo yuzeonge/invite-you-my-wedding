@@ -1,10 +1,6 @@
-import Button from "../components/Button/Button";
 import styled from "styled-components";
-import { useSetRecoilState } from "recoil";
-import modalState from "../store/infoModal";
 
 export default function Poster() {
-  const setModalState = useSetRecoilState(modalState);
   return (
     <Container>
       <ImageWrapper>
@@ -19,15 +15,13 @@ export default function Poster() {
           <Text className="f3">2024.06.02 Jun 12:10</Text>
         </Absolute>
       </ImageWrapper>
-      <ButtonWrapper>
-        <Button onClick={() => setModalState(true)}>축하 연락하기</Button>
-      </ButtonWrapper>
     </Container>
   );
 }
 
 const Container = styled.div`
   position: relative;
+  margin: 0;
 `;
 
 const ImageWrapper = styled.div`
@@ -36,6 +30,7 @@ const ImageWrapper = styled.div`
 const Image = styled.img`
   width: 100%;
   height: 100%;
+  vertical-align: bottom;
 `;
 
 const Absolute = styled.div`
@@ -76,13 +71,4 @@ const RightTextBox = styled.div`
   flex-direction: column;
   margin-left: -5%;
   margin-top: 5%;
-`;
-
-const ButtonWrapper = styled.div`
-  padding: 24px;
-  margin: 80px 0 90px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
 `;

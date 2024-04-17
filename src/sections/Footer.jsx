@@ -17,6 +17,7 @@ const Container = styled.div`
   background-color: #a8a8a8;
   position: relative;
   width: 100%;
+  margin: 0;
 `;
 
 const Text = styled.p`

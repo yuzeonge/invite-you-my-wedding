@@ -1,8 +1,6 @@
 import styled from "styled-components";
-import useCopyClipboard from "../../hooks/useCopyClipboard";
 import { useRecoilState } from "recoil";
 import infoModalState from "../../store/infoModal";
-import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const people_info = [
@@ -15,10 +13,6 @@ const people_info = [
 ];
 
 export default function ConnectInfoModal() {
-  const { copyToClipboard } = useCopyClipboard();
-
-  const notify = () => toast("계좌번호가 복사되었습니다.");
-
   const [isModalOpen, setIsModalOpen] = useRecoilState(infoModalState);
 
   const handleCloseModal = () => {
@@ -31,38 +25,24 @@ export default function ConnectInfoModal() {
           <Text className="h1">마음 전하는 곳💐</Text>
           <GuideWrapper>
             <NameWrapper>
-              *<CallingBox>축하 연락하기📞</CallingBox> <GuideText>를 누르면 전화번호부로 연결됩니다. </GuideText>
+              *<CallingBox>축하 전화하기📞</CallingBox> <GuideText>를 누르면 전화번호부로 연결됩니다. </GuideText>
             </NameWrapper>
             <NameWrapper>
-              *<CopyBox>축하 송금💵</CopyBox>
-              <GuideText>을 누르면 계좌번호가 복사됩니다.</GuideText>
+              *<MessageBox>축하 메시지 ✉️</MessageBox>
+              <GuideText>를 누르면 문자 메시지로 연결됩니다.</GuideText>
             </NameWrapper>
           </GuideWrapper>
           <NameListWrapper>
             <Text className="h2">신랑💍신부</Text>
             <NameWrapper>
               <Text>신랑 </Text> <B>소종범</B>
-              <CallingBox onClick={() => (window.document.location.href = `tel:${people_info[0].phone}`)}>축하 연락하기📞</CallingBox>
-              <CopyBox
-                onClick={() => {
-                  copyToClipboard(people_info[0].account);
-                  notify();
-                }}
-              >
-                축하 송금💵
-              </CopyBox>
+              <CallingBox onClick={() => (window.document.location.href = `tel:${people_info[0].phone}`)}>축하 전화하기📞</CallingBox>
+              <MessageBox onClick={() => (window.document.location.href = `sms:${people_info[0].phone}`)}>축하 메시지 ✉️</MessageBox>
             </NameWrapper>
             <NameWrapper>
               <Text>신부 </Text> <B>권유정</B>
-              <CallingBox onClick={() => (window.document.location.href = `tel:${people_info[1].phone}`)}>축하 연락하기📞</CallingBox>
-              <CopyBox
-                onClick={() => {
-                  copyToClipboard(people_info[1].account);
-                  notify();
-                }}
-              >
-                축하 송금💵
-              </CopyBox>
+              <CallingBox onClick={() => (window.document.location.href = `tel:${people_info[1].phone}`)}>축하 전화하기📞</CallingBox>
+              <MessageBox onClick={() => (window.document.location.href = `sms:${people_info[1].phone}`)}>축하 메시지 ✉️</MessageBox>
             </NameWrapper>
           </NameListWrapper>
           <NameListWrapper>
@@ -73,29 +53,13 @@ export default function ConnectInfoModal() {
 
             <NameWrapper>
               <Text>신랑 아버지 </Text> <B>소영식</B>
-              <CallingBox onClick={() => (window.document.location.href = `tel:${people_info[2].phone}`)}>축하 연락하기📞</CallingBox>
-              <CopyBox
-                onClick={() => {
-                  copyToClipboard(people_info[2].account);
-                  notify();
-                }}
-              >
-                축하 송금💵
-              </CopyBox>
+              <CallingBox onClick={() => (window.document.location.href = `tel:${people_info[2].phone}`)}>축하 전화하기📞</CallingBox>
+              <MessageBox onClick={() => (window.document.location.href = `sms:${people_info[2].phone}`)}>축하 메시지 ✉️</MessageBox>
             </NameWrapper>
             <NameWrapper>
               <Text>신랑 어머니 </Text> <B>박숙녀</B>
-              <CallingBox className="onebtn" onClick={() => (window.document.location.href = `tel:${people_info[3].phone}`)}>
-                축하 연락하기📞
-              </CallingBox>
-              {/* <CopyBox
-                onClick={() => {
-                  copyToClipboard(people_info[3].account);
-                  notify();
-                }}
-              >
-                축하 송금💵
-              </CopyBox> */}
+              <CallingBox onClick={() => (window.document.location.href = `tel:${people_info[3].phone}`)}>축하 전화하기📞</CallingBox>
+              <MessageBox onClick={() => (window.document.location.href = `sms:${people_info[3].phone}`)}>축하 메시지 ✉️</MessageBox>
             </NameWrapper>
           </NameListWrapper>
           <NameListWrapper>
@@ -106,21 +70,13 @@ export default function ConnectInfoModal() {
 
             <NameWrapper>
               <Text>신부 아버지 </Text> <B>권태건</B>
-              <CallingBox onClick={() => (window.document.location.href = `tel:${people_info[4].phone}`)}>축하 연락하기📞</CallingBox>
-              <CopyBox
-                onClick={() => {
-                  copyToClipboard(people_info[4].account);
-                  notify();
-                }}
-              >
-                축하 송금💵
-              </CopyBox>
+              <CallingBox onClick={() => (window.document.location.href = `tel:${people_info[4].phone}`)}>축하 전화하기📞</CallingBox>
+              <MessageBox onClick={() => (window.document.location.href = `sms:${people_info[4].phone}`)}>축하 메시지 ✉️</MessageBox>
             </NameWrapper>
             <NameWrapper>
               <Text>신부 어머니 </Text> <B>마은영</B>
-              <CallingBox className="onebtn" onClick={() => (window.document.location.href = `tel:${people_info[5].phone}`)}>
-                축하 연락하기📞
-              </CallingBox>
+              <CallingBox onClick={() => (window.document.location.href = `tel:${people_info[5].phone}`)}>축하 전화하기📞</CallingBox>
+              <MessageBox onClick={() => (window.document.location.href = `sms:${people_info[5].phone}`)}>축하 메시지 ✉️</MessageBox>
             </NameWrapper>
           </NameListWrapper>
 
@@ -180,16 +136,16 @@ const B = styled.p`
   font-weight: 600;
 `;
 
-const CopyBox = styled.div`
+const MessageBox = styled.div`
   border-radius: 5px;
-  background-color: #d1d0d0;
+  background-color: #f7deabac;
   padding: 2px 5px;
   cursor: pointer;
 `;
 
 const CallingBox = styled.div`
   border-radius: 5px;
-  background-color: #ded3c6;
+  background-color: #9ad49b81;
   padding: 2px 5px;
   cursor: pointer;
 

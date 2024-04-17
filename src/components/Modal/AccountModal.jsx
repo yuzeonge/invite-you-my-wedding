@@ -13,7 +13,7 @@ const bridegroom_infos = [
     account: "농협은행 302 03 26791691",
   },
   {
-    name: "소영식 · 박숙녀",
+    name: "소영식·박숙녀",
     account: "경남은행 538 07 0060320",
   },
 ];
@@ -24,7 +24,7 @@ const bride_infos = [
     account: "카카오뱅크 3333 154 277124",
   },
   {
-    name: "권태건 · 마은영",
+    name: "권태건·마은영",
     account: "국민은행 8424 0101 446383",
   },
 ];

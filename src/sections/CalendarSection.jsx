@@ -8,8 +8,6 @@ export default function CalendarSection() {
   return (
     <Container>
       <Flex>
-        <EmptyBox />
-        <EmptyBox />
         <TextWrapper data-aos="zoom-in-up" data-aos-delay="100">
           <Text>2024년 6월 2일</Text>
           <Text>오후 12시 10분</Text>

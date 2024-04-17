@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { Container, Flex, EmptyBox } from "../styles";
+import { Container, Flex } from "../styles";
 import styled from "styled-components";
 import AccountModal from "../components/Modal/AccountModal";
 export default function WeddingInfo() {
   const [active1, setActive1] = useState(false);
-  const [active2, setActive2] = useState(true);
+  const active2 = true;
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isBride, setIsBride] = useState(true);
@@ -105,13 +105,6 @@ const Text = styled.p`
   &.top-t {
     margin-top: 20px;
   }
-`;
-
-const B = styled.span`
-  font-size: 1.3rem;
-  color: #717171;
-  font-weight: 800;
-  margin-left: 5px;
 `;
 
 const TextWrapper = styled.div`
