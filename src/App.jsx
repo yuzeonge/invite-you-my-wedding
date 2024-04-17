@@ -3,7 +3,7 @@ import "./App.css";
 import styled from "styled-components";
 
 // hooks
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 // component
 import Starting from "./sections/Starting";
@@ -28,13 +28,14 @@ import "aos/dist/aos.css";
 import Intro from "./sections/Intro";
 
 // toast
-import { ToastContainer } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
 
 import { Howl } from "howler";
 
 function App() {
+  const [isShow, setIsShow] = useState(false);
   const sound = new Howl({
-    src: ["background-music.mp4"],
+    src: ["background-music.mp3"],
     autoplay: true,
     loop: true,
     volume: 0.3,
@@ -43,35 +44,24 @@ function App() {
     },
   });
 
-  // const targetRef = useRef(null);
-  // const handleScroll = () => {
-  //   console.log("scrolling");
-  //   const scrollPosition = window.scrollY;
-  //   const targetTop = targetRef.current.getBoundingClientRect().top;
-  //   if (targetTop > scrollPosition) {
-  //     targetRef.current.play();
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   const timer = setInterval(() => {
-  //     window.addEventListener("scroll", handleScroll);
-  //   }, 100);
-  //   return () => {
-  //     clearInterval(timer);
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
-
   useEffect(() => {
     AOS.init({
       offset: 20,
     });
-  });
+  }, []);
+  useEffect(() => {
+    setTimeout(() => {
+      setIsShow(() => true);
+    }, 3000);
+    setTimeout(() => {
+      setIsShow(() => false);
+    }, 8000);
+  }, []);
 
   return (
     <>
       <StyledLayout>
+        <StyledNav className={isShow ? "active" : ""}>배경음악이 준비되어 있습니다. 화면을 한번 터치해주세요.</StyledNav>
         <Intro />
         <Starting />
         <Poetry />
@@ -84,7 +74,7 @@ function App() {
         <Poster />
         <Footer />
       </StyledLayout>
-      <ToastContainer position="bottom-center" autoClose={1500} hideProgressBar={true} />
+      <ToastContainer position="top-center" autoClose={2000} hideProgressBar={true} />
       <ConnectInfoModal />
     </>
   );
@@ -96,6 +86,29 @@ const StyledLayout = styled.div`
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+`;
+
+const StyledNav = styled.div`
+  width: 100%;
+  max-width: 435px;
+  height: 48px;
+  position: absolute;
+  top: 0;
+
+  transform: translateY(-48px);
+
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 1.4rem;
+
+  background-color: #f0ede6;
+  color: #606060;
+  &.active {
+    transform: translateY(0);
+  }
 `;
 
 export default App;

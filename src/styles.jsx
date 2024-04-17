@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 const Container = styled.div`
   position: relative;
-  padding-top: 150px;
-  padding-bottom: 150px;
+  padding-top: 110px;
+  padding-bottom: 110px;
 `;
 
 const Flex = styled.div`
@@ -18,7 +18,6 @@ const Flex = styled.div`
   }
   &.wedding-info {
     text-align: center;
-    margin-bottom: 35px;
     width: 100%;
   }
 `;
