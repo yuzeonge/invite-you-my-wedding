@@ -61,7 +61,7 @@ function App() {
   return (
     <>
       <StyledLayout>
-        <StyledNav className={isShow ? "active" : ""}>배경음악이 준비되어 있습니다. 화면을 한번 터치해주세요.</StyledNav>
+        <StyledNav className={isShow ? "active" : ""}>배경음악이 준비되어 있습니다.</StyledNav>
         <Intro />
         <Starting />
         <Poetry />
