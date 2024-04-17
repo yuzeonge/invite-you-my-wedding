@@ -28,7 +28,7 @@ import "aos/dist/aos.css";
 import Intro from "./sections/Intro";
 
 // toast
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 
 import { Howl } from "howler";
 
