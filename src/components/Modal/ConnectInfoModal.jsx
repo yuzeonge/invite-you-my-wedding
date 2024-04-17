@@ -195,7 +195,7 @@ export const Flex = styled.div`
   align-items: center;
   flex-direction: column;
   background-color: #ffffff;
-  width: 80%;
+  width: 85%;
   height: 40%;
   border-radius: 12px;
   padding: 45px 17px 25px 17px;

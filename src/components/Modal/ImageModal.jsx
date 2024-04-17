@@ -15,7 +15,7 @@ import Slider from "react-slick";
 
 const ImageModal = forwardRef(({ src, isModalOpen, handleCloseModal, ...props }, ref) => {
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 1,

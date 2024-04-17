@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const InputField = styled.input`
-  font-size: 15px;
+  font-size: 1.5rem;
   color: #222222;
   width: 100%;
   border: none;
@@ -25,7 +25,7 @@ const InputField = styled.input`
 
   &:focus ~ label,
   &:valid ~ label {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     bottom: 64px;
     color: #666;
     font-weight: bold;
@@ -70,7 +70,7 @@ const TextArea = styled.textarea`
 
   &:focus ~ label,
   &:valid ~ label {
-    font-size: 16px;
+    font-size: 1.2rem;
     top: 0;
     color: #666;
     font-weight: bold;

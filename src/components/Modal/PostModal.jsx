@@ -13,6 +13,7 @@ const PostModal = ({ fetchGuestBook, isModalOpen, handleCloseModal }) => {
   const [author, setAuthor] = useState("");
 
   const onCreateGuestBook = () => {
+    if (title.length === 0) return;
     if (title.length >= 100) {
       alert("축하글을 100자이내로 작성해주세요");
       return;

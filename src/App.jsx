@@ -86,9 +86,17 @@ const StyledLayout = styled.div`
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 290px) {
+    max-width: 280px;
+  }
 `;
 
 const StyledNav = styled.div`
+  @media (max-width: 290px) {
+    max-width: 280px;
+  }
+
   width: 100%;
   max-width: 435px;
   height: 48px;

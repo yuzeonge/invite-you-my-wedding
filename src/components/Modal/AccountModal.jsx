@@ -95,6 +95,9 @@ export const Container = styled.div`
   width: 100%;
   max-width: 435px;
 
+  @media (max-width: 290px) {
+    max-width: 280px;
+  }
   &.disable {
     display: none;
   }

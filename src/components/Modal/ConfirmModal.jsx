@@ -53,6 +53,12 @@ const ConfirmModal = ({ fetchDeleteGuestBook, isModalOpen, handleCloseModal, gue
 };
 
 const Container = styled.div`
+  @media (max-width: 290px) {
+    min-width: 275px;
+    max-width: 275px;
+    border-radius: 8px;
+  }
+
   position: fixed;
   background-color: #fff;
   top: 50%;

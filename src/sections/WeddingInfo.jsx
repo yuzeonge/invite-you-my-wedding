@@ -27,7 +27,7 @@ export default function WeddingInfo() {
                 <Text>계좌 번호를 기재하였습니다.</Text>
                 <Text>너그러운 마음으로 양해 부탁드리겠습니다.</Text>
               </Flex>
-              <Box>
+              <Box className="box">
                 <ItemBox
                   className="b-box"
                   onClick={() => {
@@ -125,11 +125,17 @@ const InfoWrapper = styled.div`
   overflow: hidden;
   transition: all 0.3s ease-in-out;
   &.active1 {
-    height: 220px;
+    @media (max-width: 290px) {
+      height: 185px;
+    }
+    height: 230px;
     cursor: pointer;
   }
   &.active2 {
-    height: 280px;
+    @media (max-width: 290px) {
+      height: 200px;
+    }
+    height: 240px;
     transition: all 0.7s ease-in-out;
   }
   &.disable {
