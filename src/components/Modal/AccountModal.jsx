@@ -32,7 +32,7 @@ const bride_infos = [
 export default function AccountModal({ isBride, isModalOpen, setIsModalOpen }) {
   const setIsOpenModal = useSetRecoilState(modalState);
   const { copyToClipboard } = useCopyClipboard();
-  const notify = () => toast("계좌번호가 복사되었습니다.");
+  const notify = target => toast(`${target}님의 계좌가 복사되었습니다.`);
 
   const view_infos = isBride ? bride_infos : bridegroom_infos;
   const handleCloseModal = () => {
@@ -49,28 +49,48 @@ export default function AccountModal({ isBride, isModalOpen, setIsModalOpen }) {
               <Text className="bd col">{isBride ? "신부" : "신랑"}</Text>
               <Text className="bd"> {view_infos[0].name}</Text>
               <Text
+                className="copy-text"
                 onClick={() => {
                   copyToClipboard(view_infos[0].account);
-                  notify();
+                  notify(view_infos[0].name);
                 }}
               >
                 {view_infos[0].account}
               </Text>
+              <CopyButton
+                onClick={() => {
+                  copyToClipboard(view_infos[0].account);
+                  notify(view_infos[0].name);
+                }}
+              >
+                복사
+              </CopyButton>
             </TextWrapper>
             <TextWrapper>
               <Text className="bd">{view_infos[1].name}</Text>
               <Text
+                className="copy-text"
                 onClick={() => {
                   copyToClipboard(view_infos[1].account);
-                  notify();
+                  notify(view_infos[1].name);
                 }}
               >
                 {view_infos[1].account}
               </Text>
+              <CopyButton
+                onClick={() => {
+                  copyToClipboard(view_infos[1].account);
+                  notify(view_infos[1].name);
+                }}
+              >
+                복사
+              </CopyButton>
             </TextWrapper>
           </ItemWrapper>
           <ButtonWrapper>
-            <Button onClick={() => setIsOpenModal(true)}>축하 연락하기</Button>
+            <Button className="button" onClick={() => setIsOpenModal(true)}>
+              축하 연락하기
+            </Button>
           </ButtonWrapper>
         </Flex>
       </Container>
@@ -92,15 +112,26 @@ export const Container = styled.div`
   width: 100%;
   max-width: 435px;
 
-  @media (max-width: 290px) {
+  @media (max-width: 360px) {
     max-width: 280px;
   }
+
   &.disable {
     display: none;
   }
 `;
 
 export const Flex = styled.div`
+  @media (max-width: 375px) {
+    width: 34rem;
+    border-radius: 10px;
+    padding: 16px 10px;
+  }
+  @media (max-width: 290px) {
+    width: 30rem;
+    border-radius: 10px;
+    padding: 16px 10px;
+  }
   display: flex;
   justify-content: center;
   align-items: center;
@@ -114,12 +145,23 @@ export const Flex = styled.div`
 `;
 
 const ItemWrapper = styled.div`
+  @media (max-width: 375px) {
+    margin: 10px 0;
+    gap: 5px;
+  }
+  @media (max-width: 290px) {
+    margin: 10px 0;
+    gap: 3px;
+  }
   margin: 20px 0;
   display: flex;
   flex-direction: column;
   gap: 0;
 `;
 const TextWrapper = styled.div`
+  @media (max-width: 360px) {
+    gap: 4px;
+  }
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -128,6 +170,10 @@ const TextWrapper = styled.div`
 `;
 
 const Text = styled.p`
+  @media (max-width: 375px) {
+    font-size: 1.2rem;
+  }
+
   font-size: 1.3rem;
 
   &.bd {
@@ -142,9 +188,24 @@ const Text = styled.p`
   &.copy-info {
     font-size: 1.2rem;
   }
+  .copy-text {
+    cursor: pointer;
+  }
 `;
-
+const CopyButton = styled.div`
+  border-radius: 8px;
+  padding: 0 1px;
+  background-color: #f0ede6;
+  cursor: pointer;
+  width: 3rem;
+  text-align: center;
+`;
 const ButtonWrapper = styled.div`
+  @media (max-width: 375px) {
+    .button {
+      font-size: 1.1rem;
+    }
+  }
   padding: 10px;
   display: flex;
   justify-content: center;

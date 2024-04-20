@@ -19,9 +19,13 @@ export default function GuestBookList({ posts, onDelete }) {
       <Flex>
         {posts.map(post => (
           <GuestBookItem onClick={() => handleClickModalOpen(post)} key={post.id}>
-            <Text className="title">{post.title}</Text>
-            <Text className="author">From. {post.author}</Text>
-            <Text className="date">{transferTime(new Date(post.date))}</Text>
+            <ContentWrapper>
+              <Text className="title">{post.title}</Text>
+            </ContentWrapper>
+            <DateWrapper>
+              <Text className="date">{transferTime(new Date(post.date))}</Text>
+              <Text className="author">From. {post.author}</Text>
+            </DateWrapper>
           </GuestBookItem>
         ))}
       </Flex>
@@ -40,7 +44,6 @@ export default function GuestBookList({ posts, onDelete }) {
 const Container = styled.div`
   width: 100%;
   position: relative;
-  min-height: 225px;
 `;
 
 const Flex = styled.div`
@@ -50,17 +53,26 @@ const Flex = styled.div`
   flex-direction: column;
 `;
 
-const TitleWrapper = styled.div`
+const ContentWrapper = styled.div`
+  position: relative;
   width: 100%;
-  height: 100%;
-  border: 1px solid red;
+  height: auto;
 `;
+
+const DateWrapper = styled.div`
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
 const GuestBookItem = styled(Button)`
   width: 85%;
   height: 100%;
   min-height: 34px;
   background-color: white !important;
-  flex-direction: row;
+  flex-direction: column;
   margin: 5px !important;
   padding: 8px !important;
   position: relative;
@@ -72,24 +84,19 @@ const Text = styled.p`
   color: #67676728;
 
   &.date {
-    color: #333;
-    right: 6px;
-    top: 2px;
+    color: #848484;
     font-size: 1rem;
-    position: absolute;
   }
 
   &.title {
     color: #333;
-    width: 264px;
     text-align: start;
+    word-break: break-all;
     padding: 0 !important;
   }
 
   &.author {
     color: #a9a9a9;
-    bottom: 2px;
-    right: 6px;
-    position: absolute;
+    font-size: 1.1rem;
   }
 `;

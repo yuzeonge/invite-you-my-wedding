@@ -23,8 +23,6 @@ export default function Poetry() {
         <Flower className="f-b" src="image/flower.png" />
       </FormWrapper>
       <FormWrapper className="w1">
-        <EmptyBox />
-
         <TextRowWrapper data-aos="fade-up" data-aos-delay="300">
           <TextWrapper className="alignt-l">
             <Text className="t1">소영식·박숙녀의 아들</Text> <Text className="t1">권태건·마은영의 딸</Text>
@@ -51,7 +49,7 @@ const FormWrapper = styled.div`
   align-items: center;
   flex-direction: column;
   &.w1 {
-    margin: 40px;
+    margin: 42px;
   }
 `;
 

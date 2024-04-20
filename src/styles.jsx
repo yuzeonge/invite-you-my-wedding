@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const Container = styled.div`
   position: relative;
-  padding-top: 110px;
+  padding-top: 48px;
   padding-bottom: 110px;
 `;
 
@@ -47,7 +47,6 @@ const TextCategoryTitle = styled.p`
 
 const Text = styled.p`
   font-size: 1.2rem;
-
   &.t1 {
     margin-top: 30px;
     padding: 4px;
@@ -79,11 +78,23 @@ const EmptyBox = styled.div`
 
 /** 이미지 todo 이미지 통일하기*/
 const Flower = styled.img`
+  @media (max-width: 375px) {
+    margin: 24px;
+    width: 40%;
+  }
+  @media (max-width: 360px) {
+    margin: 34px;
+    width: 40%;
+  }
+  @media (max-width: 320px) {
+    margin: 26px;
+    width: 40%;
+  }
   @media (max-width: 290px) {
     margin: 12px;
     width: 40%;
   }
-  margin: 33px;
+  margin: 34px;
   width: 40%;
   &.f-t {
     margin-top: -8%;
