@@ -204,6 +204,9 @@ export const Flex = styled.div`
 `;
 
 const CloseButton = styled.button`
+  @media (max-width: 375px) {
+    padding: 6px 8px;
+  }
   &:hover {
     color: #9b9389;
     background-color: #b2aaa1;

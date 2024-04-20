@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Container, Flex } from "../styles";
+import { Flex } from "../styles";
 import styled from "styled-components";
 import AccountModal from "../components/Modal/AccountModal";
 export default function WeddingInfo() {
@@ -82,6 +82,11 @@ export default function WeddingInfo() {
   );
 }
 
+const Container = styled.div`
+  position: relative;
+  padding-bottom: 80px;
+`;
+
 const WrapperNumber = styled.div`
   display: flex;
   flex-direction: row;
@@ -125,14 +130,14 @@ const InfoWrapper = styled.div`
   overflow: hidden;
   transition: all 0.3s ease-in-out;
   &.active1 {
-    @media (max-width: 290px) {
+    @media (max-width: 360px) {
       height: 185px;
     }
     height: 230px;
     cursor: pointer;
   }
   &.active2 {
-    @media (max-width: 290px) {
+    @media (max-width: 360px) {
       height: 200px;
     }
     height: 240px;

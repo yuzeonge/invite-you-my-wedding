@@ -14,9 +14,7 @@ export default function CalendarSection() {
           <Text>창원 힐스카이 10층 힐그랜드홀</Text>
         </TextWrapper>
         <EmptyBox />
-        <EmptyBox />
         <Image src="image/calendar.png" data-aos="flip-left" data-aos-easing="ease-out-cubic" />
-        <EmptyBox />
         <TextWrapper data-aos="zoom-in-up" data-aos-delay="100">
           <Text className="countDownText">
             종범

@@ -1,4 +1,4 @@
-import { Container, TextWrapper, Text, EmptyBox } from "../styles";
+import { TextWrapper, Text, EmptyBox } from "../styles";
 import styled from "styled-components";
 
 export default function Starting() {
@@ -12,31 +12,37 @@ export default function Starting() {
           소중한 당신을 초대합니다.
         </Text>
       </StyledWrapper>
-      <EmptyBox />
-      {/* <TextWrapper>
-        <Text className="t2 mt-50" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
-          소종범·권유정 결혼합니다.
-        </Text>
-      </TextWrapper> */}
-      <EmptyBox />
-      <EmptyBox />
-      <EmptyBox />
-      <Image src="image/main-card.jpeg" data-aos="flip-left" data-aos-delay="100" data-aos-duration="900" />
+      <ImgWrapper data-aos="flip-left" data-aos-delay="3000" data-aos-duration="1800">
+        <Image src="image/main-card.jpeg" />
+      </ImgWrapper>
       <EmptyBox />
     </Container>
   );
 }
 
+const Container = styled.div`
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 110px;
+`;
+
+const ImgWrapper = styled.div`
+  margin-top: 10px;
+  background-color: #f0ede6;
+  align-items: start;
+  justify-content: center;
+  height: 520px;
+`;
 const Image = styled.img`
   width: 100%;
 `;
 
 const StyledWrapper = styled(TextWrapper)`
   .invite-text {
-    margin-top: 16%;
-    margin-bottom: 30px;
+    margin-top: 3rem;
+    margin-bottom: 0;
+    font-size: 4rem;
     padding: 4px;
-    font-size: 50px;
     font-family: "yleeMortalHeart-ImmortalMemory";
   }
 `;
