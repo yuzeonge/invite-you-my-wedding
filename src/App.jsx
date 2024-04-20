@@ -3,7 +3,7 @@ import "./App.css";
 import styled from "styled-components";
 
 // hooks
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 
 // component
 import Starting from "./sections/Starting";
@@ -30,19 +30,12 @@ import Intro from "./sections/Intro";
 // toast
 import { ToastContainer } from "react-toastify";
 
-import { Howl } from "howler";
+import Sound from "./components/Sound/Sound";
+
+// icon
 
 function App() {
   const [isShow, setIsShow] = useState(false);
-  const sound = new Howl({
-    src: ["background-music.mp3"],
-    autoplay: true,
-    loop: true,
-    volume: 0.3,
-    onend: function () {
-      console.log("Finished!");
-    },
-  });
 
   useEffect(() => {
     AOS.init({
@@ -61,6 +54,7 @@ function App() {
   return (
     <>
       <StyledLayout>
+        <Sound />
         <StyledNav className={isShow ? "active" : ""}>배경음악이 준비되어 있습니다.</StyledNav>
         <Intro />
         <Starting />
