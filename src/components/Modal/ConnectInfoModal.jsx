@@ -22,7 +22,7 @@ export default function ConnectInfoModal() {
     <>
       <Container className={isModalOpen ? "" : "disable"}>
         <Flex>
-          <Text className="h1">마음 전하는 곳💐</Text>
+          <H1Text>마음 전하는 곳💐</H1Text>
           <GuideWrapper>
             <NameWrapper>
               *<CallingBox>축하 전화하기📞</CallingBox> <GuideText>를 누르면 전화번호부로 연결됩니다. </GuideText>
@@ -100,23 +100,75 @@ const NameWrapper = styled.div`
   align-items: center;
 `;
 const Text = styled.p`
-  font-size: 1.4rem;
-  &.h1 {
-    font-size: 1.7rem;
-    font-weight: 600;
-    color: #5e5e5e;
+  @media (max-width: 375px) {
+    font-size: 1.3rem;
   }
+  @media (max-width: 360px) {
+    font-size: 1.7rem;
+  }
+  @media (max-width: 290px) {
+    font-size: 1.2rem;
+  }
+
+  font-size: 1.4rem;
+
   &.h2 {
+    @media (max-width: 375px) {
+      font-size: 1.3rem;
+    }
+    @media (max-width: 360px) {
+      font-size: 1.7rem;
+    }
+    @media (max-width: 290px) {
+      font-size: 1.2rem;
+    }
     font-size: 1.5rem;
     color: #5e5d5d;
   }
+
   &.blue {
+    @media (max-width: 375px) {
+      font-size: 1.3rem;
+    }
+    @media (max-width: 360px) {
+      font-size: 1.7rem;
+    }
+    @media (max-width: 290px) {
+      font-size: 1.2rem;
+    }
+
     color: #5baddc;
     font-weight: 600;
   }
   &.pink {
+    @media (max-width: 375px) {
+      font-size: 1.3rem;
+    }
+    @media (max-width: 360px) {
+      font-size: 1.7rem;
+    }
+    @media (max-width: 290px) {
+      font-size: 1.2rem;
+    }
+
     color: #f8acb9;
     font-weight: 600;
+  }
+`;
+
+const H1Text = styled(Text)`
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: #5e5e5e;
+  @media (max-width: 375px) {
+    font-size: 1.7rem;
+  }
+  @media (max-width: 360px) {
+    font-size: 2.3rem;
+  }
+
+  @media (max-width: 290px) {
+    font-size: 1.7rem;
   }
 `;
 
@@ -127,16 +179,44 @@ const GuideWrapper = styled.div`
 `;
 
 const GuideText = styled.p`
+  @media (max-width: 375px) {
+    font-size: 1.2rem;
+  }
+  @media (max-width: 360px) {
+    font-size: 1.7rem;
+  }
+  @media (max-width: 290px) {
+    font-size: 1.2rem;
+  }
+
   color: #504f4f;
   font-size: 1.2rem;
 `;
 
 const B = styled.p`
+  @media (max-width: 375px) {
+    font-size: 1.3rem;
+  }
+  @media (max-width: 360px) {
+    font-size: 1.7rem;
+  }
+  @media (max-width: 290px) {
+    font-size: 1.2rem;
+  }
   font-size: 1.4rem;
   font-weight: 600;
 `;
 
 const MessageBox = styled.div`
+  @media (max-width: 375px) {
+    font-size: 1.2rem;
+  }
+  @media (max-width: 360px) {
+    font-size: 1.5rem;
+  }
+  @media (max-width: 290px) {
+    font-size: 1.2rem;
+  }
   border-radius: 5px;
   background-color: #f7deabac;
   padding: 2px 5px;
@@ -144,6 +224,15 @@ const MessageBox = styled.div`
 `;
 
 const CallingBox = styled.div`
+  @media (max-width: 375px) {
+    font-size: 1.2rem;
+  }
+  @media (max-width: 360px) {
+    font-size: 1.5rem;
+  }
+  @media (max-width: 290px) {
+    font-size: 1.2rem;
+  }
   border-radius: 5px;
   background-color: #9ad49b81;
   padding: 2px 5px;

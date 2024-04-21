@@ -58,8 +58,8 @@ const Container = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 10;
   opacity: 1;
+  z-index: 999;
 
   transition: opacity 0.6s ease-in-out;
 

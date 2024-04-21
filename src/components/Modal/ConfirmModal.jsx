@@ -30,7 +30,7 @@ const ConfirmModal = ({ fetchDeleteGuestBook, isModalOpen, handleCloseModal, gue
     <>
       <Container className={isModalOpen ? "" : "disabled"}>
         <Header>
-          <HeaderText>방명록을 작성하실 때 입력하신 비밀번호를 입력하시면 삭제됩니다.</HeaderText>
+          <HeaderText>작성하실 때 입력하신 비밀번호를 입력하시면 삭제됩니다.</HeaderText>
         </Header>
         <Wrapper>
           <TextWrapper>

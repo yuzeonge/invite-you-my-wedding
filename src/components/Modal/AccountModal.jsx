@@ -123,9 +123,12 @@ export const Container = styled.div`
 
 export const Flex = styled.div`
   @media (max-width: 375px) {
-    width: 34rem;
+    width: 30rem;
     border-radius: 10px;
     padding: 16px 10px;
+  }
+  @media (max-width: 360px) {
+    width: 34rem;
   }
   @media (max-width: 290px) {
     width: 30rem;
@@ -150,7 +153,6 @@ const ItemWrapper = styled.div`
     gap: 5px;
   }
   @media (max-width: 290px) {
-    margin: 10px 0;
     gap: 3px;
   }
   margin: 20px 0;
@@ -172,6 +174,12 @@ const TextWrapper = styled.div`
 const Text = styled.p`
   @media (max-width: 375px) {
     font-size: 1.2rem;
+  }
+  @media (max-width: 360px) {
+    font-size: 1.5rem;
+  }
+  @media (max-width: 360px) {
+    font-size: 1.3rem;
   }
 
   font-size: 1.3rem;
