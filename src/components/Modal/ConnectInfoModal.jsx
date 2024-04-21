@@ -104,7 +104,7 @@ const Text = styled.p`
     font-size: 1.3rem;
   }
   @media (max-width: 360px) {
-    font-size: 1.7rem;
+    font-size: 1.3rem;
   }
   @media (max-width: 290px) {
     font-size: 1.2rem;
@@ -117,7 +117,7 @@ const Text = styled.p`
       font-size: 1.3rem;
     }
     @media (max-width: 360px) {
-      font-size: 1.7rem;
+      font-size: 1.4rem;
     }
     @media (max-width: 290px) {
       font-size: 1.2rem;
@@ -164,7 +164,7 @@ const H1Text = styled(Text)`
     font-size: 1.7rem;
   }
   @media (max-width: 360px) {
-    font-size: 2.3rem;
+    font-size: 2rem;
   }
 
   @media (max-width: 290px) {
@@ -183,7 +183,8 @@ const GuideText = styled.p`
     font-size: 1.2rem;
   }
   @media (max-width: 360px) {
-    font-size: 1.7rem;
+    font-size: 1.2rem;
+    color: #000;
   }
   @media (max-width: 290px) {
     font-size: 1.2rem;
@@ -198,7 +199,7 @@ const B = styled.p`
     font-size: 1.3rem;
   }
   @media (max-width: 360px) {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
   }
   @media (max-width: 290px) {
     font-size: 1.2rem;
@@ -212,10 +213,13 @@ const MessageBox = styled.div`
     font-size: 1.2rem;
   }
   @media (max-width: 360px) {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
   @media (max-width: 290px) {
     font-size: 1.2rem;
+  }
+  @media (max-width: 280px) {
+    font-size: 1.3rem;
   }
   border-radius: 5px;
   background-color: #f7deabac;
@@ -228,10 +232,13 @@ const CallingBox = styled.div`
     font-size: 1.2rem;
   }
   @media (max-width: 360px) {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
   @media (max-width: 290px) {
     font-size: 1.2rem;
+  }
+  @media (max-width: 280px) {
+    font-size: 1.3rem;
   }
   border-radius: 5px;
   background-color: #9ad49b81;
