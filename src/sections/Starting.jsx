@@ -23,7 +23,6 @@ export default function Starting() {
 const Container = styled.div`
   position: relative;
   padding-top: 50px;
-  padding-bottom: 110px;
 `;
 
 const ImgWrapper = styled.div`
