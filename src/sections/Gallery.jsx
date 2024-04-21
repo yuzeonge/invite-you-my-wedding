@@ -17,7 +17,6 @@ export default function Gallery() {
     setImageSrc(`${_path}/${src}`);
     setTab(index);
     setIsImageModalOpen(true);
-    console.log(slideRef.current);
     slideRef.current?.slickGoTo(index);
   };
   return (
@@ -42,13 +41,25 @@ export default function Gallery() {
 const SliderWraper = styled.div`
   position: relative;
   width: 100%;
-  .slick-slide {
-  }
 `;
 
 const WeddingImage = styled.img`
+  @media (max-width: 375px) {
+    min-height: 273px;
+  }
+  @media (max-width: 360px) {
+    min-height: 270px;
+  }
+  @media (max-width: 360px) {
+    min-height: 264px;
+  }
+  @media (max-width: 290px) {
+    min-height: 220px;
+  }
   width: 100%;
-  height: auto;
+  min-height: 318px;
   padding: 2px 4px;
   box-sizing: border-box;
+  object-fit: cover;
+  object-position: center center;
 `;

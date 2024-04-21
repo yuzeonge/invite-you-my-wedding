@@ -16,7 +16,7 @@ import { Pagination } from "@mui/material";
 
 // firbase
 import { firestore } from "../configs/firebase";
-import { collection, getDoc, getDocs, addDoc, updateDoc, doc, deleteDoc, query } from "firebase/firestore";
+import { collection, getDocs, addDoc, doc, deleteDoc, query } from "firebase/firestore";
 
 const limit = 5;
 
@@ -29,7 +29,6 @@ export default function Posting() {
   const handleCloseModal = () => setIsModalOpen(false);
 
   const handleChange = (event, value) => {
-    console.log(value);
     setCurrentPage(value);
   };
 
@@ -62,7 +61,7 @@ export default function Posting() {
       await addDoc(q, { author, password, title, date });
       getGuestBooks();
     } catch (e) {
-      console.log(e);
+      console.error(e);
     }
   };
 

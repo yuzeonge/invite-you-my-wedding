@@ -3,7 +3,7 @@ import "./App.css";
 import styled from "styled-components";
 
 // hooks
-import { useEffect, useState, useMemo } from "react";
+import { useEffect, useState } from "react";
 
 // component
 import Starting from "./sections/Starting";

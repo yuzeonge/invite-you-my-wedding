@@ -1,6 +1,6 @@
 import Button from "../components/Button/Button";
 import styled from "styled-components";
-import { Flower, EmptyBox } from "../styles";
+import { Flower } from "../styles";
 import { useSetRecoilState } from "recoil";
 import modalState from "../store/infoModal";
 
