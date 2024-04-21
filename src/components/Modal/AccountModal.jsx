@@ -128,7 +128,7 @@ export const Flex = styled.div`
     padding: 16px 10px;
   }
   @media (max-width: 360px) {
-    width: 34rem;
+    width: 32rem;
   }
   @media (max-width: 290px) {
     width: 30rem;
@@ -172,13 +172,16 @@ const TextWrapper = styled.div`
 `;
 
 const Text = styled.p`
+  @media (max-width: 414px) {
+    font-size: 1.2rem;
+  }
   @media (max-width: 375px) {
     font-size: 1.2rem;
   }
   @media (max-width: 360px) {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
-  @media (max-width: 360px) {
+  @media (max-width: 290px) {
     font-size: 1.3rem;
   }
 
@@ -188,12 +191,18 @@ const Text = styled.p`
     font-weight: 600;
   }
   &.modal-title {
+    @media (max-width: 360px) {
+      font-size: 1.7rem;
+    }
     font-size: 1.6rem;
   }
   &.col {
     color: #717171;
   }
   &.copy-info {
+    @media (max-width: 360px) {
+      font-size: 1.4rem;
+    }
     font-size: 1.2rem;
   }
   .copy-text {
@@ -201,6 +210,28 @@ const Text = styled.p`
   }
 `;
 const CopyButton = styled.div`
+  @media (max-width: 414px) {
+    border-radius: 8px;
+    padding: 1px 1px;
+    width: 3rem;
+  }
+  @media (max-width: 412px) {
+    border-radius: 6px;
+    padding: 1px 1px;
+    width: 2.5rem;
+  }
+  @media (max-width: 390px) {
+    border-radius: 8px;
+    padding: 1px 1px;
+    width: 3rem;
+  }
+
+  @media (max-width: 360px) {
+    border-radius: 6px;
+    padding: 2px 1px;
+    width: 4rem;
+  }
+
   border-radius: 8px;
   padding: 0 1px;
   background-color: #f0ede6;
@@ -209,9 +240,19 @@ const CopyButton = styled.div`
   text-align: center;
 `;
 const ButtonWrapper = styled.div`
+  @media (max-width: 414px) {
+    .button {
+      font-size: 1.2rem;
+    }
+  }
   @media (max-width: 375px) {
     .button {
       font-size: 1.1rem;
+    }
+  }
+  @media (max-width: 375px) {
+    .button {
+      font-size: 1.3rem;
     }
   }
   padding: 10px;

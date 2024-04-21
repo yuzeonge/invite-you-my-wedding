@@ -90,8 +90,11 @@ const Wrapper = styled.div`
     color: #fff;
   }
   .hero #dynamic {
-    @media (max-width: 375px) {
+    @media (max-width: 414px) {
       font-size: 1.4rem;
+    }
+    @media (max-width: 375px) {
+      font-size: 1.6rem;
     }
     position: relative;
     display: inline-block;

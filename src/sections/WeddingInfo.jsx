@@ -63,8 +63,9 @@ export default function WeddingInfo() {
                   <Text className="t-info">신랑, 신부의 결혼을 축하해주세요.</Text>
                   <Text className="t-info">예식일에 맞춰 웨딩홀로 배송됩니다.</Text>
                   <WrapperInfo>
-                    <Text className="t-info">자세한 안내는 아래 힐스카이플라워 측으로</Text>
-                    <Text>문의 부탁드립니다.</Text>
+                    <Text className="t-info">자세한 안내는</Text>
+                    <Text className="t-info">아래 힐스카이플라워 측으로</Text>
+                    <Text className="t-info">문의 부탁드립니다.</Text>
                   </WrapperInfo>
                   <WrapperNumber>
                     <Text onClick={() => (window.document.location.href = "tel:010-3836-9782")}>📞 010-3836-9782</Text>
@@ -130,15 +131,36 @@ const InfoWrapper = styled.div`
   overflow: hidden;
   transition: all 0.3s ease-in-out;
   &.active1 {
-    @media (max-width: 360px) {
-      height: 185px;
+    @media (max-width: 430px) {
+      height: 265px;
     }
-    height: 230px;
+    @media (max-width: 414px) {
+      height: 280px;
+    }
+    @media (max-width: 375px) {
+      height: 195px;
+    }
+    @media (max-width: 360px) {
+      height: 205px;
+    }
+    height: 250px;
     cursor: pointer;
   }
   &.active2 {
+    @media (max-width: 430px) {
+      height: 280px;
+    }
+    @media (max-width: 414px) {
+      height: 275px;
+    }
+    @media (max-width: 375px) {
+      height: 240px;
+    }
     @media (max-width: 360px) {
-      height: 200px;
+      height: 230px;
+    }
+    @media (max-width: 280px) {
+      height: 210px;
     }
     height: 240px;
     transition: all 0.7s ease-in-out;

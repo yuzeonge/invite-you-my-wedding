@@ -44,6 +44,9 @@ const SliderWraper = styled.div`
 `;
 
 const WeddingImage = styled.img`
+  @media (max-width: 414px) {
+    min-height: 301px;
+  }
   @media (max-width: 375px) {
     min-height: 273px;
   }

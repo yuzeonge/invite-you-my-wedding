@@ -58,6 +58,11 @@ const Container = styled.div`
     max-width: 275px;
     border-radius: 8px;
   }
+  @media (max-width: 290px) {
+    min-width: 265px;
+    max-width: 265px;
+    border-radius: 8px;
+  }
 
   position: fixed;
   background-color: #fff;
@@ -86,6 +91,11 @@ const ButtonWrapper = styled.div`
   align-items: center;
 `;
 const Wrapper = styled.div`
+  @media (max-width: 290px) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
   background-color: #ffffff;
   width: 100%;
   height: 100%;
