@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-
 const useCopyClipboard = () => {
   const copyToClipboard = async text => {
     try {

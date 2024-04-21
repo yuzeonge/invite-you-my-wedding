@@ -31,13 +31,12 @@ export default function Intro() {
       setFadeout(true);
     }, 3000);
   }, []);
-
   useEffect(() => {
     setTimeout(() => {
       dynamic(split); //dynamic함수에 split인자 넣어서 실행
     }, [800]);
+    // eslint-disable-next-line
   }, []);
-
   return (
     <Container className={fadeout ? "fadeout" : ""}>
       <Wrapper>
