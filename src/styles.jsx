@@ -41,8 +41,9 @@ const TextCategoryTitle = styled.p`
   color: #4d4d4d;
   text-align: center;
   width: 35%;
-  border-bottom: solid #f0ede6;
-  margin-bottom: 20px;
+
+  border-bottom: solid #969694;
+  margin-bottom: 28px;
 `;
 
 const Text = styled.p`
@@ -78,12 +79,18 @@ const EmptyBox = styled.div`
 
 /** 이미지 todo 이미지 통일하기*/
 const Flower = styled.img`
-  @media (max-width: 375px) {
-    margin: 24px;
+  @media (max-width: 430px) {
+    margin: 10px;
     width: 40%;
   }
+
+  @media (max-width: 375px) {
+    margin: 14px;
+    width: 40%;
+  }
+
   @media (max-width: 360px) {
-    margin: 34px;
+    margin: 20px;
     width: 40%;
   }
   @media (max-width: 320px) {
@@ -91,7 +98,7 @@ const Flower = styled.img`
     width: 40%;
   }
   @media (max-width: 290px) {
-    margin: 12px;
+    margin: 0;
     width: 40%;
   }
   margin: 34px;

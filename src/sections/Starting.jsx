@@ -1,4 +1,4 @@
-import { TextWrapper, Text, EmptyBox } from "../styles";
+import { TextWrapper, Text } from "../styles";
 import styled from "styled-components";
 
 export default function Starting() {
@@ -15,7 +15,6 @@ export default function Starting() {
       <ImgWrapper data-aos="flip-left" data-aos-delay="3000" data-aos-duration="1800">
         <Image src="image/main-card.jpeg" />
       </ImgWrapper>
-      <EmptyBox />
     </Container>
   );
 }
@@ -26,6 +25,10 @@ const Container = styled.div`
 `;
 
 const ImgWrapper = styled.div`
+  @media (max-width: 290px) {
+    height: 450px;
+  }
+
   margin-top: 10px;
   background-color: #f0ede6;
   align-items: start;

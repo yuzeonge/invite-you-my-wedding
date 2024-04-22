@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Flex, Text } from "../styles";
+import { Flex } from "../styles";
 export default function Ending() {
   return (
     <Container>
@@ -13,4 +13,11 @@ export default function Ending() {
 const Container = styled.div`
   position: relative;
   padding-bottom: 100px;
+`;
+
+const Text = styled.p`
+  @media (max-width: 375px) {
+    font-size: 1.4rem;
+  }
+  font-size: 1.2rem;
 `;

@@ -34,6 +34,9 @@ const Image = styled.img`
 `;
 
 const Absolute = styled.div`
+  @media (max-width: 375px) {
+    bottom: 8px;
+  }
   @media (max-width: 360px) {
     bottom: 12px;
   }
@@ -54,6 +57,9 @@ const Text = styled.p`
   color: #fff;
 
   &.f6 {
+    @media (max-width: 375px) {
+      margin-bottom: 2px;
+    }
     @media (max-width: 360px) {
       font-size: 4.5rem;
     }

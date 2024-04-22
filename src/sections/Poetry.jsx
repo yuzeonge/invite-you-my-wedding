@@ -50,6 +50,7 @@ const FormWrapper = styled.div`
   flex-direction: column;
   &.w1 {
     margin: 42px;
+    background-color: #ffff;
   }
 `;
 
@@ -60,6 +61,9 @@ const TextWrapper = styled.div`
 `;
 
 const TextRowWrapper = styled.div`
+  @media (max-width: 290px) {
+    width: 85%;
+  }
   width: 70%;
   display: flex;
   justify-content: center;
@@ -77,15 +81,36 @@ const BackgoundImage = styled.img`
 `;
 
 const Text = styled.span`
+  @media (max-width: 414px) {
+    font-size: 1.4rem;
+  }
+  @media (max-width: 375px) {
+    font-size: 1.4rem;
+  }
+  @media (max-width: 290px) {
+    font-size: 1.4rem;
+  }
   font-size: 1.25rem;
   margin: 2px;
   width: 100%;
   text-align: center;
   &.t1 {
+    @media (max-width: 414px) {
+      font-size: 1.4rem;
+    }
+    @media (max-width: 375px) {
+      font-size: 1.5rem;
+    }
+    @media (max-width: 290px) {
+      font-size: 1.4rem;
+    }
     font-size: 1.3rem;
     text-align: left;
   }
   &.t2 {
+    @media (max-width: 414px) {
+      font-size: 1.6rem;
+    }
     display: flex;
     margin-left: 15px;
     font-size: 1.5rem;

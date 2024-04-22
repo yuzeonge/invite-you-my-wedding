@@ -1,4 +1,4 @@
-import { Container, Flex, TextCategoryTitle, EmptyBox } from "../styles";
+import { Flex, TextCategoryTitle, EmptyBox } from "../styles";
 import styled from "styled-components";
 import MultiSlick from "../components/Slick/MultiSlick";
 import { useState, useRef } from "react";
@@ -38,6 +38,9 @@ export default function Gallery() {
   );
 }
 
+const Container = styled.div`
+  position: relative;
+`;
 const SliderWraper = styled.div`
   position: relative;
   width: 100%;

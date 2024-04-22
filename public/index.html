@@ -27,32 +27,41 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>종범💍유정 결혼합니다.</title>
+    <!-- <script
+      src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.1/kakao.min.js"
+      integrity="sha384-kDljxUXHaJ9xAb2AzRd59KxjrFjzHa5TAoFQ6GbYTCAG0bjM55XohjjDT7tDDC01"
+      crossorigin="anonymous"
+    ></script> -->
+  </head>
+  <body>
     <script
       src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.1/kakao.min.js"
       integrity="sha384-kDljxUXHaJ9xAb2AzRd59KxjrFjzHa5TAoFQ6GbYTCAG0bjM55XohjjDT7tDDC01"
       crossorigin="anonymous"
     ></script>
-  </head>
-  <body>
     <noscript>2024년 06월 02일 (일) 오후 12시 10분, 창원 힐스카이 웨딩 10층 힐그랜드홀</noscript>
     <div id="root"></div>
     <div id="modal"></div>
-  </body>
-  <script>
-    Kakao.init("933c1dc5c71683ec8ee52c1de08223ff");
-    console.log(Kakao.isInitialized()); // 사용하려는 앱의 JavaScript 키 입력
-    Kakao.API.request({
-      url: "/v2/api/talk/memo/send",
-      data: {
-        request_url: "https://www.inviteyou.info",
-        template_id: "107185",
-      },
-    })
-      .then(function (response) {
-        console.log(response);
-      })
-      .catch(function (error) {
-        console.log(error);
+    <div
+      id="kakaotalk-sharing-btn"
+      href="javascript:;"
+      style="width: 100%; height: 20px; background-color: #a8a8a8; text-align: center; color: white"
+    >
+      카카오 공유하기
+    </div>
+    <script>
+      Kakao.init("c089c8172def97eb00c07217cae17495"); // 사용하려는 앱의 JavaScript 키 입력
+    </script>
+
+    <script>
+      Kakao.Share.createCustomButton({
+        container: "#kakaotalk-sharing-btn",
+        templateId: 107185,
+        templateArgs: {
+          title: "소종범 ♥️ 권유정 결혼합니다.",
+          description: "2024년 6월 2일 (일) 오후 12시 10분, 창원 힐스카이 10층 힐그랜드홀",
+        },
       });
-  </script>
+    </script>
+  </body>
 </html>
