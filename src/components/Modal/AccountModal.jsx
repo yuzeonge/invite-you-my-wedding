@@ -122,6 +122,11 @@ export const Container = styled.div`
 `;
 
 export const Flex = styled.div`
+  @media (max-width: 414px) {
+    width: 28rem;
+    border-radius: 10px;
+    padding: 22px 10px;
+  }
   @media (max-width: 375px) {
     width: 30rem;
     border-radius: 10px;
@@ -148,6 +153,10 @@ export const Flex = styled.div`
 `;
 
 const ItemWrapper = styled.div`
+  @media (max-width: 414px) {
+    margin: 20px 0;
+    gap: 5px;
+  }
   @media (max-width: 375px) {
     margin: 10px 0;
     gap: 5px;
@@ -173,10 +182,10 @@ const TextWrapper = styled.div`
 
 const Text = styled.p`
   @media (max-width: 414px) {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
   @media (max-width: 375px) {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
   @media (max-width: 360px) {
     font-size: 1.4rem;
@@ -191,7 +200,10 @@ const Text = styled.p`
     font-weight: 600;
   }
   &.modal-title {
-    @media (max-width: 360px) {
+    @media (max-width: 414px) {
+      font-size: 1.5rem;
+    }
+    @media (max-width: 375px) {
       font-size: 1.7rem;
     }
     font-size: 1.6rem;
@@ -200,6 +212,12 @@ const Text = styled.p`
     color: #717171;
   }
   &.copy-info {
+    @media (max-width: 414px) {
+      font-size: 1.4rem;
+    }
+    @media (max-width: 375px) {
+      font-size: 1.5rem;
+    }
     @media (max-width: 360px) {
       font-size: 1.4rem;
     }

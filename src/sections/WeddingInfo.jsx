@@ -101,8 +101,32 @@ const WrapperInfo = styled.div`
   margin: 17px;
 `;
 const Text = styled.p`
+  @media (max-width: 430px) {
+    font-size: 1.5rem;
+  }
+  @media (max-width: 393px) {
+    font-size: 1.3rem;
+  }
+  @media (max-width: 390px) {
+    font-size: 1.5rem;
+  }
+  @media (max-width: 375px) {
+    font-size: 1.4rem;
+  }
+  @media (max-width: 360px) {
+    font-size: 1.5rem;
+  }
+  @media (max-width: 290px) {
+    font-size: 1.6rem;
+  }
   font-size: 1.3rem;
   &.t1 {
+    @media (max-width: 414px) {
+      font-size: 1.4rem;
+    }
+    @media (max-width: 375px) {
+      font-size: 1.4rem;
+    }
     font-size: 1.5rem;
   }
   &.info-title {
@@ -135,10 +159,10 @@ const InfoWrapper = styled.div`
       height: 265px;
     }
     @media (max-width: 414px) {
-      height: 280px;
+      height: 315px;
     }
     @media (max-width: 375px) {
-      height: 195px;
+      height: 280px;
     }
     @media (max-width: 360px) {
       height: 205px;
@@ -151,10 +175,10 @@ const InfoWrapper = styled.div`
       height: 280px;
     }
     @media (max-width: 414px) {
-      height: 275px;
+      height: 305px;
     }
     @media (max-width: 375px) {
-      height: 240px;
+      height: 260px;
     }
     @media (max-width: 360px) {
       height: 230px;
@@ -163,10 +187,13 @@ const InfoWrapper = styled.div`
       height: 210px;
     }
     height: 240px;
-    transition: all 0.7s ease-in-out;
+    transition: all 0.8s ease-in-out;
   }
   &.disable {
-    height: 38.5px;
+    @media (max-width: 414px) {
+      font-size: 1.4rem;
+    }
+    height: 45.5px;
   }
 `;
 

@@ -7,7 +7,7 @@ export default function Intro() {
   const [fadeout, setFadeout] = useState(false);
 
   //javascript 작성하기
-  const string = "소종범 🧡 권유정 2024년 6월 2일 결혼합니다."; //원하는 텍스트를 string변수 선언
+  const string = "소종범 ♥️ 권유정 2024년 6월 2일 결혼합니다."; //원하는 텍스트를 string변수 선언
   const split = string.split(""); //string의 텍스트를 여러개의 문자열로 나눠줌
 
   function dynamic(arr) {
@@ -53,7 +53,7 @@ export default function Intro() {
 const Container = styled.div`
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: #f8d0d7ab;
   position: fixed;
   top: 0;
   left: 0;
@@ -83,23 +83,38 @@ const Wrapper = styled.div`
   margin: 0 auto;
 
   .hero {
-    @media (max-width: 360px) {
-      font-size: 1.2rem;
+    @media (max-width: 430px) {
+      font-size: 1.3rem;
     }
-    font-size: 1.4rem;
-    color: #fff;
-  }
-  .hero #dynamic {
     @media (max-width: 414px) {
       font-size: 1.4rem;
     }
     @media (max-width: 375px) {
       font-size: 1.6rem;
     }
+    @media (max-width: 360px) {
+      font-size: 1.4rem;
+    }
+    font-size: 1.4rem;
+    color: black;
+  }
+  .hero #dynamic {
+    @media (max-width: 430px) {
+      font-size: 1.3rem;
+    }
+    @media (max-width: 414px) {
+      font-size: 1.4rem;
+    }
+    @media (max-width: 375px) {
+      font-size: 1.6rem;
+    }
+    @media (max-width: 360px) {
+      font-size: 1.4rem;
+    }
     position: relative;
     display: inline-block;
     font-size: 1.7rem;
-    color: #fff;
+    color: black;
   }
 
   /*커서모양 만들기*/
@@ -111,7 +126,7 @@ const Wrapper = styled.div`
     right: -10px;
     width: 4px;
     height: 100%;
-    background-color: white;
+    background-color: black;
   }
 
   .hero #dynamic.active::after {

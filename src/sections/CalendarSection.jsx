@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Container, EmptyBox, Flex } from "../styles";
+import { EmptyBox, Flex } from "../styles";
 import HeartIcon from "../components/Icons/heart";
 
 import DdayCount from "../components/DdayCount";
@@ -29,8 +29,19 @@ export default function CalendarSection() {
     </Container>
   );
 }
+const Container = styled.div`
+  position: relative;
+  padding-top: 48px;
+  padding-bottom: 84px;
+`;
 
 const Text = styled.p`
+  @media (max-width: 414px) {
+    font-size: 1.5rem;
+  }
+  @media (max-width: 375px) {
+    font-size: 1.5rem;
+  }
   font-size: 1.4rem;
   display: flex;
   justify-content: center;
