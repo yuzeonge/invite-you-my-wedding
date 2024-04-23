@@ -115,8 +115,16 @@ const Text = styled.p`
   @media (max-width: 280px) {
     font-size: 1.3rem;
   }
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
   font-size: 1.4rem;
+=======
+  font-size: 1.1rem;
+>>>>>>> Stashed changes
+=======
+  font-size: 1.1rem;
+>>>>>>> Stashed changes
 
   &.h2 {
     @media (max-width: 393px) {
@@ -131,7 +139,7 @@ const Text = styled.p`
     @media (max-width: 290px) {
       font-size: 1.2rem;
     }
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: #5e5d5d;
   }
 
@@ -145,7 +153,6 @@ const Text = styled.p`
     @media (max-width: 290px) {
       font-size: 1.2rem;
     }
-
     color: #5baddc;
     font-weight: 600;
   }
@@ -159,7 +166,6 @@ const Text = styled.p`
     @media (max-width: 290px) {
       font-size: 1.2rem;
     }
-
     color: #f8acb9;
     font-weight: 600;
   }
@@ -194,7 +200,19 @@ const GuideText = styled.p`
   @media (max-width: 412px) {
     font-size: 1.2rem;
   }
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
+=======
+=======
+>>>>>>> Stashed changes
+  @media (max-width: 397px) {
+    font-size: 1rem;
+  }
+  @media (max-width: 394px) {
+    font-size: 1.1rem;
+  }
+>>>>>>> Stashed changes
   @media (max-width: 375px) {
     font-size: 1.2rem;
   }
@@ -205,12 +223,29 @@ const GuideText = styled.p`
   @media (max-width: 290px) {
     font-size: 1.2rem;
   }
-
   color: #504f4f;
-  font-size: 1.2rem;
+  font-size: 1rem;
 `;
 
 const B = styled.p`
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+=======
+>>>>>>> Stashed changes
+  @media (max-width: 430px) {
+    font-size: 1.2rem;
+  }
+  @media (max-width: 412px) {
+    font-size: 1.2rem;
+  }
+  @media (max-width: 398px) {
+    font-size: 1.3rem;
+  }
+  @media (max-width: 394px) {
+    font-size: 1.3rem;
+  }
+>>>>>>> Stashed changes
   @media (max-width: 393px) {
     font-size: 1.3rem;
   }
@@ -226,7 +261,15 @@ const B = styled.p`
   @media (max-width: 280px) {
     font-size: 1.3rem;
   }
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
   font-size: 1.4rem;
+=======
+  font-size: 1.1rem;
+>>>>>>> Stashed changes
+=======
+  font-size: 1.1rem;
+>>>>>>> Stashed changes
   font-weight: 600;
 `;
 
@@ -234,6 +277,18 @@ const MessageBox = styled.div`
   @media (max-width: 412px) {
     font-size: 1.1rem;
   }
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+=======
+>>>>>>> Stashed changes
+  @media (max-width: 397px) {
+    font-size: 1rem;
+  }
+  @media (max-width: 394px) {
+    font-size: 1rem;
+  }
+>>>>>>> Stashed changes
   @media (max-width: 393px) {
     font-size: 1.1rem;
   }
@@ -249,6 +304,7 @@ const MessageBox = styled.div`
   @media (max-width: 280px) {
     font-size: 1.1rem;
   }
+  font-size: 1rem;
   border-radius: 5px;
   background-color: #f7deabac;
   padding: 2px 5px;
@@ -277,11 +333,11 @@ const CallingBox = styled.div`
   @media (max-width: 280px) {
     font-size: 1.1rem;
   }
+  font-size: 1rem;
   border-radius: 5px;
   background-color: #9ad49b81;
   padding: 2px 5px;
   cursor: pointer;
-
   &.onebtn {
     text-align: center;
     width: 137px;
@@ -324,7 +380,7 @@ export const Container = styled.div`
 
 export const Flex = styled.div`
   @media (max-width: 412px) {
-    width: 88%;
+    width: 28rem;
   }
   @media (max-width: 393px) {
     width: 27rem;
@@ -350,7 +406,7 @@ export const Flex = styled.div`
   align-items: center;
   flex-direction: column;
   background-color: #ffffff;
-  width: 85%;
+  width: 90%;
   height: 40%;
   border-radius: 12px;
   padding: 45px 17px 25px 17px;
