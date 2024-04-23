@@ -83,6 +83,10 @@ const Flower = styled.img`
     margin: 10px;
     width: 40%;
   }
+  @media (max-width: 393px) {
+    margin: 8px;
+    width: 40%;
+  }
 
   @media (max-width: 375px) {
     margin: 14px;
