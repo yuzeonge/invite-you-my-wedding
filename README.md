@@ -8,17 +8,15 @@
 
 ```bash
 $ git clone https://github.com/devchaeyoung/invite-you-my-wedding.git
-$ npm i
-$ npm start
+$ yarn
+$ yarn start
 ```
 
-`npm start`입력시 자동으로 브라우저가 안켜진다면 localhost:3000으로 접속.
+`yarn start`입력시 자동으로 브라우저가 안켜진다면 localhost:3000으로 접속.
 
 ### 배포 페이지
 
 www.inviteyou.info
-
-- 현재 최신 버전 배포전 상태
 
 ## 요약
 
@@ -27,4 +25,3 @@ www.inviteyou.info
 - firebase DB
 - react-slick 사진 슬라이더
 - data-aos를 통한 애니매이션
-- howler.js 라이브러리 음원 자동재생
