@@ -5,7 +5,7 @@ export default function Starting() {
   return (
     <Container>
       <StyledWrapper>
-        <Text className="invite-text" data-aos="fade-up" data-aos-delay="3000" data-aos-duration="1200">
+        <Text id="invite-you" className="invite-text" data-aos="fade-up" data-aos-delay="3000" data-aos-duration="1200">
           Invite you
         </Text>
         <Text className="t2 mb-48" data-aos="fade-up" data-aos-delay="3000" data-aos-duration="1800">
@@ -45,6 +45,5 @@ const StyledWrapper = styled(TextWrapper)`
     margin-bottom: 0;
     font-size: 4rem;
     padding: 4px;
-    font-family: "yleeMortalHeart-ImmortalMemory";
   }
 `;
