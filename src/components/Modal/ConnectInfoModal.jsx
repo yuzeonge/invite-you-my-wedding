@@ -99,6 +99,9 @@ const NameWrapper = styled.div`
   align-items: center;
 `;
 const Text = styled.p`
+  @media (min-width: 399px) {
+    font-size: 1.1rem;
+  }
   @media (max-width: 398px) {
     font-size: 1.3rem;
   }
@@ -123,10 +126,19 @@ const Text = styled.p`
   @media (max-width: 280px) {
     font-size: 1.3rem;
   }
+  @media (max-width: 274px) {
+    font-size: 1rem;
+  }
+  @media (max-width: 239px) {
+    font-size: 0.7rem;
+  }
 
   font-size: 1.1rem;
 
   &.h2 {
+    @media (min-width: 399px) {
+      font-size: 1.2rem;
+    }
     @media (max-width: 393px) {
       font-size: 1.3rem;
     }
@@ -139,11 +151,17 @@ const Text = styled.p`
     @media (max-width: 290px) {
       font-size: 1.2rem;
     }
-    font-size: 1.3rem;
+    @media (max-width: 274px) {
+      font-size: 1rem;
+    }
+    font-size: 1.2rem;
     color: #5e5d5d;
   }
 
   &.blue {
+    @media (min-width: 399px) {
+      font-size: 1.1rem;
+    }
     @media (max-width: 375px) {
       font-size: 1.3rem;
     }
@@ -152,11 +170,17 @@ const Text = styled.p`
     }
     @media (max-width: 290px) {
       font-size: 1.2rem;
+    }
+    @media (max-width: 274px) {
+      font-size: 1rem;
     }
     color: #5baddc;
     font-weight: 600;
   }
   &.pink {
+    @media (min-width: 399px) {
+      font-size: 1.1rem;
+    }
     @media (max-width: 375px) {
       font-size: 1.3rem;
     }
@@ -165,6 +189,9 @@ const Text = styled.p`
     }
     @media (max-width: 290px) {
       font-size: 1.2rem;
+    }
+    @media (max-width: 274px) {
+      font-size: 1rem;
     }
     color: #f8acb9;
     font-weight: 600;
@@ -182,6 +209,9 @@ const H1Text = styled(Text)`
   @media (max-width: 290px) {
     font-size: 1.7rem;
   }
+  @media (max-width: 274px) {
+    font-size: 1.5rem;
+  }
   font-size: 1.7rem;
   font-weight: 600;
   color: #5e5e5e;
@@ -194,6 +224,9 @@ const GuideWrapper = styled.div`
 `;
 
 const GuideText = styled.p`
+  @media (min-width: 431px) {
+    font-size: 1rem;
+  }
   @media (max-width: 430px) {
     font-size: 1.15rem;
   }
@@ -219,11 +252,20 @@ const GuideText = styled.p`
   @media (max-width: 290px) {
     font-size: 1.2rem;
   }
+  @media (max-width: 274px) {
+    font-size: 1rem;
+  }
+  @media (max-width: 239px) {
+    font-size: 0.7rem;
+  }
   color: #504f4f;
   font-size: 1rem;
 `;
 
 const B = styled.p`
+  @media (min-width: 431px) {
+    font-size: 1rem;
+  }
   @media (max-width: 430px) {
     font-size: 1.2rem;
   }
@@ -236,7 +278,6 @@ const B = styled.p`
   @media (max-width: 394px) {
     font-size: 1.3rem;
   }
-
   @media (max-width: 393px) {
     font-size: 1.3rem;
   }
@@ -258,12 +299,21 @@ const B = styled.p`
   @media (max-width: 280px) {
     font-size: 1.3rem;
   }
+  @media (max-width: 274px) {
+    font-size: 1rem;
+  }
+  @media (max-width: 239px) {
+    font-size: 0.7rem;
+  }
 
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 600;
 `;
 
 const MessageBox = styled.div`
+  @media (min-width: 413px) {
+    font-size: 1rem;
+  }
   @media (max-width: 412px) {
     font-size: 1.1rem;
   }
@@ -293,6 +343,12 @@ const MessageBox = styled.div`
   }
   @media (max-width: 280px) {
     font-size: 1.1rem;
+  }
+  @media (max-width: 274px) {
+    font-size: 1rem;
+  }
+  @media (max-width: 239px) {
+    font-size: 0.7rem;
   }
   font-size: 1rem;
   border-radius: 5px;
@@ -302,6 +358,9 @@ const MessageBox = styled.div`
 `;
 
 const CallingBox = styled.div`
+  @media (min-width: 413px) {
+    font-size: 1rem;
+  }
   @media (max-width: 412px) {
     font-size: 1.1rem;
   }
@@ -327,12 +386,17 @@ const CallingBox = styled.div`
   @media (max-width: 356px) {
     font-size: 1rem;
   }
-
   @media (max-width: 290px) {
     font-size: 1.2rem;
   }
   @media (max-width: 280px) {
     font-size: 1.1rem;
+  }
+  @media (max-width: 274px) {
+    font-size: 1rem;
+  }
+  @media (max-width: 239px) {
+    font-size: 0.7rem;
   }
   font-size: 1rem;
   border-radius: 5px;
@@ -380,6 +444,9 @@ export const Container = styled.div`
 `;
 
 export const Flex = styled.div`
+  @media (min-width: 413px) {
+    width: 29rem;
+  }
   @media (max-width: 412px) {
     width: 28rem;
   }
@@ -405,6 +472,7 @@ export const Flex = styled.div`
     width: 90%;
     padding: 45px 10px 25px 10px;
   }
+
   display: flex;
   justify-content: center;
   align-items: center;
