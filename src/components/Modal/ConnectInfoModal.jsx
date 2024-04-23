@@ -100,6 +100,9 @@ const NameWrapper = styled.div`
   align-items: center;
 `;
 const Text = styled.p`
+  @media (max-width: 393px) {
+    font-size: 1.3rem;
+  }
   @media (max-width: 375px) {
     font-size: 1.3rem;
   }
@@ -116,6 +119,9 @@ const Text = styled.p`
   font-size: 1.4rem;
 
   &.h2 {
+    @media (max-width: 393px) {
+      font-size: 1.3rem;
+    }
     @media (max-width: 375px) {
       font-size: 1.3rem;
     }
@@ -188,6 +194,7 @@ const GuideText = styled.p`
   @media (max-width: 412px) {
     font-size: 1.2rem;
   }
+
   @media (max-width: 375px) {
     font-size: 1.2rem;
   }
@@ -204,6 +211,9 @@ const GuideText = styled.p`
 `;
 
 const B = styled.p`
+  @media (max-width: 393px) {
+    font-size: 1.3rem;
+  }
   @media (max-width: 375px) {
     font-size: 1.3rem;
   }
@@ -222,6 +232,9 @@ const B = styled.p`
 
 const MessageBox = styled.div`
   @media (max-width: 412px) {
+    font-size: 1.1rem;
+  }
+  @media (max-width: 393px) {
     font-size: 1.1rem;
   }
   @media (max-width: 375px) {
@@ -244,6 +257,9 @@ const MessageBox = styled.div`
 
 const CallingBox = styled.div`
   @media (max-width: 412px) {
+    font-size: 1.1rem;
+  }
+  @media (max-width: 393px) {
     font-size: 1.1rem;
   }
   @media (max-width: 375px) {
@@ -306,6 +322,12 @@ export const Container = styled.div`
 export const Flex = styled.div`
   @media (max-width: 412px) {
     width: 88%;
+  }
+  @media (max-width: 393px) {
+    width: 27rem;
+  }
+  @media (max-width: 375px) {
+    width: 30rem;
   }
   @media (max-width: 360px) {
     width: 88%;

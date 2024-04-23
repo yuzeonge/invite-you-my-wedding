@@ -133,6 +133,11 @@ export const Flex = styled.div`
     border-radius: 10px;
     padding: 22px 10px;
   }
+  @media (max-width: 393px) {
+    width: 28rem;
+    border-radius: 10px;
+    padding: 22px 10px;
+  }
   @media (max-width: 375px) {
     width: 30rem;
     border-radius: 10px;
@@ -238,6 +243,7 @@ const Text = styled.p`
     @media (max-width: 414px) {
       font-size: 1.4rem;
     }
+
     @media (max-width: 375px) {
       font-size: 1.5rem;
     }
@@ -261,6 +267,7 @@ const CopyButton = styled.div`
     padding: 1px 1px;
     width: 2.5rem;
   }
+
   @media (max-width: 390px) {
     border-radius: 8px;
     padding: 1px 1px;
