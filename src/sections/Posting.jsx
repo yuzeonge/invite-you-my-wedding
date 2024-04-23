@@ -108,6 +108,14 @@ const GoToWriteButton = styled.div`
     font-size: 1.2rem;
     padding: 3px 6px;
   }
+  @media (max-width: 393px) {
+    font-size: 1.2rem;
+    padding: 1px 4px;
+  }
+  @media (max-width: 375px) {
+    font-size: 1.2rem;
+    padding: 3px 6px;
+  }
   @media (max-width: 290px) {
     font-size: 1.2rem;
     padding: 1px 4px;
@@ -127,6 +135,12 @@ const Text = styled.p`
   @media (max-width: 414px) {
     font-size: 1.3rem;
   }
+  @media (max-width: 393px) {
+    font-size: 1.2rem;
+  }
+  @media (max-width: 375px) {
+    font-size: 1.3rem;
+  }
   @media (max-width: 290px) {
     font-size: 1.2rem;
   }
@@ -143,6 +157,12 @@ const TextWrapper = styled.div`
     width: 27.5rem;
   }
   @media (max-width: 414px) {
+    width: 29.5rem;
+  }
+  @media (max-width: 393px) {
+    width: 27rem;
+  }
+  @media (max-width: 375px) {
     width: 29.5rem;
   }
   display: flex;

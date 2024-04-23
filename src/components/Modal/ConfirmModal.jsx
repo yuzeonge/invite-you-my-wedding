@@ -62,6 +62,9 @@ const Container = styled.div`
     width: 400px;
     border-radius: 10px;
   }
+  @media (max-width: 393px) {
+    width: 360px;
+  }
   @media (max-width: 390px) {
     width: 320px;
   }

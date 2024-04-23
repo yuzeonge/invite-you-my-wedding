@@ -138,6 +138,11 @@ export const Flex = styled.div`
     border-radius: 10px;
     padding: 22px 10px;
   }
+  @media (max-width: 390px) {
+    width: 29rem;
+    border-radius: 10px;
+    padding: 16px 10px;
+  }
   @media (max-width: 375px) {
     width: 30rem;
     border-radius: 10px;
