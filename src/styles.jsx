@@ -90,7 +90,7 @@ const Flower = styled.img`
   }
 
   @media (max-width: 360px) {
-    margin: 20px;
+    margin: 10px;
     width: 40%;
   }
   @media (max-width: 320px) {

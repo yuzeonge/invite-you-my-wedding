@@ -104,6 +104,14 @@ export default function Posting() {
 }
 
 const GoToWriteButton = styled.div`
+  @media (max-width: 414px) {
+    font-size: 1.2rem;
+    padding: 3px 6px;
+  }
+  @media (max-width: 290px) {
+    font-size: 1.2rem;
+    padding: 1px 4px;
+  }
   border-radius: 10px;
   padding: 3px 10px;
   background-color: #797676;
@@ -116,6 +124,13 @@ const GoToWriteButton = styled.div`
 `;
 
 const Text = styled.p`
+  @media (max-width: 414px) {
+    font-size: 1.3rem;
+  }
+  @media (max-width: 290px) {
+    font-size: 1.2rem;
+  }
+
   font-size: 1.2rem;
   z-index: 10;
   display: flex;
@@ -124,6 +139,9 @@ const Text = styled.p`
 `;
 
 const TextWrapper = styled.div`
+  @media (max-width: 414px) {
+    width: 90%;
+  }
   display: flex;
   width: 85%;
   margin-bottom: 10px;

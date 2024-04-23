@@ -61,6 +61,9 @@ const TextWrapper = styled.div`
 `;
 
 const TextRowWrapper = styled.div`
+  @media (max-width: 360px) {
+    width: 85%;
+  }
   @media (max-width: 290px) {
     width: 85%;
   }

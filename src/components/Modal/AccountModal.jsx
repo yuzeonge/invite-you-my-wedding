@@ -112,18 +112,24 @@ export const Container = styled.div`
   width: 100%;
   max-width: 435px;
 
-  @media (max-width: 360px) {
-    max-width: 280px;
-  }
-
   &.disable {
     display: none;
   }
 `;
 
 export const Flex = styled.div`
+  @media (max-width: 430px) {
+    width: 27rem;
+    border-radius: 10px;
+    padding: 22px 10px;
+  }
   @media (max-width: 414px) {
     width: 28rem;
+    border-radius: 10px;
+    padding: 22px 10px;
+  }
+  @media (max-width: 412px) {
+    width: 29rem;
     border-radius: 10px;
     padding: 22px 10px;
   }
@@ -133,10 +139,15 @@ export const Flex = styled.div`
     padding: 16px 10px;
   }
   @media (max-width: 360px) {
-    width: 32rem;
+    width: 30rem;
   }
   @media (max-width: 290px) {
     width: 30rem;
+    border-radius: 10px;
+    padding: 16px 10px;
+  }
+  @media (max-width: 280px) {
+    width: 28rem;
     border-radius: 10px;
     padding: 16px 10px;
   }
@@ -153,6 +164,9 @@ export const Flex = styled.div`
 `;
 
 const ItemWrapper = styled.div`
+  @media (max-width: 430px) {
+    gap: 3px;
+  }
   @media (max-width: 414px) {
     margin: 20px 0;
     gap: 5px;
@@ -170,6 +184,9 @@ const ItemWrapper = styled.div`
   gap: 0;
 `;
 const TextWrapper = styled.div`
+  @media (max-width: 430px) {
+    gap: 2px;
+  }
   @media (max-width: 360px) {
     gap: 4px;
   }
@@ -181,8 +198,14 @@ const TextWrapper = styled.div`
 `;
 
 const Text = styled.p`
+  @media (max-width: 430px) {
+    font-size: 1.2rem;
+  }
   @media (max-width: 414px) {
     font-size: 1.3rem;
+  }
+  @media (max-width: 412px) {
+    font-size: 1.4rem;
   }
   @media (max-width: 375px) {
     font-size: 1.3rem;
@@ -191,7 +214,7 @@ const Text = styled.p`
     font-size: 1.4rem;
   }
   @media (max-width: 290px) {
-    font-size: 1.3rem;
+    font-size: 1.35rem;
   }
 
   font-size: 1.3rem;
@@ -250,6 +273,11 @@ const CopyButton = styled.div`
     width: 4rem;
   }
 
+  @media (max-width: 290px) {
+    border-radius: 6px;
+    padding: 1px 1px;
+    width: 2.5rem;
+  }
   border-radius: 8px;
   padding: 0 1px;
   background-color: #f0ede6;

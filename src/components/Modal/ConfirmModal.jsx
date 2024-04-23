@@ -13,7 +13,7 @@ const ConfirmModal = ({ fetchDeleteGuestBook, isModalOpen, handleCloseModal, gue
 
   const onDeleteGuestBook = () => {
     if (password !== guestBookItem.password) {
-      alert("비밀번호가 다릅니다.");
+      alert("비밀번호가 틀립니다");
       return;
     }
     notify();
@@ -30,11 +30,16 @@ const ConfirmModal = ({ fetchDeleteGuestBook, isModalOpen, handleCloseModal, gue
     <>
       <Container className={isModalOpen ? "" : "disabled"}>
         <Header>
-          <HeaderText>작성하실 때 입력하신 비밀번호를 입력하시면 삭제됩니다.</HeaderText>
+          <HeaderText>삭제하시겠습니까?</HeaderText>
         </Header>
         <Wrapper>
           <TextWrapper>
-            <TextInput value={password} onChange={e => setPassword(e.target.value)} type="password" label={"비밀번호입력"} />
+            <TextInput
+              value={password}
+              onChange={e => setPassword(e.target.value)}
+              type="password"
+              label={"작성 시 입력하신 비밀번호를 입력해주세요."}
+            />
           </TextWrapper>
           <ButtonWrapper>
             <Button className="button point" onClick={onDeleteGuestBook}>
@@ -53,15 +58,23 @@ const ConfirmModal = ({ fetchDeleteGuestBook, isModalOpen, handleCloseModal, gue
 };
 
 const Container = styled.div`
+  @media (max-width: 430px) {
+    width: 400px;
+    border-radius: 10px;
+  }
+  @media (max-width: 390px) {
+    width: 320px;
+  }
+  @media (max-width: 375px) {
+    width: 260px;
+  }
+
   @media (max-width: 360px) {
-    min-width: 275px;
-    max-width: 275px;
+    width: 340px;
     border-radius: 8px;
   }
   @media (max-width: 290px) {
-    min-width: 265px;
-    max-width: 265px;
-    border-radius: 8px;
+    width: 265px;
   }
 
   position: fixed;
@@ -71,7 +84,7 @@ const Container = styled.div`
 
   transform: translate(-50%, -50%);
   z-index: 11;
-  min-width: 368px;
+  width: 368px;
   min-height: 148px;
   border-radius: 15px;
 
@@ -91,6 +104,15 @@ const ButtonWrapper = styled.div`
   align-items: center;
 `;
 const Wrapper = styled.div`
+  @media (max-width: 430px) {
+    padding-top: 24px;
+    padding-bottom: 20px;
+  }
+  @media (max-width: 375px) {
+    padding-top: 0px;
+    padding-bottom: 20px;
+  }
+
   @media (max-width: 290px) {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -114,6 +136,10 @@ const Wrapper = styled.div`
 `;
 
 const Header = styled.div`
+  @media (max-width: 430px) {
+    margin-top: 30px;
+    padding-bottom: 8px;
+  }
   width: 100%;
   height: 24px;
   display: flex;
@@ -123,6 +149,14 @@ const Header = styled.div`
 `;
 
 const HeaderText = styled.p`
+  @media (max-width: 430px) {
+    font-size: 1.3rem;
+  }
+  @media (max-width: 375px) {
+    font-size: 1.4rem;
+    margin-bottom: 16px;
+  }
+
   font-size: 1.2rem;
 `;
 const TextWrapper = styled.div`

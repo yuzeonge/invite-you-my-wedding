@@ -156,7 +156,7 @@ const InfoWrapper = styled.div`
   transition: all 0.3s ease-in-out;
   &.active1 {
     @media (max-width: 430px) {
-      height: 265px;
+      height: 285px;
     }
     @media (max-width: 414px) {
       height: 315px;
@@ -165,14 +165,17 @@ const InfoWrapper = styled.div`
       height: 280px;
     }
     @media (max-width: 360px) {
-      height: 205px;
+      height: 235px;
+    }
+    @media (max-width: 290px) {
+      height: 250px;
     }
     height: 250px;
     cursor: pointer;
   }
   &.active2 {
     @media (max-width: 430px) {
-      height: 280px;
+      height: 310px;
     }
     @media (max-width: 414px) {
       height: 305px;
@@ -181,10 +184,10 @@ const InfoWrapper = styled.div`
       height: 260px;
     }
     @media (max-width: 360px) {
-      height: 230px;
+      height: 265px;
     }
     @media (max-width: 280px) {
-      height: 210px;
+      height: 245px;
     }
     height: 240px;
     transition: all 0.8s ease-in-out;
