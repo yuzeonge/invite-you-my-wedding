@@ -151,6 +151,9 @@ export const Flex = styled.div`
   @media (max-width: 360px) {
     width: 30rem;
   }
+  @media (max-width: 356px) {
+    width: 29rem;
+  }
   @media (max-width: 320px) {
     width: 32rem;
   }
@@ -189,6 +192,7 @@ const ItemWrapper = styled.div`
     margin: 10px 0;
     gap: 5px;
   }
+
   @media (max-width: 290px) {
     gap: 3px;
   }
@@ -201,9 +205,11 @@ const TextWrapper = styled.div`
   @media (max-width: 430px) {
     gap: 2px;
   }
+
   @media (max-width: 360px) {
     gap: 4px;
   }
+
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -229,6 +235,9 @@ const Text = styled.p`
   }
   @media (max-width: 360px) {
     font-size: 1.4rem;
+  }
+  @media (max-width: 356px) {
+    font-size: 1.3rem;
   }
   @media (max-width: 290px) {
     font-size: 1.35rem;

@@ -268,6 +268,9 @@ const CallingBox = styled.div`
   @media (max-width: 360px) {
     font-size: 1.2rem;
   }
+  @media (max-width: 356px) {
+    font-size: 1rem;
+  }
   @media (max-width: 290px) {
     font-size: 1.2rem;
   }
@@ -335,6 +338,9 @@ export const Flex = styled.div`
   @media (max-width: 360px) {
     width: 88%;
   }
+  @media (max-width: 356px) {
+    width: 28rem;
+  }
   @media (max-width: 290px) {
     width: 90%;
     padding: 45px 10px 25px 10px;
@@ -356,6 +362,7 @@ const CloseButton = styled.button`
   @media (max-width: 375px) {
     padding: 6px 8px;
   }
+
   &:hover {
     color: #9b9389;
     background-color: #b2aaa1;

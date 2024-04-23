@@ -15,7 +15,7 @@ export default function Intro() {
       textRef.current.textContent += arr.shift();
       setTimeout(function () {
         dynamic(arr);
-      }, 130);
+      }, 70);
     }
   }
 
