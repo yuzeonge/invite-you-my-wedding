@@ -66,7 +66,7 @@ const Container = styled.div`
     width: 320px;
   }
   @media (max-width: 375px) {
-    width: 260px;
+    width: 310px;
   }
 
   @media (max-width: 360px) {
