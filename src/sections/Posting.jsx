@@ -139,8 +139,11 @@ const Text = styled.p`
 `;
 
 const TextWrapper = styled.div`
+  @media (max-width: 430px) {
+    width: 27.5rem;
+  }
   @media (max-width: 414px) {
-    width: 90%;
+    width: 29.5rem;
   }
   display: flex;
   width: 85%;
