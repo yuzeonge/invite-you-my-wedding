@@ -100,6 +100,12 @@ const NameWrapper = styled.div`
   align-items: center;
 `;
 const Text = styled.p`
+  @media (max-width: 398px) {
+    font-size: 1.3rem;
+  }
+  @media (max-width: 394px) {
+    font-size: 1.2rem;
+  }
   @media (max-width: 393px) {
     font-size: 1.3rem;
   }
@@ -108,6 +114,9 @@ const Text = styled.p`
   }
   @media (max-width: 360px) {
     font-size: 1.3rem;
+  }
+  @media (max-width: 358px) {
+    font-size: 1.25rem;
   }
   @media (max-width: 290px) {
     font-size: 1.2rem;
@@ -166,9 +175,6 @@ const Text = styled.p`
 `;
 
 const H1Text = styled(Text)`
-  font-size: 1.7rem;
-  font-weight: 600;
-  color: #5e5e5e;
   @media (max-width: 375px) {
     font-size: 1.7rem;
   }
@@ -179,6 +185,9 @@ const H1Text = styled(Text)`
   @media (max-width: 290px) {
     font-size: 1.7rem;
   }
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: #5e5e5e;
 `;
 
 const GuideWrapper = styled.div`
@@ -188,19 +197,27 @@ const GuideWrapper = styled.div`
 `;
 
 const GuideText = styled.p`
+  @media (max-width: 397px) {
+    font-size: 1rem;
+  }
   @media (max-width: 430px) {
     font-size: 1.15rem;
   }
   @media (max-width: 412px) {
     font-size: 1.2rem;
   }
-
+  @media (max-width: 394px) {
+    font-size: 1.1rem;
+  }
   @media (max-width: 375px) {
     font-size: 1.2rem;
   }
   @media (max-width: 360px) {
     font-size: 1.2rem;
     color: #000;
+  }
+  @media (max-width: 358px) {
+    font-size: 1.2rem;
   }
   @media (max-width: 290px) {
     font-size: 1.2rem;
@@ -211,6 +228,12 @@ const GuideText = styled.p`
 `;
 
 const B = styled.p`
+  @media (max-width: 398px) {
+    font-size: 1.3rem;
+  }
+  @media (max-width: 394px) {
+    font-size: 1.3rem;
+  }
   @media (max-width: 393px) {
     font-size: 1.3rem;
   }
@@ -219,6 +242,12 @@ const B = styled.p`
   }
   @media (max-width: 360px) {
     font-size: 1.6rem;
+  }
+  @media (max-width: 358px) {
+    font-size: 1.3rem;
+  }
+  @media (max-width: 356px) {
+    font-size: 1.2rem;
   }
   @media (max-width: 290px) {
     font-size: 1.2rem;
@@ -231,8 +260,14 @@ const B = styled.p`
 `;
 
 const MessageBox = styled.div`
+  @media (max-width: 397px) {
+    font-size: 1rem;
+  }
   @media (max-width: 412px) {
     font-size: 1.1rem;
+  }
+  @media (max-width: 394px) {
+    font-size: 1rem;
   }
   @media (max-width: 393px) {
     font-size: 1.1rem;
@@ -241,7 +276,13 @@ const MessageBox = styled.div`
     font-size: 1.2rem;
   }
   @media (max-width: 360px) {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+  }
+  @media (max-width: 358px) {
+    font-size: 1rem;
+  }
+  @media (max-width: 356px) {
+    font-size: 1rem;
   }
   @media (max-width: 290px) {
     font-size: 1.2rem;
@@ -259,18 +300,29 @@ const CallingBox = styled.div`
   @media (max-width: 412px) {
     font-size: 1.1rem;
   }
+  @media (max-width: 397px) {
+    font-size: 1rem;
+  }
+  @media (max-width: 394px) {
+    font-size: 1rem;
+  }
   @media (max-width: 393px) {
     font-size: 1.1rem;
   }
   @media (max-width: 375px) {
     font-size: 1.2rem;
   }
+
   @media (max-width: 360px) {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+  }
+  @media (max-width: 358px) {
+    font-size: 1rem;
   }
   @media (max-width: 356px) {
     font-size: 1rem;
   }
+
   @media (max-width: 290px) {
     font-size: 1.2rem;
   }
@@ -336,7 +388,10 @@ export const Flex = styled.div`
     width: 30rem;
   }
   @media (max-width: 360px) {
-    width: 88%;
+    width: 28rem;
+  }
+  @media (max-width: 358px) {
+    width: 28rem;
   }
   @media (max-width: 356px) {
     width: 28rem;

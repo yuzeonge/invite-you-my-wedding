@@ -133,6 +133,16 @@ export const Flex = styled.div`
     border-radius: 10px;
     padding: 22px 10px;
   }
+  @media (max-width: 409px) {
+    width: 28rem;
+    border-radius: 10px;
+    padding: 22px 10px;
+  }
+  @media (max-width: 394px) {
+    width: 27rem;
+    border-radius: 10px;
+    padding: 22px 10px;
+  }
   @media (max-width: 393px) {
     width: 27rem;
     border-radius: 10px;
@@ -149,7 +159,10 @@ export const Flex = styled.div`
     padding: 16px 10px;
   }
   @media (max-width: 360px) {
-    width: 30rem;
+    width: 29rem;
+  }
+  @media (max-width: 358px) {
+    width: 28rem;
   }
   @media (max-width: 356px) {
     width: 29rem;
@@ -227,6 +240,10 @@ const Text = styled.p`
   @media (max-width: 412px) {
     font-size: 1.4rem;
   }
+  @media (max-width: 394px) {
+    font-size: 1.3rem;
+  }
+
   @media (max-width: 393px) {
     font-size: 1.3rem;
   }
@@ -234,9 +251,15 @@ const Text = styled.p`
     font-size: 1.3rem;
   }
   @media (max-width: 360px) {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
+  }
+  @media (max-width: 358px) {
+    font-size: 1.2rem;
   }
   @media (max-width: 356px) {
+    font-size: 1.3rem;
+  }
+  @media (max-width: 320px) {
     font-size: 1.3rem;
   }
   @media (max-width: 290px) {
@@ -299,6 +322,11 @@ const CopyButton = styled.div`
     border-radius: 6px;
     padding: 2px 1px;
     width: 4rem;
+  }
+  @media (max-width: 358px) {
+    border-radius: 6px;
+    padding: 2px 1px;
+    width: 3.5rem;
   }
 
   @media (max-width: 290px) {

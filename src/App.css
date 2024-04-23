@@ -8,6 +8,11 @@
     font-size: 14px;
   }
 }
+@media (max-width: 429px) {
+  * {
+    font-size: 13px;
+  }
+}
 @media (max-width: 414px) {
   * {
     font-size: 13px;
