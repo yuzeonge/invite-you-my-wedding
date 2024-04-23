@@ -116,6 +116,10 @@ const GoToWriteButton = styled.div`
     font-size: 1.2rem;
     padding: 3px 6px;
   }
+  @media (max-width: 320px) {
+    font-size: 1.1rem;
+    padding: 3px 6px;
+  }
   @media (max-width: 290px) {
     font-size: 1.2rem;
     padding: 1px 4px;
@@ -140,6 +144,9 @@ const Text = styled.p`
   }
   @media (max-width: 375px) {
     font-size: 1.3rem;
+  }
+  @media (max-width: 320px) {
+    font-size: 1.2rem;
   }
   @media (max-width: 290px) {
     font-size: 1.2rem;

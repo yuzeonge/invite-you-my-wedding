@@ -63,7 +63,7 @@ const Container = styled.div`
     border-radius: 10px;
   }
   @media (max-width: 393px) {
-    width: 360px;
+    width: 27rem;
   }
   @media (max-width: 390px) {
     width: 320px;
@@ -71,10 +71,15 @@ const Container = styled.div`
   @media (max-width: 375px) {
     width: 310px;
   }
-
+  @media (max-width: 320px) {
+    width: 28rem;
+  }
   @media (max-width: 360px) {
     width: 340px;
     border-radius: 8px;
+  }
+  @media (max-width: 320px) {
+    width: 34rem;
   }
   @media (max-width: 290px) {
     width: 265px;
@@ -111,9 +116,12 @@ const Wrapper = styled.div`
     padding-top: 24px;
     padding-bottom: 20px;
   }
+
   @media (max-width: 375px) {
     padding-top: 0px;
     padding-bottom: 20px;
+  }
+  @media (max-width: 320px) {
   }
 
   @media (max-width: 290px) {

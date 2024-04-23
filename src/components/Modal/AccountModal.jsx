@@ -134,7 +134,7 @@ export const Flex = styled.div`
     padding: 22px 10px;
   }
   @media (max-width: 393px) {
-    width: 28rem;
+    width: 27rem;
     border-radius: 10px;
     padding: 22px 10px;
   }
@@ -150,6 +150,9 @@ export const Flex = styled.div`
   }
   @media (max-width: 360px) {
     width: 30rem;
+  }
+  @media (max-width: 320px) {
+    width: 32rem;
   }
   @media (max-width: 290px) {
     width: 30rem;
@@ -181,6 +184,7 @@ const ItemWrapper = styled.div`
     margin: 20px 0;
     gap: 5px;
   }
+
   @media (max-width: 375px) {
     margin: 10px 0;
     gap: 5px;
@@ -216,6 +220,9 @@ const Text = styled.p`
   }
   @media (max-width: 412px) {
     font-size: 1.4rem;
+  }
+  @media (max-width: 393px) {
+    font-size: 1.3rem;
   }
   @media (max-width: 375px) {
     font-size: 1.3rem;
