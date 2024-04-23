@@ -23,7 +23,6 @@ export default function ConnectInfoModal() {
       <Container className={isModalOpen ? "" : "disable"}>
         <Flex>
           <H1Text>마음 전하는 곳💐</H1Text>
-          이거보이낭??
           <GuideWrapper>
             <NameWrapper>
               *<CallingBox>축하 전화하기📞</CallingBox> <GuideText>를 누르면 전화번호부로 연결됩니다. </GuideText>
@@ -125,7 +124,7 @@ const Text = styled.p`
     font-size: 1.3rem;
   }
 
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 
   &.h2 {
     @media (max-width: 393px) {
@@ -255,7 +254,7 @@ const B = styled.p`
   @media (max-width: 280px) {
     font-size: 1.3rem;
   }
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: 600;
 `;
 
