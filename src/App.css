@@ -39,7 +39,9 @@
     font-size: 9px;
   }
 }
-
+#invite-you {
+  font-family: "yleeMortalHeart-ImmortalMemory";
+}
 :root {
   --font-basic: "GowunDodum-Regular";
   --font--mortalHeart: "yleeMortalHeart-ImmortalMemory";

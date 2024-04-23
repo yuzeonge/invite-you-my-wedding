@@ -23,6 +23,7 @@ export default function ConnectInfoModal() {
       <Container className={isModalOpen ? "" : "disable"}>
         <Flex>
           <H1Text>마음 전하는 곳💐</H1Text>
+          이거보이낭??
           <GuideWrapper>
             <NameWrapper>
               *<CallingBox>축하 전화하기📞</CallingBox> <GuideText>를 누르면 전화번호부로 연결됩니다. </GuideText>
@@ -79,7 +80,6 @@ export default function ConnectInfoModal() {
               <MessageBox onClick={() => (window.document.location.href = `sms:${people_info[5].phone}`)}>축하 메시지 ✉️</MessageBox>
             </NameWrapper>
           </NameListWrapper>
-
           <CloseButton onClick={handleCloseModal}>닫기</CloseButton>
         </Flex>
       </Container>
@@ -218,7 +218,7 @@ const B = styled.p`
     font-size: 1.3rem;
   }
   @media (max-width: 360px) {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
   @media (max-width: 290px) {
     font-size: 1.2rem;
