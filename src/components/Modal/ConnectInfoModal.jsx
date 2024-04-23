@@ -326,6 +326,9 @@ export const Flex = styled.div`
   @media (max-width: 393px) {
     width: 27rem;
   }
+  @media (max-width: 390px) {
+    width: 28rem;
+  }
   @media (max-width: 375px) {
     width: 30rem;
   }

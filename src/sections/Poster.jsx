@@ -62,6 +62,12 @@ const Text = styled.p`
   @media (max-width: 412px) {
     font-size: 1.6rem;
   }
+  @media (max-width: 393px) {
+    font-size: 1.4rem;
+  }
+  @media (max-width: 375px) {
+    font-size: 1.6rem;
+  }
   @media (max-width: 360px) {
     font-size: 1.6rem;
   }
@@ -80,7 +86,12 @@ const Text = styled.p`
     @media (max-width: 412px) {
       font-size: 5.2rem;
     }
+    @media (max-width: 393px) {
+      font-size: 4.8rem;
+      margin-bottom: 1px;
+    }
     @media (max-width: 375px) {
+      font-size: 5.2rem;
       margin-bottom: 2px;
     }
     @media (max-width: 360px) {
@@ -95,6 +106,12 @@ const Text = styled.p`
       font-size: 2.7rem;
     }
     @media (max-width: 412px) {
+      font-size: 2.8rem;
+    }
+    @media (max-width: 393px) {
+      font-size: 2.3rem;
+    }
+    @media (max-width: 375px) {
       font-size: 2.8rem;
     }
     @media (max-width: 360px) {
