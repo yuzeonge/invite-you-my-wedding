@@ -34,6 +34,12 @@ const Image = styled.img`
 `;
 
 const Absolute = styled.div`
+  @media (max-width: 430px) {
+    bottom: 2px;
+  }
+  @media (max-width: 414px) {
+    bottom: 4px;
+  }
   @media (max-width: 375px) {
     bottom: 8px;
   }
@@ -50,30 +56,52 @@ const Absolute = styled.div`
 `;
 
 const Text = styled.p`
+  @media (max-width: 430px) {
+    font-size: 1.6rem;
+  }
+  @media (max-width: 412px) {
+    font-size: 1.6rem;
+  }
   @media (max-width: 360px) {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
   font-size: 1.6rem;
   color: #fff;
 
   &.f6 {
+    @media (max-width: 430px) {
+      font-size: 5rem;
+      margin-bottom: 2px;
+    }
+    @media (max-width: 414px) {
+      font-size: 5rem;
+      margin-bottom: 2px;
+    }
+    @media (max-width: 412px) {
+      font-size: 5.2rem;
+    }
     @media (max-width: 375px) {
       margin-bottom: 2px;
     }
     @media (max-width: 360px) {
-      font-size: 4.5rem;
+      font-size: 4.7rem;
     }
     font-family: "yleeMortalHeart-ImmortalMemory";
     font-size: 6rem;
     margin-bottom: 10px;
   }
   &.f3 {
+    @media (max-width: 430px) {
+      font-size: 2.7rem;
+    }
+    @media (max-width: 412px) {
+      font-size: 2.8rem;
+    }
+    @media (max-width: 360px) {
+      font-size: 2.8rem;
+    }
     font-family: "yleeMortalHeart-ImmortalMemory";
     font-size: 3rem;
-  }
-  &.f2 {
-    font-family: "yleeMortalHeart-ImmortalMemory";
-    font-size: 2rem;
   }
 `;
 

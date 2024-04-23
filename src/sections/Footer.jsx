@@ -17,6 +17,7 @@ const Container = styled.div`
   background-color: #a8a8a8;
   position: relative;
   width: 100%;
+  height: 56px;
   margin: 0;
 `;
 
@@ -35,5 +36,5 @@ const Flex = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  padding: 12px 10px 30px 10px;
+  padding: 12px 10px 0px 10px;
 `;

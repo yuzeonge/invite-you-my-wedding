@@ -68,6 +68,9 @@ const DateWrapper = styled.div`
 `;
 
 const GuestBookItem = styled(Button)`
+  @media (max-width: 414px) {
+    width: 90%;
+  }
   width: 85%;
   height: 100%;
   min-height: 34px;

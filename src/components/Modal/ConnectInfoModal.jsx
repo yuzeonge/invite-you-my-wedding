@@ -109,6 +109,9 @@ const Text = styled.p`
   @media (max-width: 290px) {
     font-size: 1.2rem;
   }
+  @media (max-width: 280px) {
+    font-size: 1.3rem;
+  }
 
   font-size: 1.4rem;
 
@@ -179,6 +182,12 @@ const GuideWrapper = styled.div`
 `;
 
 const GuideText = styled.p`
+  @media (max-width: 430px) {
+    font-size: 1.15rem;
+  }
+  @media (max-width: 412px) {
+    font-size: 1.2rem;
+  }
   @media (max-width: 375px) {
     font-size: 1.2rem;
   }
@@ -204,22 +213,28 @@ const B = styled.p`
   @media (max-width: 290px) {
     font-size: 1.2rem;
   }
+  @media (max-width: 280px) {
+    font-size: 1.3rem;
+  }
   font-size: 1.4rem;
   font-weight: 600;
 `;
 
 const MessageBox = styled.div`
+  @media (max-width: 412px) {
+    font-size: 1.1rem;
+  }
   @media (max-width: 375px) {
     font-size: 1.2rem;
   }
   @media (max-width: 360px) {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   @media (max-width: 290px) {
     font-size: 1.2rem;
   }
   @media (max-width: 280px) {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
   border-radius: 5px;
   background-color: #f7deabac;
@@ -228,17 +243,20 @@ const MessageBox = styled.div`
 `;
 
 const CallingBox = styled.div`
+  @media (max-width: 412px) {
+    font-size: 1.1rem;
+  }
   @media (max-width: 375px) {
     font-size: 1.2rem;
   }
   @media (max-width: 360px) {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   @media (max-width: 290px) {
     font-size: 1.2rem;
   }
   @media (max-width: 280px) {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
   border-radius: 5px;
   background-color: #9ad49b81;
@@ -286,6 +304,16 @@ export const Container = styled.div`
 `;
 
 export const Flex = styled.div`
+  @media (max-width: 412px) {
+    width: 88%;
+  }
+  @media (max-width: 360px) {
+    width: 88%;
+  }
+  @media (max-width: 290px) {
+    width: 90%;
+    padding: 45px 10px 25px 10px;
+  }
   display: flex;
   justify-content: center;
   align-items: center;

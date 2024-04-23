@@ -25,6 +25,9 @@ const InputField = styled.input`
 
   &:focus ~ label,
   &:valid ~ label {
+    @media (max-width: 430px) {
+      font-size: 1.3rem;
+    }
     font-size: 1.5rem;
     bottom: 64px;
     color: #666;
@@ -38,6 +41,9 @@ const InputField = styled.input`
 `;
 
 const Label = styled.label`
+  @media (max-width: 430px) {
+    font-size: 1.3rem;
+  }
   position: absolute;
   color: #aaa;
   left: 0px;
@@ -70,6 +76,9 @@ const TextArea = styled.textarea`
 
   &:focus ~ label,
   &:valid ~ label {
+    @media (max-width: 430px) {
+      font-size: 1rem;
+    }
     font-size: 1.2rem;
     top: 0;
     color: #666;
