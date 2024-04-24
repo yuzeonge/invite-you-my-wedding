@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "GowunDodum-Regular";
+  font-weight: normal;
+  src: url("./fonts/GowunDodum-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "yleeMortalHeart-ImmortalMemory";
+  src: url("./fonts/yleeMortalHeart-ImmortalMemory.ttf");
+}
+
+:root {
+  --font-basic: "GowunDodum-Regular";
+  --font--mortalHeart: "yleeMortalHeart-ImmortalMemory";
+}
+
+* {
+  font-family: "GowunDodum-Regular";
+}

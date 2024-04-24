@@ -27,13 +27,25 @@ export default function Gallery() {
         <SliderWraper>
           <MultiSlick>
             {_imageSrcArray.map((src, index) => (
-              <WeddingImage src={`${_path}/${src}`} onClick={() => handleOpenModal(src, index)} key={index} />
+              <WeddingImage
+                src={`${_path}/${src}`}
+                onClick={() => handleOpenModal(src, index)}
+                key={index}
+                loading="lazy"
+                decoding="async"
+              />
             ))}
           </MultiSlick>
         </SliderWraper>
         <EmptyBox />
       </Flex>
-      <ImageModal ref={slideRef} isModalOpen={isImageModalOpen} src={imageSrc} handleCloseModal={() => setIsImageModalOpen(false)} tab={tab} />
+      <ImageModal
+        ref={slideRef}
+        isModalOpen={isImageModalOpen}
+        src={imageSrc}
+        handleCloseModal={() => setIsImageModalOpen(false)}
+        tab={tab}
+      />
     </Container>
   );
 }

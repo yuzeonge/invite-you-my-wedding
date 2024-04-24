@@ -18,6 +18,11 @@ export default function ConnectInfoModal() {
   const handleCloseModal = () => {
     setIsModalOpen(false);
   };
+
+  if (typeof window !== "object") {
+    return <></>;
+  }
+
   return (
     <>
       <Container className={isModalOpen ? "" : "disable"}>
@@ -36,13 +41,21 @@ export default function ConnectInfoModal() {
             <Text className="h2">신랑💍신부</Text>
             <NameWrapper>
               <Text>신랑 </Text> <B>소종범</B>
-              <CallingBox onClick={() => (window.document.location.href = `tel:${people_info[0].phone}`)}>축하 전화하기📞</CallingBox>
-              <MessageBox onClick={() => (window.document.location.href = `sms:${people_info[0].phone}`)}>축하 메시지 ✉️</MessageBox>
+              <CallingBox onClick={() => (window.document.location.href = `tel:${people_info[0].phone}`)}>
+                축하 전화하기📞
+              </CallingBox>
+              <MessageBox onClick={() => (window.document.location.href = `sms:${people_info[0].phone}`)}>
+                축하 메시지 ✉️
+              </MessageBox>
             </NameWrapper>
             <NameWrapper>
               <Text>신부 </Text> <B>권유정</B>
-              <CallingBox onClick={() => (window.document.location.href = `tel:${people_info[1].phone}`)}>축하 전화하기📞</CallingBox>
-              <MessageBox onClick={() => (window.document.location.href = `sms:${people_info[1].phone}`)}>축하 메시지 ✉️</MessageBox>
+              <CallingBox onClick={() => (window.document.location.href = `tel:${people_info[1].phone}`)}>
+                축하 전화하기📞
+              </CallingBox>
+              <MessageBox onClick={() => (window.document.location.href = `sms:${people_info[1].phone}`)}>
+                축하 메시지 ✉️
+              </MessageBox>
             </NameWrapper>
           </NameListWrapper>
           <NameListWrapper>
@@ -53,13 +66,21 @@ export default function ConnectInfoModal() {
 
             <NameWrapper>
               <Text>신랑 아버지 </Text> <B>소영식</B>
-              <CallingBox onClick={() => (window.document.location.href = `tel:${people_info[2].phone}`)}>축하 전화하기📞</CallingBox>
-              <MessageBox onClick={() => (window.document.location.href = `sms:${people_info[2].phone}`)}>축하 메시지 ✉️</MessageBox>
+              <CallingBox onClick={() => (window.document.location.href = `tel:${people_info[2].phone}`)}>
+                축하 전화하기📞
+              </CallingBox>
+              <MessageBox onClick={() => (window.document.location.href = `sms:${people_info[2].phone}`)}>
+                축하 메시지 ✉️
+              </MessageBox>
             </NameWrapper>
             <NameWrapper>
               <Text>신랑 어머니 </Text> <B>박숙녀</B>
-              <CallingBox onClick={() => (window.document.location.href = `tel:${people_info[3].phone}`)}>축하 전화하기📞</CallingBox>
-              <MessageBox onClick={() => (window.document.location.href = `sms:${people_info[3].phone}`)}>축하 메시지 ✉️</MessageBox>
+              <CallingBox onClick={() => (window.document.location.href = `tel:${people_info[3].phone}`)}>
+                축하 전화하기📞
+              </CallingBox>
+              <MessageBox onClick={() => (window.document.location.href = `sms:${people_info[3].phone}`)}>
+                축하 메시지 ✉️
+              </MessageBox>
             </NameWrapper>
           </NameListWrapper>
           <NameListWrapper>
@@ -70,13 +91,21 @@ export default function ConnectInfoModal() {
 
             <NameWrapper>
               <Text>신부 아버지 </Text> <B>권태건</B>
-              <CallingBox onClick={() => (window.document.location.href = `tel:${people_info[4].phone}`)}>축하 전화하기📞</CallingBox>
-              <MessageBox onClick={() => (window.document.location.href = `sms:${people_info[4].phone}`)}>축하 메시지 ✉️</MessageBox>
+              <CallingBox onClick={() => (window.document.location.href = `tel:${people_info[4].phone}`)}>
+                축하 전화하기📞
+              </CallingBox>
+              <MessageBox onClick={() => (window.document.location.href = `sms:${people_info[4].phone}`)}>
+                축하 메시지 ✉️
+              </MessageBox>
             </NameWrapper>
             <NameWrapper>
               <Text>신부 어머니 </Text> <B>마은영</B>
-              <CallingBox onClick={() => (window.document.location.href = `tel:${people_info[5].phone}`)}>축하 전화하기📞</CallingBox>
-              <MessageBox onClick={() => (window.document.location.href = `sms:${people_info[5].phone}`)}>축하 메시지 ✉️</MessageBox>
+              <CallingBox onClick={() => (window.document.location.href = `tel:${people_info[5].phone}`)}>
+                축하 전화하기📞
+              </CallingBox>
+              <MessageBox onClick={() => (window.document.location.href = `sms:${people_info[5].phone}`)}>
+                축하 메시지 ✉️
+              </MessageBox>
             </NameWrapper>
           </NameListWrapper>
           <CloseButton onClick={handleCloseModal}>닫기</CloseButton>

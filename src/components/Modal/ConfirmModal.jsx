@@ -1,21 +1,21 @@
-import styled from 'styled-components';
-import Button from '../Button/Button';
-import { Dimed } from './ConnectInfoModal';
-import TextInput from '../Input/TextInput';
-import { useState, useEffect } from 'react';
+import styled from "styled-components";
+import Button from "../Button/Button";
+import { Dimed } from "./ConnectInfoModal";
+import TextInput from "../Input/TextInput";
+import { useState, useEffect } from "react";
 
-import ReactDom from 'react-dom';
-import { toast } from 'react-toastify';
+import ReactDom from "react-dom";
+import { toast } from "react-toastify";
 
 const ConfirmModal = ({ fetchDeleteGuestBook, isModalOpen, handleCloseModal, guestBookItem }) => {
-  const [password, setPassword] = useState('');
-  const [isMounted, setIsMounted] = useState(false);
+  const [password, setPassword] = useState("");
+  const [element, setElement] = useState(null);
 
-  const notify = () => toast('방명록이 삭제되었습니다.');
+  const notify = () => toast("방명록이 삭제되었습니다.");
 
   const onDeleteGuestBook = () => {
     if (password !== guestBookItem.password) {
-      alert('비밀번호가 틀립니다');
+      alert("비밀번호가 틀립니다");
       return;
     }
     notify();
@@ -25,17 +25,17 @@ const ConfirmModal = ({ fetchDeleteGuestBook, isModalOpen, handleCloseModal, gue
       handleCloseModal();
     }, 300);
   };
+
   useEffect(() => {
-    setIsMounted(true);
+    setElement(document.getElementById("modal"));
   }, []);
 
-  if (!isMounted) return null;
-
   if (!isModalOpen) return null;
+  if (!element) return <></>;
 
   return ReactDom.createPortal(
     <>
-      <Container className={isModalOpen ? '' : 'disabled'}>
+      <Container className={isModalOpen ? "" : "disabled"}>
         <Header>
           <HeaderText>삭제하시겠습니까?</HeaderText>
         </Header>
@@ -43,9 +43,9 @@ const ConfirmModal = ({ fetchDeleteGuestBook, isModalOpen, handleCloseModal, gue
           <TextWrapper>
             <TextInput
               value={password}
-              onChange={e => setPassword(e.target.value)}
+              onChange={(e) => setPassword(e.target.value)}
               type="password"
-              label={'작성 시 입력하신 비밀번호를 입력해주세요.'}
+              label={"작성 시 입력하신 비밀번호를 입력해주세요."}
             />
           </TextWrapper>
           <ButtonWrapper>
@@ -58,9 +58,9 @@ const ConfirmModal = ({ fetchDeleteGuestBook, isModalOpen, handleCloseModal, gue
           </ButtonWrapper>
         </Wrapper>
       </Container>
-      <Dimed className={isModalOpen ? '' : 'disable'} onClick={handleCloseModal} />
+      <Dimed className={isModalOpen ? "" : "disable"} onClick={handleCloseModal} />
     </>,
-    document.getElementById('modal')
+    element
   );
 };
 

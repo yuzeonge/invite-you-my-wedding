@@ -5,15 +5,20 @@ export default function Starting() {
   return (
     <Container>
       <StyledWrapper>
-        <Text id="invite-you" className="invite-text" data-aos="fade-up" data-aos-delay="3000" data-aos-duration="1200">
+        <InviteText
+          data-aos="fade-up"
+          data-aos-delay="3000"
+          data-aos-duration="1200"
+          style={{ fontFamily: "yleeMortalHeart-ImmortalMemory" }}
+        >
           Invite you
-        </Text>
+        </InviteText>
         <Text className="t2 mb-48" data-aos="fade-up" data-aos-delay="3000" data-aos-duration="1800">
           소중한 당신을 초대합니다.
         </Text>
       </StyledWrapper>
       <ImgWrapper data-aos="flip-left" data-aos-delay="3000" data-aos-duration="1800">
-        <Image src="image/main-card.jpeg" />
+        <Image src="image/main-card.webp" fetchpriority="high" alt="썸네일이미지" />
       </ImgWrapper>
     </Container>
   );
@@ -39,11 +44,12 @@ const Image = styled.img`
   width: 100%;
 `;
 
-const StyledWrapper = styled(TextWrapper)`
-  .invite-text {
-    margin-top: 3rem;
-    margin-bottom: 0;
-    font-size: 4rem;
-    padding: 4px;
-  }
+const InviteText = styled.p`
+  font-size: 1.2rem;
+  margin-top: 3rem;
+  margin-bottom: 0;
+  font-size: 4rem;
+  padding: 4px;
 `;
+
+const StyledWrapper = styled(TextWrapper)``;

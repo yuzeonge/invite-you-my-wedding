@@ -20,7 +20,7 @@ export default function Sound() {
 
   return (
     <>
-      <StyledAudio autoPlay controls ref={audioRef} loop id="audio">
+      <StyledAudio autoPlay ref={audioRef} loop id="audio">
         <source src="background-music.mp3" />
       </StyledAudio>
       <SoundWrapper onClick={togglePlay}>{isPlaying ? <GiSoundOff size={30} /> : <GiSoundOn size={30} />}</SoundWrapper>
