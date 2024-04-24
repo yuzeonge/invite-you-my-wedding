@@ -41,21 +41,13 @@ export default function ConnectInfoModal() {
             <Text className="h2">신랑💍신부</Text>
             <NameWrapper>
               <Text>신랑 </Text> <B>소종범</B>
-              <CallingBox onClick={() => (window.document.location.href = `tel:${people_info[0].phone}`)}>
-                축하 전화하기📞
-              </CallingBox>
-              <MessageBox onClick={() => (window.document.location.href = `sms:${people_info[0].phone}`)}>
-                축하 메시지 ✉️
-              </MessageBox>
+              <CallingBox onClick={() => (window.document.location.href = `tel:${people_info[0].phone}`)}>축하 전화하기📞</CallingBox>
+              <MessageBox onClick={() => (window.document.location.href = `sms:${people_info[0].phone}`)}>축하 메시지 ✉️</MessageBox>
             </NameWrapper>
             <NameWrapper>
               <Text>신부 </Text> <B>권유정</B>
-              <CallingBox onClick={() => (window.document.location.href = `tel:${people_info[1].phone}`)}>
-                축하 전화하기📞
-              </CallingBox>
-              <MessageBox onClick={() => (window.document.location.href = `sms:${people_info[1].phone}`)}>
-                축하 메시지 ✉️
-              </MessageBox>
+              <CallingBox onClick={() => (window.document.location.href = `tel:${people_info[1].phone}`)}>축하 전화하기📞</CallingBox>
+              <MessageBox onClick={() => (window.document.location.href = `sms:${people_info[1].phone}`)}>축하 메시지 ✉️</MessageBox>
             </NameWrapper>
           </NameListWrapper>
           <NameListWrapper>
@@ -66,21 +58,13 @@ export default function ConnectInfoModal() {
 
             <NameWrapper>
               <Text>신랑 아버지 </Text> <B>소영식</B>
-              <CallingBox onClick={() => (window.document.location.href = `tel:${people_info[2].phone}`)}>
-                축하 전화하기📞
-              </CallingBox>
-              <MessageBox onClick={() => (window.document.location.href = `sms:${people_info[2].phone}`)}>
-                축하 메시지 ✉️
-              </MessageBox>
+              <CallingBox onClick={() => (window.document.location.href = `tel:${people_info[2].phone}`)}>축하 전화하기📞</CallingBox>
+              <MessageBox onClick={() => (window.document.location.href = `sms:${people_info[2].phone}`)}>축하 메시지 ✉️</MessageBox>
             </NameWrapper>
             <NameWrapper>
               <Text>신랑 어머니 </Text> <B>박숙녀</B>
-              <CallingBox onClick={() => (window.document.location.href = `tel:${people_info[3].phone}`)}>
-                축하 전화하기📞
-              </CallingBox>
-              <MessageBox onClick={() => (window.document.location.href = `sms:${people_info[3].phone}`)}>
-                축하 메시지 ✉️
-              </MessageBox>
+              <CallingBox onClick={() => (window.document.location.href = `tel:${people_info[3].phone}`)}>축하 전화하기📞</CallingBox>
+              <MessageBox onClick={() => (window.document.location.href = `sms:${people_info[3].phone}`)}>축하 메시지 ✉️</MessageBox>
             </NameWrapper>
           </NameListWrapper>
           <NameListWrapper>
@@ -91,21 +75,13 @@ export default function ConnectInfoModal() {
 
             <NameWrapper>
               <Text>신부 아버지 </Text> <B>권태건</B>
-              <CallingBox onClick={() => (window.document.location.href = `tel:${people_info[4].phone}`)}>
-                축하 전화하기📞
-              </CallingBox>
-              <MessageBox onClick={() => (window.document.location.href = `sms:${people_info[4].phone}`)}>
-                축하 메시지 ✉️
-              </MessageBox>
+              <CallingBox onClick={() => (window.document.location.href = `tel:${people_info[4].phone}`)}>축하 전화하기📞</CallingBox>
+              <MessageBox onClick={() => (window.document.location.href = `sms:${people_info[4].phone}`)}>축하 메시지 ✉️</MessageBox>
             </NameWrapper>
             <NameWrapper>
               <Text>신부 어머니 </Text> <B>마은영</B>
-              <CallingBox onClick={() => (window.document.location.href = `tel:${people_info[5].phone}`)}>
-                축하 전화하기📞
-              </CallingBox>
-              <MessageBox onClick={() => (window.document.location.href = `sms:${people_info[5].phone}`)}>
-                축하 메시지 ✉️
-              </MessageBox>
+              <CallingBox onClick={() => (window.document.location.href = `tel:${people_info[5].phone}`)}>축하 전화하기📞</CallingBox>
+              <MessageBox onClick={() => (window.document.location.href = `sms:${people_info[5].phone}`)}>축하 메시지 ✉️</MessageBox>
             </NameWrapper>
           </NameListWrapper>
           <CloseButton onClick={handleCloseModal}>닫기</CloseButton>
@@ -132,19 +108,19 @@ const Text = styled.p`
     font-size: 1.1rem;
   }
   @media (max-width: 398px) {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   @media (max-width: 394px) {
     font-size: 1.2rem;
   }
   @media (max-width: 393px) {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   @media (max-width: 375px) {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   @media (max-width: 360px) {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   @media (max-width: 358px) {
     font-size: 1.25rem;
@@ -153,7 +129,7 @@ const Text = styled.p`
     font-size: 1.2rem;
   }
   @media (max-width: 280px) {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
   @media (max-width: 274px) {
     font-size: 1rem;
@@ -166,24 +142,24 @@ const Text = styled.p`
 
   &.h2 {
     @media (min-width: 399px) {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
     }
     @media (max-width: 393px) {
-      font-size: 1.3rem;
+      font-size: 1.1rem;
     }
     @media (max-width: 375px) {
-      font-size: 1.3rem;
+      font-size: 1.1rem;
     }
     @media (max-width: 360px) {
-      font-size: 1.4rem;
+      font-size: 1.2rem;
     }
     @media (max-width: 290px) {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
     }
     @media (max-width: 274px) {
       font-size: 1rem;
     }
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #5e5d5d;
   }
 
@@ -195,7 +171,7 @@ const Text = styled.p`
       font-size: 1.3rem;
     }
     @media (max-width: 360px) {
-      font-size: 1.7rem;
+      font-size: 1.5rem;
     }
     @media (max-width: 290px) {
       font-size: 1.2rem;
@@ -214,7 +190,7 @@ const Text = styled.p`
       font-size: 1.3rem;
     }
     @media (max-width: 360px) {
-      font-size: 1.7rem;
+      font-size: 1.5rem;
     }
     @media (max-width: 290px) {
       font-size: 1.2rem;
@@ -302,22 +278,22 @@ const B = styled.p`
     font-size: 1.2rem;
   }
   @media (max-width: 398px) {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   @media (max-width: 394px) {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   @media (max-width: 393px) {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   @media (max-width: 375px) {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   @media (max-width: 360px) {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
   @media (max-width: 358px) {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   @media (max-width: 356px) {
     font-size: 1.2rem;
@@ -326,7 +302,7 @@ const B = styled.p`
     font-size: 1.2rem;
   }
   @media (max-width: 280px) {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   @media (max-width: 274px) {
     font-size: 1rem;
@@ -344,7 +320,7 @@ const MessageBox = styled.div`
     font-size: 1rem;
   }
   @media (max-width: 412px) {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
   @media (max-width: 397px) {
     font-size: 1rem;
@@ -353,13 +329,13 @@ const MessageBox = styled.div`
     font-size: 1rem;
   }
   @media (max-width: 393px) {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
   @media (max-width: 375px) {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   @media (max-width: 360px) {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
   @media (max-width: 358px) {
     font-size: 1rem;
@@ -368,10 +344,10 @@ const MessageBox = styled.div`
     font-size: 1rem;
   }
   @media (max-width: 290px) {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   @media (max-width: 280px) {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
   @media (max-width: 274px) {
     font-size: 1rem;
@@ -400,14 +376,14 @@ const CallingBox = styled.div`
     font-size: 1rem;
   }
   @media (max-width: 393px) {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
   @media (max-width: 375px) {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   @media (max-width: 360px) {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
   @media (max-width: 358px) {
     font-size: 1rem;
@@ -416,7 +392,7 @@ const CallingBox = styled.div`
     font-size: 1rem;
   }
   @media (max-width: 290px) {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   @media (max-width: 280px) {
     font-size: 1.1rem;
