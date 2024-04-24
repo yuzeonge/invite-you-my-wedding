@@ -60,7 +60,7 @@ const Container = styled.div`
   opacity: 1;
   z-index: 999;
   backdrop-filter: blur(10px);
-
+  -webkit-backdrop-filter: blur(10px);
   transition: opacity 0.6s ease-in-out;
 
   &.fadeout {
