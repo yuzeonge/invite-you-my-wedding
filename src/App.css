@@ -44,28 +44,6 @@
     font-size: 9px;
   }
 }
-#invite-you {
-  font-family: "yleeMortalHeart-ImmortalMemory";
-}
-:root {
-  --font-basic: "GowunDodum-Regular";
-  --font--mortalHeart: "yleeMortalHeart-ImmortalMemory";
-}
-
-@font-face {
-  font-family: "GowunDodum-Regular";
-  font-weight: normal;
-  src: url("./fonts/GowunDodum-Regular.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "yleeMortalHeart-ImmortalMemory";
-  src: url("./fonts/yleeMortalHeart-ImmortalMemory.ttf");
-}
-
-body {
-  font-family: "GowunDodum-Regular";
-}
 
 a {
   text-decoration: none;

@@ -30,9 +30,11 @@ const DdayCount = ({ targetDate }) => {
 
   const { days, hours, minutes, seconds } = timeLeft;
 
+  if (typeof window === "undefined") return <></>;
+
   return (
     <Text>
-      {days > 0 && <Text>{days}일&nbsp; </Text>}
+      {days > 0 && <>{days}일 </>}
       {hours}시 {minutes}분 {seconds}초 남았습니다.
     </Text>
   );

@@ -1,43 +1,43 @@
 // styles
-import './App.css';
-import styled from 'styled-components';
+import "./font.css";
+import "./App.css";
+import styled from "styled-components";
 
 // hooks
-import { useEffect, useState } from 'react';
-import { RecoilRoot } from 'recoil';
+import { useEffect, useState } from "react";
+import { RecoilRoot } from "recoil";
 
 // component
-import Starting from './sections/Starting';
-import Poster from './sections/Poster';
-import Poetry from './sections/Poetry';
-import Calendar from './sections/CalendarSection';
-import Gallery from './sections/Gallery';
-import Location from './sections/Location';
-import WeddingInfo from './sections/WeddingInfo';
-import Posting from './sections/Posting';
-import Ending from './sections/Ending';
-import Footer from './sections/Footer';
-import ConnectInfoModal from './components/Modal/ConnectInfoModal';
+import Starting from "./sections/Starting";
+import Poster from "./sections/Poster";
+import Poetry from "./sections/Poetry";
+import Calendar from "./sections/CalendarSection";
+import Gallery from "./sections/Gallery";
+import Location from "./sections/Location";
+import WeddingInfo from "./sections/WeddingInfo";
+import Posting from "./sections/Posting";
+import Ending from "./sections/Ending";
+import Footer from "./sections/Footer";
+import ConnectInfoModal from "./components/Modal/ConnectInfoModal";
 
 // slick
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 // aos
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import Intro from './sections/Intro';
+import AOS from "aos";
+import "aos/dist/aos.css";
+import Intro from "./sections/Intro";
 
 // toast
-import { ToastContainer } from 'react-toastify';
+import { ToastContainer } from "react-toastify";
 
-import Sound from './components/Sound/Sound';
+import Sound from "./components/Sound/Sound";
 
 // icon
 
 function App() {
   const [isShow, setIsShow] = useState(false);
-  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
     AOS.init({
@@ -46,24 +46,25 @@ function App() {
   }, []);
 
   useEffect(() => {
-    setIsMounted(true);
-  }, []);
-  useEffect(() => {
-    setTimeout(() => {
+    const showTimeout = setTimeout(() => {
       setIsShow(() => true);
     }, 3000);
-    setTimeout(() => {
+
+    const hideTimeout = setTimeout(() => {
       setIsShow(() => false);
     }, 8000);
-  }, []);
 
-  if (!isMounted) return null;
+    return () => {
+      clearTimeout(showTimeout);
+      clearTimeout(hideTimeout);
+    };
+  }, []);
 
   return (
     <RecoilRoot>
       <StyledLayout>
         <Sound />
-        <StyledNav className={isShow ? 'active' : ''}>배경음악이 준비되어 있습니다.</StyledNav>
+        <StyledNav className={isShow ? "active" : ""}>배경음악이 준비되어 있습니다.</StyledNav>
         <Intro />
         <Starting />
         <Poetry />

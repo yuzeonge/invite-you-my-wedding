@@ -1,18 +1,18 @@
-import { forwardRef } from 'react';
-import styled from 'styled-components';
-import ReactDom from 'react-dom';
-import { useState, useEffect } from 'react';
+import { forwardRef } from "react";
+import styled from "styled-components";
+import ReactDom from "react-dom";
+import { useState, useEffect } from "react";
 
 // component
-import { Dimed } from './ConnectInfoModal';
-import IconButton from '../Button/IconButton';
-import CloseSvg from '../Icons/close';
+import { Dimed } from "./ConnectInfoModal";
+import IconButton from "../Button/IconButton";
+import CloseSvg from "../Icons/close";
 
 // constant
-import { _imageSrcArray, _path } from '../../constants/image';
+import { _imageSrcArray, _path } from "../../constants/image";
 
 // slick
-import Slider from 'react-slick';
+import Slider from "react-slick";
 
 const ImageModal = forwardRef(({ src, isModalOpen, handleCloseModal, ...props }, ref) => {
   const settings = {
@@ -23,16 +23,17 @@ const ImageModal = forwardRef(({ src, isModalOpen, handleCloseModal, ...props },
     slidesToScroll: 1,
   };
 
-  const [isMounted, setIsMounted] = useState(false);
+  const [element, setElement] = useState(null);
 
   useEffect(() => {
-    setIsMounted(true);
+    setElement(document.getElementById("modal"));
   }, []);
 
-  if (!isMounted) return null;
+  if (!element) return <></>;
+
   return ReactDom.createPortal(
     <>
-      <Container className={isModalOpen ? '' : 'disable'}>
+      <Container className={isModalOpen ? "" : "disable"}>
         <Header>
           <IconButtonWrapper>
             <IconButton onClick={handleCloseModal}>
@@ -42,15 +43,15 @@ const ImageModal = forwardRef(({ src, isModalOpen, handleCloseModal, ...props },
         </Header>
         <Wrapper>
           <Slider {...settings} ref={ref}>
-            {_imageSrcArray.map(src => (
+            {_imageSrcArray.map((src) => (
               <Image src={`${_path}/${src}`} key={src} />
             ))}
           </Slider>
         </Wrapper>
       </Container>
-      <Dimed className={isModalOpen ? '' : 'disable'} onClick={handleCloseModal} style={{ opacity: '0.9' }} />
+      <Dimed className={isModalOpen ? "" : "disable"} onClick={handleCloseModal} style={{ opacity: "0.9" }} />
     </>,
-    document.getElementById('modal')
+    element
   );
 });
 
