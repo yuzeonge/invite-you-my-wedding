@@ -59,6 +59,7 @@ const Container = styled.div`
   left: 0;
   opacity: 1;
   z-index: 999;
+  backdrop-filter: blur(10px);
 
   transition: opacity 0.6s ease-in-out;
 

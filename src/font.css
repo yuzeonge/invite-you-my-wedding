@@ -2,11 +2,13 @@
   font-family: "GowunDodum-Regular";
   font-weight: normal;
   src: url("./fonts/GowunDodum-Regular.ttf") format("truetype");
+  font-display: block;
 }
 
 @font-face {
   font-family: "yleeMortalHeart-ImmortalMemory";
   src: url("./fonts/yleeMortalHeart-ImmortalMemory.ttf");
+  font-display: block;
 }
 
 :root {
