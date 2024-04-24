@@ -36,6 +36,7 @@ const TextWrapper = styled.div`
 
 const TextCategoryTitle = styled.p`
   font-family: "yleeMortalHeart-ImmortalMemory";
+  font-display: block;
   font-size: 3rem;
   font-weight: bold;
   color: #4d4d4d;
@@ -53,11 +54,13 @@ const Text = styled.p`
     padding: 4px;
     font-size: 50px;
     font-family: "yleeMortalHeart-ImmortalMemory";
+    font-display: block;
   }
   &.t2 {
     font-size: 1.6rem;
     letter-spacing: -0.5px;
     margin-bottom: 10px;
+    font-display: block;
   }
 
   &.mb-48 {
@@ -69,6 +72,7 @@ const Text = styled.p`
   }
   &.fs {
     font-family: "yleeMortalHeart-ImmortalMemory";
+    font-display: block;
   }
 `;
 

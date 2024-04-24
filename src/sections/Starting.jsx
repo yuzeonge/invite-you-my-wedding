@@ -50,6 +50,7 @@ const InviteText = styled.p`
   margin-bottom: 0;
   font-size: 4rem;
   padding: 4px;
+  font-display: block;
 `;
 
 const StyledWrapper = styled(TextWrapper)``;
