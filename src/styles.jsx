@@ -89,7 +89,7 @@ const Flower = styled.img`
   }
 
   @media (max-width: 375px) {
-    margin: 14px;
+    margin: 10px;
     width: 40%;
   }
 
@@ -97,8 +97,12 @@ const Flower = styled.img`
     margin: 10px;
     width: 40%;
   }
+  @media (max-width: 354px) {
+    margin: 0px;
+    width: 40%;
+  }
   @media (max-width: 320px) {
-    margin: 26px;
+    margin: 16px;
     width: 40%;
   }
   @media (max-width: 290px) {

@@ -48,6 +48,7 @@ const FormWrapper = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin: 0;
   &.w1 {
     margin: 42px;
     background-color: #ffff;
