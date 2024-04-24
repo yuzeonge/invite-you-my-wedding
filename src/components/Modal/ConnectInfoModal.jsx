@@ -105,7 +105,7 @@ const NameWrapper = styled.div`
 `;
 const Text = styled.p`
   @media (min-width: 399px) {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
   @media (max-width: 398px) {
     font-size: 1.2rem;
@@ -125,6 +125,9 @@ const Text = styled.p`
   @media (max-width: 358px) {
     font-size: 1.25rem;
   }
+  @media (max-width: 318px) and(min-width: 317px) {
+    font-size: 1.3rem;
+  }
   @media (max-width: 290px) {
     font-size: 1.2rem;
   }
@@ -142,7 +145,7 @@ const Text = styled.p`
 
   &.h2 {
     @media (min-width: 399px) {
-      font-size: 1.1rem;
+      font-size: 1.2rem;
     }
     @media (max-width: 393px) {
       font-size: 1.1rem;
@@ -165,7 +168,7 @@ const Text = styled.p`
 
   &.blue {
     @media (min-width: 399px) {
-      font-size: 1.1rem;
+      font-size: 1.3rem;
     }
     @media (max-width: 375px) {
       font-size: 1.3rem;
@@ -184,7 +187,7 @@ const Text = styled.p`
   }
   &.pink {
     @media (min-width: 399px) {
-      font-size: 1.1rem;
+      font-size: 1.3rem;
     }
     @media (max-width: 375px) {
       font-size: 1.3rem;
@@ -230,7 +233,7 @@ const GuideWrapper = styled.div`
 
 const GuideText = styled.p`
   @media (min-width: 431px) {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
   @media (max-width: 430px) {
     font-size: 1.15rem;
@@ -254,6 +257,7 @@ const GuideText = styled.p`
   @media (max-width: 358px) {
     font-size: 1.2rem;
   }
+
   @media (max-width: 290px) {
     font-size: 1.2rem;
   }
@@ -269,7 +273,7 @@ const GuideText = styled.p`
 
 const B = styled.p`
   @media (min-width: 431px) {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
   @media (max-width: 430px) {
     font-size: 1.2rem;
@@ -298,6 +302,9 @@ const B = styled.p`
   @media (max-width: 356px) {
     font-size: 1.2rem;
   }
+  @media (max-width: 318px) and(min-width: 317px) {
+    font-size: 1.3rem;
+  }
   @media (max-width: 290px) {
     font-size: 1.2rem;
   }
@@ -317,7 +324,7 @@ const B = styled.p`
 
 const MessageBox = styled.div`
   @media (min-width: 413px) {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
   @media (max-width: 412px) {
     font-size: 1rem;
@@ -364,10 +371,10 @@ const MessageBox = styled.div`
 
 const CallingBox = styled.div`
   @media (min-width: 413px) {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
   @media (max-width: 412px) {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
   @media (max-width: 397px) {
     font-size: 1rem;
@@ -406,7 +413,7 @@ const CallingBox = styled.div`
   font-size: 1rem;
   border-radius: 5px;
   background-color: #9ad49b81;
-  padding: 2px 5px;
+  padding: 2px 3px;
   cursor: pointer;
   &.onebtn {
     text-align: center;
@@ -450,7 +457,7 @@ export const Container = styled.div`
 
 export const Flex = styled.div`
   @media (min-width: 413px) {
-    width: 29rem;
+    width: 90%;
   }
   @media (max-width: 412px) {
     width: 28rem;
@@ -471,10 +478,13 @@ export const Flex = styled.div`
     width: 28rem;
   }
   @media (max-width: 356px) {
-    width: 28rem;
+    width: 31rem;
+  }
+  @media (max-width: 318px) and(min-width: 317px) {
+    width: 34rem;
   }
   @media (max-width: 290px) {
-    width: 90%;
+    width: 30rem;
     padding: 45px 10px 25px 10px;
   }
 
@@ -486,7 +496,7 @@ export const Flex = styled.div`
   width: 90%;
   height: 40%;
   border-radius: 12px;
-  padding: 45px 17px 25px 17px;
+  padding: 45px 14px 25px 14px;
   box-shadow: 2px 3px 3px 0.2em #67676728;
   gap: 30px;
 `;
