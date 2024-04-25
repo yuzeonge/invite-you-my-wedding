@@ -1,5 +1,5 @@
-import { TextWrapper, Text } from "../styles";
-import styled from "styled-components";
+import { TextWrapper, Text } from '../styles';
+import styled from 'styled-components';
 
 export default function Starting() {
   return (
@@ -7,18 +7,18 @@ export default function Starting() {
       <StyledWrapper>
         <InviteText
           data-aos="fade-up"
-          data-aos-delay="3000"
+          data-aos-delay="1000"
           data-aos-duration="1200"
-          style={{ fontFamily: "yleeMortalHeart-ImmortalMemory" }}
+          style={{ fontFamily: 'yleeMortalHeart-ImmortalMemory' }}
         >
           Invite you
         </InviteText>
-        <Text className="t2 mb-48" data-aos="fade-up" data-aos-delay="3000" data-aos-duration="1800">
+        <Text className="t2 mb-48" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1800">
           소중한 당신을 초대합니다.
         </Text>
       </StyledWrapper>
-      <ImgWrapper data-aos="flip-left" data-aos-delay="3000" data-aos-duration="1800">
-        <Image src="image/main-card.webp" fetchpriority="high" alt="썸네일이미지" />
+      <ImgWrapper data-aos="flip-left" data-aos-delay="1000" data-aos-duration="1800">
+        <Image src="image/main-card.jpeg" />
       </ImgWrapper>
     </Container>
   );
