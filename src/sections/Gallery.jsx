@@ -11,8 +11,8 @@ export default function Gallery() {
   const [tab, setTab] = useState(0);
 
   const slideRef = useRef(null);
-
   const testRef = useRef(null);
+
   const handleOpenModal = (src, index) => {
     setImageSrc(`${_path}/${src}`);
     setTab(index);
@@ -27,25 +27,13 @@ export default function Gallery() {
         <SliderWraper>
           <MultiSlick>
             {_imageSrcArray.map((src, index) => (
-              <WeddingImage
-                src={`${_path}/${src}`}
-                onClick={() => handleOpenModal(src, index)}
-                key={index}
-                loading="lazy"
-                decoding="async"
-              />
+              <WeddingImage src={`${_path}/${src}`} onClick={() => handleOpenModal(src, index)} key={index} loading="lazy" decoding="async" />
             ))}
           </MultiSlick>
         </SliderWraper>
         <EmptyBox />
       </Flex>
-      <ImageModal
-        ref={slideRef}
-        isModalOpen={isImageModalOpen}
-        src={imageSrc}
-        handleCloseModal={() => setIsImageModalOpen(false)}
-        tab={tab}
-      />
+      <ImageModal ref={slideRef} isModalOpen={isImageModalOpen} src={imageSrc} handleCloseModal={() => setIsImageModalOpen(false)} tab={tab} />
     </Container>
   );
 }

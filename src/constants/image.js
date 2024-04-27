@@ -20,8 +20,23 @@ export const _imageSrcArray = [
   "17.jpeg",
 
   "11.jpeg",
-
   "7.jpeg",
   "16.jpeg",
+  "23.png",
+
+  "21.png",
+  "22.png",
+  "20.png",
+  "24.png",
+
+  "25.png",
+  "26.png",
+  "31.png",
+  "32.png",
+
+  "27.png",
+  "28.png",
+  "29.png",
+  "30.png",
 ];
 export const _path = `image/gallery`;
