@@ -37,11 +37,16 @@ import Sound from "./components/Sound/Sound";
 
 function App() {
   const [isShow, setIsShow] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
     AOS.init({
       offset: 20,
     });
+  }, []);
+
+  useEffect(() => {
+    setIsMounted(true);
   }, []);
 
   useEffect(() => {
@@ -64,16 +69,20 @@ function App() {
       <StyledLayout>
         <Sound />
         <StyledNav className={isShow ? "active" : ""}>배경음악이 준비되어 있습니다.</StyledNav>
-        <Starting />
-        <Poetry />
-        <Calendar />
-        <Gallery />
-        <Location />
-        <WeddingInfo />
-        <Posting />
-        <Ending />
-        <Poster />
-        <Footer />
+        {isMounted && (
+          <>
+            <Starting />
+            <Poetry />
+            <Calendar />
+            <Gallery />
+            <Location />
+            <WeddingInfo />
+            <Posting />
+            <Ending />
+            <Poster />
+            <Footer />
+          </>
+        )}
       </StyledLayout>
       <ToastContainer position="top-center" autoClose={2000} hideProgressBar={true} />
       <ConnectInfoModal />

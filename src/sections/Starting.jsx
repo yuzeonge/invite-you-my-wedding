@@ -1,5 +1,5 @@
-import { TextWrapper, Text } from '../styles';
-import styled from 'styled-components';
+import { TextWrapper, Text } from "../styles";
+import styled from "styled-components";
 
 export default function Starting() {
   return (
@@ -9,7 +9,7 @@ export default function Starting() {
           data-aos="fade-up"
           data-aos-delay="1000"
           data-aos-duration="1200"
-          style={{ fontFamily: 'yleeMortalHeart-ImmortalMemory' }}
+          style={{ fontFamily: "yleeMortalHeart-ImmortalMemory" }}
         >
           Invite you
         </InviteText>
