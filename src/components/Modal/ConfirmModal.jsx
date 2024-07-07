@@ -43,13 +43,13 @@ const ConfirmModal = ({ fetchDeleteGuestBook, isModalOpen, handleCloseModal, gue
           <TextWrapper>
             <TextInput
               value={password}
-              onChange={(e) => setPassword(e.target.value)}
+              onChange={e => setPassword(e.target.value)}
               type="password"
               label={"작성 시 입력하신 비밀번호를 입력해주세요."}
             />
           </TextWrapper>
           <ButtonWrapper>
-            <Button className="button point" onClick={onDeleteGuestBook}>
+            <Button className="button point" onClick={() => alert("삭제 불가한 게시물입니다.")}>
               삭제
             </Button>
             <Button className="button" onClick={handleCloseModal}>

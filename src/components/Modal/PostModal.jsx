@@ -7,7 +7,7 @@ import ReactDom from "react-dom";
 import IconButton from "../Button/IconButton";
 import CloseSvg from "../Icons/close";
 
-const PostModal = ({ fetchGuestBook, isModalOpen, handleCloseModal }) => {
+const PostModal = ({ isModalOpen, handleCloseModal }) => {
   const [title, setTitle] = useState("");
   const [password, setPassword] = useState("");
   const [author, setAuthor] = useState("");
@@ -19,7 +19,7 @@ const PostModal = ({ fetchGuestBook, isModalOpen, handleCloseModal }) => {
       alert("축하글을 100자이내로 작성해주세요");
       return;
     }
-    fetchGuestBook({ author, password, title, date: new Date() });
+
     alert("이미 완료된 이벤트입니다.");
     handleCloseModal();
   };
@@ -56,13 +56,7 @@ const PostModal = ({ fetchGuestBook, isModalOpen, handleCloseModal }) => {
           <TextWrapper>
             <TextInput value={title} onChange={e => setTitle(e.target.value)} type="text" label={"축하글을 작성해주세요! (100자이내)"} textArea />
           </TextWrapper>
-          <Button
-            className="button"
-            onClick={() => {
-              alert("이미 모든 축하글이 전달되었습니다.");
-              handleCloseModal();
-            }}
-          >
+          <Button className="button" onClick={onCreateGuestBook}>
             신랑 신부에게 축하 글 전달하기
           </Button>
         </Wrapper>

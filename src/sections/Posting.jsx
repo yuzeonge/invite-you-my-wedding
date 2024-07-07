@@ -14,10 +14,6 @@ import HeartIcon from "../components/Icons/heart";
 // mui
 import { Pagination } from "@mui/material";
 
-// firbase
-import { firestore } from "../configs/firebase";
-import { collection, getDocs, addDoc, doc, deleteDoc, query } from "firebase/firestore";
-
 const limit = 5;
 
 export default function Posting() {
@@ -33,40 +29,14 @@ export default function Posting() {
   };
 
   const getGuestBooks = async () => {
-    const q = query(collection(firestore, "posting"));
-    const querySnapshot = await getDocs(q);
+    const data = await fetch("/data.json").then(res => res.json());
 
-    const postList = querySnapshot.docs.map(doc => {
-      const { date } = doc.data();
-      return {
-        id: doc.id,
-        ...doc.data(),
-        date: new Date(date.seconds * 1000 + date.nanoseconds / 1000000),
-      };
-    });
-
-    // props.date를 기준으로 정렬된 새로운 배열 생성
-    const sortedArray = postList.sort((a, b) => {
-      // 날짜를 비교하여 비교 함수를 반환합니다.
-      return new Date(b.date) - new Date(a.date);
-    });
-
-    setCount(Math.ceil(sortedArray.length / limit));
-    setPostList(sortedArray);
-  };
-
-  const createGuestBook = async ({ author, password, title, date = new Date() }) => {
-    try {
-      const q = query(collection(firestore, "posting"));
-      await addDoc(q, { author, password, title, date });
-      getGuestBooks();
-    } catch (e) {
-      console.error(e);
-    }
+    setCount(Math.ceil(data.length / limit));
+    setPostList(data);
   };
 
   const deleteGuestbook = async id => {
-    await deleteDoc(doc(firestore, "posting", id));
+    alert("삭제 붙가한 게시물입니다.");
     getGuestBooks();
   };
 
@@ -98,7 +68,7 @@ export default function Posting() {
           <Flower src="image/flower.png" className="f-b" />
         </Flex>
       </Container>
-      <PostModal fetchGuestBook={createGuestBook} isModalOpen={isModalOpen} handleCloseModal={handleCloseModal} />
+      <PostModal isModalOpen={isModalOpen} handleCloseModal={handleCloseModal} />
     </>
   );
 }
