@@ -14,6 +14,7 @@
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "firebase": "^10.10.0",
+    "gh-pages": "^6.1.1",
     "node": "^18.20.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -27,13 +28,16 @@
     "styled-components": "^6.1.8",
     "web-vitals": "^2.1.4"
   },
+  "homepage": "https://yuzeonge.github.io/invite-you-my-wedding/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "build:client": "webpack --config webpack.client.js",
-    "build:server": "webpack --config webpack.server.js"
+    "build:server": "webpack --config webpack.server.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
