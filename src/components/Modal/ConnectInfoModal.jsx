@@ -4,12 +4,12 @@ import infoModalState from "../../store/infoModal";
 import "react-toastify/dist/ReactToastify.css";
 
 const people_info = [
-  { account: "경남은행 538 07 0060320 소종범", phone: "010-2586-7540" },
-  { account: "카카오뱅크 3333154277124 권유정", phone: "010-5064-8396" },
-  { account: "경남은행 538 07 0060320 소영식", phone: "010-6557-2640" },
-  { account: "박숙녀", phone: "010-2271-7540" },
-  { account: "국민은행 8424 0101 446383 권태건", phone: "010-7111-2364" },
-  { account: "마은영", phone: "010-3012-8399" },
+  { account: "", phone: "" },
+  { account: "", phone: "" },
+  { account: "", phone: "" },
+  { account: "", phone: "" },
+  { account: "", phone: "" },
+  { account: "", phone: "" },
 ];
 
 export default function ConnectInfoModal() {
@@ -41,13 +41,13 @@ export default function ConnectInfoModal() {
             <Text className="h2">신랑💍신부</Text>
             <NameWrapper>
               <Text>신랑 </Text> <B>소종범</B>
-              <CallingBox onClick={() => (window.document.location.href = `tel:${people_info[0].phone}`)}>축하 전화하기📞</CallingBox>
-              <MessageBox onClick={() => (window.document.location.href = `sms:${people_info[0].phone}`)}>축하 메시지 ✉️</MessageBox>
+              <CallingBox onClick={() => alert("현재 완료된 이벤트입니다.")}>축하 전화하기📞</CallingBox>
+              <MessageBox onClick={() => alert("현재 완료된 이벤트입니다.")}>축하 메시지 ✉️</MessageBox>
             </NameWrapper>
             <NameWrapper>
               <Text>신부 </Text> <B>권유정</B>
-              <CallingBox onClick={() => (window.document.location.href = `tel:${people_info[1].phone}`)}>축하 전화하기📞</CallingBox>
-              <MessageBox onClick={() => (window.document.location.href = `sms:${people_info[1].phone}`)}>축하 메시지 ✉️</MessageBox>
+              <CallingBox onClick={() => alert("현재 완료된 이벤트입니다.")}>축하 전화하기📞</CallingBox>
+              <MessageBox onClick={() => alert("현재 완료된 이벤트입니다.")}>축하 메시지 ✉️</MessageBox>
             </NameWrapper>
           </NameListWrapper>
           <NameListWrapper>
@@ -58,13 +58,13 @@ export default function ConnectInfoModal() {
 
             <NameWrapper>
               <Text>신랑 아버지 </Text> <B>소영식</B>
-              <CallingBox onClick={() => (window.document.location.href = `tel:${people_info[2].phone}`)}>축하 전화하기📞</CallingBox>
-              <MessageBox onClick={() => (window.document.location.href = `sms:${people_info[2].phone}`)}>축하 메시지 ✉️</MessageBox>
+              <CallingBox onClick={() => alert("현재 완료된 이벤트입니다.")}>축하 전화하기📞</CallingBox>
+              <MessageBox onClick={() => alert("현재 완료된 이벤트입니다.")}>축하 메시지 ✉️</MessageBox>
             </NameWrapper>
             <NameWrapper>
               <Text>신랑 어머니 </Text> <B>박숙녀</B>
-              <CallingBox onClick={() => (window.document.location.href = `tel:${people_info[3].phone}`)}>축하 전화하기📞</CallingBox>
-              <MessageBox onClick={() => (window.document.location.href = `sms:${people_info[3].phone}`)}>축하 메시지 ✉️</MessageBox>
+              <CallingBox onClick={() => alert("현재 완료된 이벤트입니다.")}>축하 전화하기📞</CallingBox>
+              <MessageBox onClick={() => alert("현재 완료된 이벤트입니다.")}>축하 메시지 ✉️</MessageBox>
             </NameWrapper>
           </NameListWrapper>
           <NameListWrapper>
@@ -75,13 +75,13 @@ export default function ConnectInfoModal() {
 
             <NameWrapper>
               <Text>신부 아버지 </Text> <B>권태건</B>
-              <CallingBox onClick={() => (window.document.location.href = `tel:${people_info[4].phone}`)}>축하 전화하기📞</CallingBox>
-              <MessageBox onClick={() => (window.document.location.href = `sms:${people_info[4].phone}`)}>축하 메시지 ✉️</MessageBox>
+              <CallingBox onClick={() => alert("현재 완료된 이벤트입니다.")}>축하 전화하기📞</CallingBox>
+              <MessageBox onClick={() => alert("현재 완료된 이벤트입니다.")}>축하 메시지 ✉️</MessageBox>
             </NameWrapper>
             <NameWrapper>
               <Text>신부 어머니 </Text> <B>마은영</B>
-              <CallingBox onClick={() => (window.document.location.href = `tel:${people_info[5].phone}`)}>축하 전화하기📞</CallingBox>
-              <MessageBox onClick={() => (window.document.location.href = `sms:${people_info[5].phone}`)}>축하 메시지 ✉️</MessageBox>
+              <CallingBox onClick={() => alert("현재 완료된 이벤트입니다.")}>축하 전화하기📞</CallingBox>
+              <MessageBox onClick={() => alert("현재 완료된 이벤트입니다.")}>축하 메시지 ✉️</MessageBox>
             </NameWrapper>
           </NameListWrapper>
           <CloseButton onClick={handleCloseModal}>닫기</CloseButton>

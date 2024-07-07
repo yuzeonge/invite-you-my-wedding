@@ -20,6 +20,7 @@ const PostModal = ({ fetchGuestBook, isModalOpen, handleCloseModal }) => {
       return;
     }
     fetchGuestBook({ author, password, title, date: new Date() });
+    alert("이미 완료된 이벤트입니다.");
     handleCloseModal();
   };
 
@@ -47,26 +48,21 @@ const PostModal = ({ fetchGuestBook, isModalOpen, handleCloseModal }) => {
 
         <Wrapper>
           <TextWrapper>
-            <TextInput value={author} onChange={(e) => setAuthor(e.target.value)} type="text" label={"이름"} />
+            <TextInput value={author} onChange={e => setAuthor(e.target.value)} type="text" label={"이름"} />
           </TextWrapper>
           <TextWrapper>
-            <TextInput
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              type="password"
-              label={"비밀번호"}
-            />
+            <TextInput value={password} onChange={e => setPassword(e.target.value)} type="password" label={"비밀번호"} />
           </TextWrapper>
           <TextWrapper>
-            <TextInput
-              value={title}
-              onChange={(e) => setTitle(e.target.value)}
-              type="text"
-              label={"축하글을 작성해주세요! (100자이내)"}
-              textArea
-            />
+            <TextInput value={title} onChange={e => setTitle(e.target.value)} type="text" label={"축하글을 작성해주세요! (100자이내)"} textArea />
           </TextWrapper>
-          <Button className="button" onClick={onCreateGuestBook}>
+          <Button
+            className="button"
+            onClick={() => {
+              alert("이미 모든 축하글이 전달되었습니다.");
+              handleCloseModal();
+            }}
+          >
             신랑 신부에게 축하 글 전달하기
           </Button>
         </Wrapper>

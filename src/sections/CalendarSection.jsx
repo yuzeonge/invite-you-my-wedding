@@ -19,11 +19,10 @@ export default function CalendarSection() {
           <Text className="countDownText">
             종범
             <HeartIcon src="image/heart.png" />
-            유정 결혼식이
+            유정
           </Text>
-          <Flex>
-            <DdayCount targetDate={new Date(2024, 5, 2, 12, 10)} />
-          </Flex>
+
+          <Flex>{/* <DdayCount targetDate={new Date(2024, 5, 2, 12, 10)} /> */}</Flex>
         </TextWrapper>
       </Flex>
     </Container>

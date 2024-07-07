@@ -10,29 +10,29 @@ import { toast } from "react-toastify";
 const bridegroom_infos = [
   {
     name: "소종범",
-    account: "농협은행 302 03 26791691",
+    account: "",
   },
   {
     name: "소영식·박숙녀",
-    account: "경남은행 538 07 0060320",
+    account: "",
   },
 ];
 
 const bride_infos = [
   {
     name: "권유정",
-    account: "카카오뱅크 3333 154 277124",
+    account: "",
   },
   {
     name: "권태건·마은영",
-    account: "국민은행 8424 0101 446383",
+    account: "",
   },
 ];
 
 export default function AccountModal({ isBride, isModalOpen, setIsModalOpen }) {
   const setIsOpenModal = useSetRecoilState(modalState);
   const { copyToClipboard } = useCopyClipboard();
-  const notify = target => toast(`${target}님의 계좌가 복사되었습니다.`);
+  const notify = () => toast(`해당 정보는 완료되었습니다.`);
 
   const view_infos = isBride ? bride_infos : bridegroom_infos;
   const handleCloseModal = () => {
