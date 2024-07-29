@@ -32,6 +32,7 @@ import "aos/dist/aos.css";
 import { ToastContainer } from "react-toastify";
 
 import Sound from "./components/Sound/Sound";
+import { BrowserRouter } from "react-router-dom";
 
 // icon
 
@@ -65,28 +66,30 @@ function App() {
   }, []);
 
   return (
-    <RecoilRoot>
-      <StyledLayout>
-        <Sound />
-        <StyledNav className={isShow ? "active" : ""}>배경음악이 준비되어 있습니다.</StyledNav>
-        {isMounted && (
-          <>
-            <Starting />
-            <Poetry />
-            <Calendar />
-            <Gallery />
-            <Location />
-            <WeddingInfo />
-            <Posting />
-            <Ending />
-            <Poster />
-            <Footer />
-          </>
-        )}
-      </StyledLayout>
-      <ToastContainer position="top-center" autoClose={2000} hideProgressBar={true} />
-      <ConnectInfoModal />
-    </RecoilRoot>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <RecoilRoot>
+        <StyledLayout>
+          <Sound />
+          <StyledNav className={isShow ? "active" : ""}>배경음악이 준비되어 있습니다.</StyledNav>
+          {isMounted && (
+            <>
+              <Starting />
+              <Poetry />
+              <Calendar />
+              <Gallery />
+              <Location />
+              <WeddingInfo />
+              <Posting />
+              <Ending />
+              <Poster />
+              <Footer />
+            </>
+          )}
+        </StyledLayout>
+        <ToastContainer position="top-center" autoClose={2000} hideProgressBar={true} />
+        <ConnectInfoModal />
+      </RecoilRoot>
+    </BrowserRouter>
   );
 }
 
