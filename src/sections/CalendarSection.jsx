@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { EmptyBox, Flex } from "../styles";
 import HeartIcon from "../components/Icons/heart";
 
-import DdayCount from "../components/DdayCount";
+import { TheTimes } from "../components/DdayCount";
 
 export default function CalendarSection() {
   return (
@@ -22,7 +22,9 @@ export default function CalendarSection() {
             유정
           </Text>
 
-          <Flex>{/* <DdayCount targetDate={new Date(2024, 5, 2, 12, 10)} /> */}</Flex>
+          <Flex>
+            <TheTimes targetDate={new Date(2024, 5, 2, 12, 10)} />
+          </Flex>
         </TextWrapper>
       </Flex>
     </Container>

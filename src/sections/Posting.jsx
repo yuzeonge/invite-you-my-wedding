@@ -13,6 +13,7 @@ import HeartIcon from "../components/Icons/heart";
 
 // mui
 import { Pagination } from "@mui/material";
+import { data } from "../configs/data";
 
 const limit = 5;
 
@@ -29,9 +30,9 @@ export default function Posting() {
   };
 
   const getGuestBooks = async () => {
-    const data = await fetch("/data.json").then(res => res.json());
+    const datas = data;
 
-    setCount(Math.ceil(data.length / limit));
+    setCount(Math.ceil(datas.length / limit));
     setPostList(data);
   };
 
